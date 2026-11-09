@@ -1,5 +1,11 @@
 # Changelog
 
+## 0.6.4-beta
+
+### Fixes
+
+- **SSH to a Mac: tmux sessions now show up.** macOS's SSH server starts sessions without a language setting, and in that case tmux replaces tabs and non-ASCII text with "_" in its output, so Initia couldn't read the session list. Initia now runs tmux with `-u` (UTF-8 output) on every host, which also keeps Korean and box-drawing characters intact when you attach to a remote session
+
 ## 0.6.3-beta
 
 ### Fixes
