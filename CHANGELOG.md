@@ -1,5 +1,46 @@
 # Changelog
 
+## 0.6.0-beta
+
+### New: Home
+
+- Initia now opens on a **Home** screen: a summary of your tmux sessions, windows, Claude sessions and background sessions, then a card for every session with a live preview, plus Quick start cards for presets that aren't running
+- Every session shows where it is open: in Initia (green), in another terminal (blue), or only in the background (gray)
+- **Claude Code detection**: Initia finds Claude in each tmux window (also over SSH) and shows whether it is working or waiting for you
+
+### New: Claude notifications
+
+- Get a macOS notification when Claude finishes working in a session you aren't looking at, with the task name. Click it to jump straight to that session
+- Finished sessions you haven't viewed yet get a bell on their tab, sidebar row and card, and the Dock icon shows how many there are
+- Turn notifications or their sound off in Settings → General
+
+### New: automatic updates
+
+- Initia checks for new versions (every 6 hours) and shows an **Update** button at the bottom of the sidebar. One click downloads the release, verifies its checksum, replaces the app and restarts it
+- Your tmux sessions keep running through the update, and the tabs you had open come back
+- Settings → General → Updates: check now, turn automatic checks off, or skip beta versions. Also in the app menu: Initia → Check for Updates…
+
+### New: SSH hosts
+
+- The sidebar lists the hosts from `~/.ssh/config`. Connect to one to see and open its tmux sessions, with previews and Claude detection
+- Works with key and password logins: if a host needs a password, you type it once in a terminal tab and Initia reuses that connection
+- Add, rename, edit and delete hosts in the app. Initia only changes the lines you edit, keeps your comments and other options, and backs up the previous file to `~/.ssh/config.initia-backup`
+- Presets can now start sessions on an SSH host
+
+### New: terminals without tmux
+
+- Open a plain terminal (⌘T), locally or on an SSH host. New sessions still use tmux by default
+
+### New: Exit and snippets
+
+- **Exit** quits Claude with `/exit`, waits for it to finish, then ends the session. The menu next to it has "Quit Claude only", "Detach" and "Kill session"
+- **Snippets**: a row of buttons under the terminal that types text for you (`/clear`, `/compact`, `continue`, Esc by default). Edit them or add your own
+
+### Changes
+
+- Selecting a session always shows its terminal first. Detaching shows a Reconnect button instead of switching to Overview
+- Closing a tab moves to the next tab, or back to Home
+
 ## 0.5.0-beta
 
 ### New: built-in terminal
