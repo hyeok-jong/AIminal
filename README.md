@@ -38,14 +38,16 @@ Initia is the app I wanted for that:
 - **Presets for the things you start every day.** A machine, a folder and a startup command (like `claude`) become one click, or start on their own when Initia launches
 - **Know when Claude is done.** Initia sees which sessions run Claude Code and whether it is working or waiting, and notifies you when it finishes, even on a remote server
 - **Many machines, one window.** Your `~/.ssh/config` machines sit next to this Mac. Connect once and see every tmux session running on each of them, and open any of them in a tab
+- **And containers inside them.** Real work often happens one level deeper, in a docker container on the server. Initia keeps tmux on the server, enters the container for you, and still knows when Claude in there is done
 - **A home, not just a terminal.** Start from an overview of everything that is running, then dive into a session in Initia's own terminal
 
 ## Features
 
 - **Home**: a start screen with a card for every session, live previews, and a summary of what's running
 - **Built-in terminal**: open any tmux session in a real terminal inside Initia, with a tab for each one. Closing a tab only detaches. Plain terminals without tmux work too (⌘T)
-- **Claude Code aware**: see which sessions run Claude and whether it is working or waiting. Get a notification when Claude finishes, and quit it cleanly with **Exit** (`/exit`, then end the session)
+- **Claude Code aware**: see which sessions run Claude (or `happy claude`) and whether it is working or waiting, even inside a docker container. Get a notification when Claude finishes, and quit it cleanly with **Exit** (`/exit`, then end the session)
 - **Machines**: this Mac and your `~/.ssh/config` machines side by side in the sidebar. Connect (key or password) to see and open each machine's tmux sessions, and add or edit machines in the app. Initia keeps one SSH session per machine, so your server sees a single login
+- **Docker containers**: keep tmux on the server and work inside a container. A session or preset can name a container, and Initia runs `docker exec` into it for you (with your folder and startup command). Each machine page lists its running containers, and sessions show which container they are in
 - **Snippets**: one-click buttons under the terminal that type text for you (`/clear`, `/compact`, …)
 - **Manage tmux**: create sessions; rename sessions and windows; create and close windows
 - **Opens in Initia by default**, and still one click away in iTerm2, Terminal, cmux, Ghostty, WezTerm, kitty or Alacritty
@@ -78,11 +80,12 @@ Presets are stored in `~/.config/initia/config.json`, so you can also write them
 ```json
 "presets": [
   { "name": "api-server", "path": "~/dev/api-server", "command": "claude", "autostart": true },
-  { "name": "notebook", "path": "~/research", "command": "jupyter lab", "device": "gpu-box" }
+  { "name": "notebook", "path": "~/research", "command": "jupyter lab", "device": "gpu-box" },
+  { "name": "train", "path": "/workspace/train", "command": "claude", "device": "gpu-box", "container": "research" }
 ]
 ```
 
-`device` is the machine's `Host` name from `~/.ssh/config`. Leave it out for this Mac.
+`device` is the machine's `Host` name from `~/.ssh/config`. Leave it out for this Mac. With `container`, tmux stays on the machine and the session runs `docker exec -it -w <path> <container> bash -lc '<command>; exec bash -l'`, so `path` is a folder inside the container.
 
 ## Configuration
 

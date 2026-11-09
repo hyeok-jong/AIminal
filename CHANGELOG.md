@@ -1,5 +1,18 @@
 # Changelog
 
+## 0.6.6-beta
+
+### New: docker containers
+
+- **Claude inside docker is detected.** When a tmux pane runs `docker exec` into a container, Claude's processes are not under the pane, so Initia now also recognizes Claude from its window title and screen. Working/waiting, notifications and Exit work as usual
+- **Sessions and presets can enter a container.** Pick a running container (or type its name) in New session or a preset: tmux stays on the machine and Initia runs `docker exec -it -w <folder> <container> bash -lc '<command>; exec bash -l'` for you
+- Machine pages list running containers with **New session** and **Shell** buttons, and session cards, rows and window cards show the container a session is in (🐳)
+
+### New
+
+- Sessions started with `happy claude` show a **Happy** badge. In Happy's remote mode, where Claude's screen is hidden, the badge says so
+- "Device" is now "Machine" in the session and preset forms, and crowded session cards shrink the status chip to an icon
+
 ## 0.6.5-beta
 
 ### Changes
