@@ -1,5 +1,21 @@
 # Changelog
 
+## 0.7.0-beta
+
+### New: keyboard and navigation
+
+- **Hold ⌘** to see every keyboard shortcut, with tab numbers shown on the tabs
+- **⌘K command palette**: search sessions (including those inside containers), machines, presets and commands, then press Enter
+- **Zoom the terminal** with ⌘= / ⌘- and reset with ⌘0
+- **Tabs**: ⌘1…⌘8 jump to a tab, ⌘9 to the last one, ⇧⌘] / ⇧⌘[ for next/previous; ⌘W closes the current tab like Ctrl-b d (the session keeps running)
+- ⇧⌘H goes Home, ⌃⌘S shows or hides the sidebar, and the new Go menu lists all of these
+
+### Sidebar
+
+- Machines are clearly grouped: a divider between machines, bold machine names, and guide lines that show what sits under each machine and container
+- **Containers collapse** like machines (collapsed by default) and still show Claude and attention badges when collapsed
+- **Expand all / Collapse all** buttons next to "Machines (SSH)"; what you expand or collapse is remembered
+
 ## 0.6.9-beta
 
 ### Changes
