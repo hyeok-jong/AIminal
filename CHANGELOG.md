@@ -1,5 +1,12 @@
 # Changelog
 
+## 0.6.2-beta
+
+### Fixes
+
+- **Claude finished notifications now work inside tmux.** Current Claude Code keeps its window title fixed (starting with ✳) when it runs in tmux, so Initia could not tell when it was working and rarely sent a notification. Initia now reads the bottom of each Claude pane and treats Claude as working while it shows "esc to interrupt". Checked end to end on a real remote server: working → finished → notification → Exit
+- Claude is now detected when its process is named `claude.exe` (recent npm installs on Linux), not only `claude`
+
 ## 0.6.1-beta
 
 ### Changes

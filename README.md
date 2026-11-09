@@ -4,12 +4,21 @@
 
 > Status: **public beta**, free during the beta.
 
-![Initia home: every tmux session as a card with a live preview, Claude status, and SSH hosts in the sidebar](screenshots/home.png)
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="screenshots/home-dark.png">
+  <img src="screenshots/home.png" alt="Initia home: every tmux session as a card with a live preview, Claude status, and SSH hosts in the sidebar">
+</picture>
 
 <table>
 <tr>
-<td><img src="screenshots/overview.png" alt="Session overview: a live preview of every window, with Exit and terminal controls"></td>
-<td><img src="screenshots/ssh-host.png" alt="An SSH host: its remote tmux sessions and the editable ssh config entry"></td>
+<td><picture>
+  <source media="(prefers-color-scheme: dark)" srcset="screenshots/overview-dark.png">
+  <img src="screenshots/overview.png" alt="Session overview: a live preview of every window, with Exit and terminal controls">
+</picture></td>
+<td><picture>
+  <source media="(prefers-color-scheme: dark)" srcset="screenshots/ssh-host-dark.png">
+  <img src="screenshots/ssh-host.png" alt="An SSH host: its remote tmux sessions and the editable ssh config entry">
+</picture></td>
 </tr>
 <tr>
 <td align="center">Live overview of every window</td>
