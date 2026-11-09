@@ -1,5 +1,14 @@
 # Changelog
 
+## 0.6.5-beta
+
+### Changes
+
+- **Machines.** The sidebar now has one Machines section: this Mac and your SSH machines side by side. Expand a machine to see its tmux sessions; click the machine itself for its page (open a shell, start a session, and for SSH machines, connection and config). This Mac gets its own machine page too
+- The sidebar no longer uses the system disclosure control, which could misdraw selection and indentation; sessions under a machine are indented and no longer repeat the machine name
+- **Sessions open in Initia by default** everywhere, including a preset's Open and "Open a specific window". External terminals stay one click away under their own names. Existing settings are switched to Initia once
+- README: why Initia exists, and new screenshots
+
 ## 0.6.4-beta
 
 ### Fixes
