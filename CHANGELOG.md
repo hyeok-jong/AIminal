@@ -1,5 +1,13 @@
 # Changelog
 
+## 0.6.3-beta
+
+### Fixes
+
+- **SSH: Initia no longer logs in to your server every few seconds.** It now keeps one SSH session open per host and streams the session list, Claude status and screen previews over it, so a login monitor (or Tailscale SSH's session log) sees a single login while Initia is connected. Before, every refresh and every preview was a new SSH command, and on Macs where connection sharing failed (see below) each one was a full new login
+- **SSH: fixed "path … too long for Unix domain socket".** Connection sharing failed on Macs with a long user name, which broke password logins (for example from a MacBook to another Mac) and forced a new login for every request. Initia now uses a short per-host socket name, and falls back to a private folder in /tmp when the home folder path is too long
+- Smart Exit sends its keys to a remote host in one SSH command and waits on the streamed status instead of polling
+
 ## 0.6.2-beta
 
 ### Fixes
