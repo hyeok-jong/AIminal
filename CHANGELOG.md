@@ -1,5 +1,11 @@
 # Changelog
 
+## 0.7.3-beta
+
+### Fixes
+
+- **Dragging in the sidebar now actually reorders.** Machines and sessions could be dragged but snapped back, because the sidebar list swallowed the drop. The machine section now uses the list's own reordering: drag an SSH machine to move it among machines, or a session to move it within its machine or container (an insertion line shows where it lands). This Mac stays at the top
+
 ## 0.7.2-beta
 
 ### New
