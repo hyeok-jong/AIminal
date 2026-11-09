@@ -1,5 +1,13 @@
 # Changelog
 
+## 0.6.9-beta
+
+### Changes
+
+- **An update button that is always there.** The toolbar (and the menu bar popover) has an update button: when a new version exists it reads "Update to <version>" and installs it in one click; otherwise it checks right away and tells you whether you are up to date
+- Update notifications appear at most once a day; in between, the button and the sidebar banner show that an update is waiting
+- The sidebar section is now "Machines (SSH)" and its button "Add machine (SSH)". Containers sit under their machine, and the tmux sessions inside a container sit under the container
+
 ## 0.6.8-beta
 
 ### New: tmux inside docker containers
