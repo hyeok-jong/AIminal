@@ -1,5 +1,13 @@
 # Changelog
 
+## 0.6.7-beta
+
+### New: Claude usage limit
+
+- Initia notices when Claude stops at its usage limit ("Usage limit reached · limit resets 8:50pm") and shows a ⚠ **Limit** badge with the reset time on the session's card, sidebar row, tab and window card
+- You get one notification when a session hits the limit ("Claude hit its usage limit · Resets at 8:50pm") instead of a "Claude finished" one, and the Home summary counts sessions at the limit
+- Works on this Mac, on SSH machines and inside docker containers
+
 ## 0.6.6-beta
 
 ### New: docker containers
