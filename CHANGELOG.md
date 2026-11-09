@@ -1,5 +1,16 @@
 # Changelog
 
+## 0.6.1-beta
+
+### Changes
+
+- New installs start with an `example` preset (Claude Code in your home folder)
+
+### Fixes
+
+- **SSH: connecting no longer closes right away when a host can't be reached.** Before, if Initia couldn't connect with your SSH key for any reason (Tailscale off, address not found, network unreachable), it opened a login tab that closed at once. Now a login tab opens only when the host needs a password or a host-key confirmation; otherwise you see the actual error
+- SSH terminal tabs stay open after the connection ends, showing the last output and exit code, with **Reconnect** and **Close** buttons
+
 ## 0.6.0-beta
 
 ### New: Home
