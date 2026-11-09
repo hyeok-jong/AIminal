@@ -1,5 +1,13 @@
 # Changelog
 
+## 0.7.2-beta
+
+### New
+
+- **Drag to reorder** machines, sessions (within a machine or container), presets and the tabs at the top. The order is saved, and Home follows it
+- **Home sections collapse**: click a machine or container heading to fold it, or use Expand all / Collapse all at the top. What you fold is remembered
+- **Clearer hierarchy**: on Home, a machine's containers now sit inside the machine's section, indented with a colored line ("research (docker, in gpu-box)"). In the sidebar, child rows are indented further with stronger guide lines
+
 ## 0.7.1-beta
 
 ### New
