@@ -4,6 +4,19 @@
 
 > Status: **public beta**, free during the beta.
 
+![Initia home: every tmux session as a card with a live preview, Claude status, and SSH hosts in the sidebar](screenshots/home.png)
+
+<table>
+<tr>
+<td><img src="screenshots/overview.png" alt="Session overview: a live preview of every window, with Exit and terminal controls"></td>
+<td><img src="screenshots/ssh-host.png" alt="An SSH host: its remote tmux sessions and the editable ssh config entry"></td>
+</tr>
+<tr>
+<td align="center">Live overview of every window</td>
+<td align="center">Remote tmux sessions over SSH</td>
+</tr>
+</table>
+
 ## Features
 
 - **Home**: a start screen with a card for every session, live previews, and a summary of what's running
@@ -33,9 +46,26 @@ The script downloads the latest release, verifies its checksum, and installs Ini
 xattr -dr com.apple.quarantine /Applications/Initia.app
 ```
 
+## Presets
+
+A preset is a session you start often: a device, a folder, and a startup command. Start it in one click from Home, or mark it **autostart** to bring it up when Initia launches. A new install comes with an `example` preset that opens Claude Code in your home folder; edit or delete it in the sidebar.
+
+Presets are stored in `~/.config/initia/config.json`, so you can also write them by hand:
+
+```json
+"presets": [
+  { "name": "api-server", "path": "~/dev/api-server", "command": "claude", "autostart": true },
+  { "name": "notebook", "path": "~/research", "command": "jupyter lab", "device": "gpu-box" }
+]
+```
+
+`device` is a `Host` name from `~/.ssh/config`. Leave it out for this Mac.
+
 ## Configuration
 
 Settings live in `~/.config/initia/config.json`. Open the Settings window with ⌘,.
+
+**Logs:** errors and warnings go to `~/Library/Logs/Initia/initia.log`. Open the log viewer with ⇧⌘L.
 
 **SSH:** Initia reads hosts from `~/.ssh/config`. When you edit a host in Initia, only the lines you change are rewritten, and the previous file is kept as `~/.ssh/config.initia-backup`. Initia never stores passwords: if a host needs one, you log in once in a terminal tab and Initia reuses that connection for 30 minutes.
 
