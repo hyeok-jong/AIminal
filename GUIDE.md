@@ -72,7 +72,7 @@ Below, every machine and every container with tmux gets its own section of **ses
 - a **live preview** of the last lines on screen
 - the current task title (what Claude is working on) and the last activity
 
-Click a card to open it. Presets you haven't started yet appear under **Quick start**, and machines that aren't connected are listed with a **Connect** button.
+Click a heading to collapse it (Expand all / Collapse all are at the top); containers sit inside their machine's section. Click a card to open it, or drag it to reorder. Presets you haven't started yet appear under **Quick start**, and machines that aren't connected are listed with a **Connect** button.
 
 ## The sidebar
 
@@ -98,6 +98,7 @@ PRESETS
 - Click the arrow to expand or collapse a machine or container. Containers start collapsed; their row still shows Claude and bell badges.
 - Click a **machine row** for its page: a shell, new sessions, running containers, and (for SSH) the connection and its config.
 - The guide lines and indentation show what belongs to what. What you expand stays expanded next time.
+- Drag machines, sessions, presets or tabs to reorder them; Home uses the same order.
 - Right-click anything for its actions. ⌃⌘S hides the sidebar. The search field filters sessions, machines and presets.
 
 ## Working in a session
