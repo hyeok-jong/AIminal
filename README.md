@@ -44,10 +44,11 @@ Initia is the app I wanted for that:
 ## Features
 
 - **Home**: a start screen with a card for every session, live previews, and a summary of what's running
-- **Built-in terminal**: open any tmux session in a real terminal inside Initia, with a tab for each one. Closing a tab only detaches. Plain terminals without tmux work too (⌘T)
+- **Built-in terminal**: open any tmux session in a real terminal inside Initia, with a tab for each one. Plain terminals without tmux work too (⌘T)
+- **Clear close actions**: Close window (Ctrl-b d) keeps the session running, Quit Claude (/exit) ends only Claude, End tmux session ends it all
 - **Claude Code aware**: see which sessions run Claude (or `happy claude`) and whether it is working or waiting, even inside a docker container. Get a notification when Claude finishes or hits its usage limit (with the reset time), and quit it cleanly with **Exit** (`/exit`, then end the session)
 - **Machines**: this Mac and your `~/.ssh/config` machines side by side in the sidebar. Connect (key or password) to see and open each machine's tmux sessions, and add or edit machines in the app. Initia keeps one SSH session per machine, so your server sees a single login
-- **Docker containers**: keep tmux on the server and work inside a container. A session or preset can name a container, and Initia runs `docker exec` into it for you (with your folder and startup command). Each machine page lists its running containers, and sessions show which container they are in
+- **Docker containers**: keep tmux on the server and work inside a container. A session or preset can name a container, and Initia runs `docker exec` into it for you (with your folder and startup command). Initia also finds the tmux sessions running *inside* each container and opens them with `docker exec -it <container> tmux attach`. Each machine page lists its running containers
 - **Snippets**: one-click buttons under the terminal that type text for you (`/clear`, `/compact`, …)
 - **Manage tmux**: create sessions; rename sessions and windows; create and close windows
 - **Opens in Initia by default**, and still one click away in iTerm2, Terminal, cmux, Ghostty, WezTerm, kitty or Alacritty

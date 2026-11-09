@@ -1,5 +1,18 @@
 # Changelog
 
+## 0.6.8-beta
+
+### New: tmux inside docker containers
+
+- Initia now also reads the tmux sessions running **inside** each docker container on a machine (this Mac or over SSH). They appear under the machine as "🐳 container" with their sessions, on Home, and on the machine page, with live previews and Claude detection
+- Open one and Initia runs `docker exec -it <container> tmux attach -t <session>` in its own terminal. Notifications, Exit, rename and the other session actions work the same way
+- Container tmux is checked every 15 seconds over the machine's existing SSH session, so it adds no logins
+
+### Changes
+
+- **Clearer close actions**, each named after what it does: **Close window (Ctrl-b d)** closes only Initia's tab and keeps the tmux session running, **Quit Claude (/exit)** ends only Claude, and **End tmux session…** ends the session (quitting Claude with /exit first). There is no longer a one-click default, so nothing ends by accident
+- Container buttons show the exact command: **docker exec** opens a shell without tmux, **tmux + docker exec** starts a tmux session on the machine that enters the container
+
 ## 0.6.7-beta
 
 ### New: Claude usage limit
