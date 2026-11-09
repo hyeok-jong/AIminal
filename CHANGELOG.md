@@ -1,5 +1,13 @@
 # Changelog
 
+## 0.7.1-beta
+
+### New
+
+- **Claude account.** Machine pages, container rows and Claude session headers show which account Claude Code is signed in with there, and its plan (for example `you@example.com · Max 5x`). Read from `~/.claude.json` on each machine and container; tokens are never read
+- **User guide**: [GUIDE.md](GUIDE.md) and a Korean edition, [GUIDE.ko.md](GUIDE.ko.md)
+- **Help menu**: Initia Guide, Keyboard Shortcuts, Release Notes and Show Logs. The guide and shortcuts are in the ⌘K palette too
+
 ## 0.7.0-beta
 
 ### New: keyboard and navigation

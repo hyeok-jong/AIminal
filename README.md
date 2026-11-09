@@ -2,7 +2,7 @@
 
 **A tmux-native terminal for macOS.** See every tmux session on your Mac and on your servers, watch them live, know when Claude Code is done, and work in them from a built-in terminal.
 
-> Status: **public beta**, free during the beta.
+> Status: **public beta**, free during the beta. · 📖 **[Guide](GUIDE.md)** · **[한국어 사용설명서](GUIDE.ko.md)**
 
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="screenshots/home-dark.png">
@@ -47,7 +47,7 @@ Initia is the app I wanted for that:
 - **Built-in terminal**: open any tmux session in a real terminal inside Initia, with a tab for each one. Plain terminals without tmux work too (⌘T)
 - **Clear close actions**: Close window (Ctrl-b d) keeps the session running, Quit Claude (/exit) ends only Claude, End tmux session ends it all
 - **Keyboard first**: hold ⌘ to see every shortcut, ⌘K to jump to any session, machine or command, ⌘1…⌘9 for tabs, ⌘= / ⌘- to zoom the terminal
-- **Claude Code aware**: see which sessions run Claude (or `happy claude`) and whether it is working or waiting, even inside a docker container. Get a notification when Claude finishes or hits its usage limit (with the reset time), and quit it cleanly with **Exit** (`/exit`, then end the session)
+- **Claude Code aware**: see which sessions run Claude (or `happy claude`) and whether it is working or waiting, even inside a docker container. Get a notification when Claude finishes or hits its usage limit (with the reset time), see which account and plan Claude is signed in with on each machine, and quit it cleanly with **Quit Claude (/exit)**
 - **Machines**: this Mac and your `~/.ssh/config` machines side by side in the sidebar. Connect (key or password) to see and open each machine's tmux sessions, and add or edit machines in the app. Initia keeps one SSH session per machine, so your server sees a single login
 - **Docker containers**: keep tmux on the server and work inside a container. A session or preset can name a container, and Initia runs `docker exec` into it for you (with your folder and startup command). Initia also finds the tmux sessions running *inside* each container and opens them with `docker exec -it <container> tmux attach`. Each machine page lists its running containers
 - **Snippets**: one-click buttons under the terminal that type text for you (`/clear`, `/compact`, …)
