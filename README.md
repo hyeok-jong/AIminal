@@ -26,6 +26,19 @@
 </tr>
 </table>
 
+## Highlights
+
+| | |
+|---|---|
+| 🏠 **A home for all your tmux sessions** | Every session on this Mac, your SSH servers and the docker containers on them, as live cards in one window |
+| 🤖 **Knows when Claude Code is done** | Working, waiting, or stopped at the usage limit (with the reset time). A notification the moment it finishes, even on a remote server or inside a container |
+| 🗂 **File tree beside the terminal** | ⇧⌘E. Follows the session's folder, on your Mac, servers and containers. Click a file to hand it to Claude as `@path` |
+| ✏️ **Edit files without vim** | Double-click a `.md`, `.html`, `.sh`, `.py`, `.json`, `.yaml`… to open it next to the terminal. Markdown and HTML preview, ⌘S saves straight back to the server |
+| ⬇️⬆️ **Download and upload** | Right-click to download a file or folder, drag from Finder to upload. A progress bar with size and percent, and a Cancel button |
+| 🪟 **Terminals side by side** | Drag a tab onto the terminal to open it beside the current one. Watch Claude on two servers at once |
+| 🐳 **Docker containers, first class** | Enter containers for you, find the tmux sessions inside them, and open them in a tab |
+| 🔐 **Server-friendly SSH** | Uses your `~/.ssh/config`, keys or passwords, one shared connection per machine. Nothing to install on the server |
+
 ## Why I built Initia
 
 My day runs on tmux. Every project lives in its own tmux session, most of them running Claude Code, and they are spread over several machines: my Mac, a GPU server, a lab server, each reached over SSH and each holding several tmux sessions of its own.
@@ -50,7 +63,9 @@ Initia is the app I wanted for that:
 - **Claude Code aware**: see which sessions run Claude (or `happy claude`) and whether it is working or waiting, even inside a docker container. Get a notification when Claude finishes or hits its usage limit (with the reset time), see which account and plan Claude is signed in with on each machine, and quit it cleanly with **Quit Claude (/exit)**
 - **Machines**: this Mac and your `~/.ssh/config` machines side by side in the sidebar. Connect (key or password) to see and open each machine's tmux sessions, and add or edit machines in the app. Initia keeps one SSH session per machine, so your server sees a single login
 - **Docker containers**: keep tmux on the server and work inside a container. A session or preset can name a container, and Initia runs `docker exec` into it for you (with your folder and startup command). Initia also finds the tmux sessions running *inside* each container and opens them with `docker exec -it <container> tmux attach`. Each machine page lists its running containers
-- **File tree** (⇧⌘E): a folder tree beside the terminal that follows the session's folder, on this Mac, SSH machines and inside containers. Click a file to type its path (as `@path` for Claude), double-click to open it (VS Code Remote on SSH), and download or drag-and-drop upload files and folders
+- **File tree** (⇧⌘E, shown by default): a folder tree beside the terminal that follows the session's folder, on this Mac, SSH machines and inside containers. Click a file to type its path (as `@path` for Claude). Download files and folders, or drag them in from Finder to upload, with a progress bar and Cancel
+- **Built-in editor**: double-click a text file (`.md`, `.html`, `.sh`, `.py`, `.json`, `.yaml`, …) to open it next to the terminal. Markdown and HTML have a live preview. ⌘S saves back to the machine or container, and Initia warns you if the file changed since you opened it. Other files open in their app, or in VS Code Remote on SSH machines
+- **Side by side**: drag a tab onto the terminal (or right-click a tab → Open Beside Current Tab) to see up to four terminals and files at once
 - **Snippets**: one-click buttons under the terminal that type text for you (`/clear`, `/compact`, …)
 - **Manage tmux**: create sessions; rename sessions and windows; create and close windows
 - **Opens in Initia by default**, and still one click away in iTerm2, Terminal, cmux, Ghostty, WezTerm, kitty or Alacritty
