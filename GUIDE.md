@@ -125,7 +125,7 @@ A folder tree sits to the left of the terminal, like VS Code's Explorer. It is o
 - It **follows the session's current folder**: `cd` in the terminal and the tree moves there a few seconds later. If a window is inside a container (`docker exec`), the tree shows the container's home.
 - **Click a folder** to expand it. **Click a file** to type its path into the terminal, without pressing Enter. When Claude is running, it types `@path` so Claude picks up the file.
 - **Double-click a text file** (`.md`, `.html`, `.sh`, `.py`, `.json`, `.yaml`, …) to edit it right next to the terminal; see [Editing files](#editing-files). Other files (images, PDFs, spreadsheets) open in their app on this Mac, in VS Code Remote on an SSH machine if VS Code is installed, or as a downloaded copy. Double-click a folder to make it the top.
-- **Right-click** for Copy Path, Copy Relative Path, cd Here, Show in Finder, **Download to Downloads** and **Upload Here…**.
+- **Right-click** for Copy Path, Copy Relative Path, cd Here, Show in Finder, **Download To…** (pick any folder; Initia remembers the last one), **Download to Downloads** and **Upload Here…**. On this Mac, **Copy To…** does the same.
 - **Upload** by dropping files or folders from Finder onto a folder (or onto empty space for the top folder). Initia asks before replacing anything.
 - **Progress**: big transfers show a progress bar with the size and percent under the tree, and a **Cancel** button. A cancelled download leaves nothing behind; a cancelled upload may leave a partial file on the server.
 - The header has Parent folder, Go to the terminal's folder, show/hide hidden files, Upload and Refresh. Drag the divider to resize.

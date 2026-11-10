@@ -34,7 +34,7 @@
 | 🤖 **Knows when Claude Code is done** | Working, waiting, or stopped at the usage limit (with the reset time). A notification the moment it finishes, even on a remote server or inside a container |
 | 🗂 **File tree beside the terminal** | ⇧⌘E. Follows the session's folder, on your Mac, servers and containers. Click a file to hand it to Claude as `@path` |
 | ✏️ **Edit files without vim** | Double-click a `.md`, `.html`, `.sh`, `.py`, `.json`, `.yaml`… to open it next to the terminal. Markdown and HTML preview, ⌘S saves straight back to the server |
-| ⬇️⬆️ **Download and upload** | Right-click to download a file or folder, drag from Finder to upload. A progress bar with size and percent, and a Cancel button |
+| ⬇️⬆️ **Download and upload** | Right-click to download a file or folder to any folder you pick, drag from Finder to upload. A progress bar with size and percent, and a Cancel button |
 | 🪟 **Terminals side by side** | Drag a tab onto the terminal to open it beside the current one. Watch Claude on two servers at once |
 | 🐳 **Docker containers, first class** | Enter containers for you, find the tmux sessions inside them, and open them in a tab |
 | 🔐 **Server-friendly SSH** | Uses your `~/.ssh/config`, keys or passwords, one shared connection per machine. Nothing to install on the server |
