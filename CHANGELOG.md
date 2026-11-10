@@ -1,5 +1,15 @@
 # Changelog
 
+## 0.9.3-beta
+
+### New
+
+- **Split without dragging.** ⌘D opens a new terminal beside the current one, in the same machine and folder; ⇧⌘D opens it below. The new split button in the session header also opens any tab, or any session that isn't open yet, beside the current one
+- **Side by side or stacked**: switch the layout from the split button
+- **Syntax colors in the editor** for shell, Python, JavaScript/TypeScript, C-family, Go, Rust, Swift, YAML, JSON, HTML, SQL and Dockerfiles
+- Panes beside the terminal show which machine and container they're on
+- **New screenshots** in the README showing the file tree, editor, side-by-side terminals and transfers
+
 ## 0.9.2-beta
 
 ### Changes

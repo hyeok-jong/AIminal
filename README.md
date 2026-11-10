@@ -1,30 +1,13 @@
 # Initia
 
-**A tmux-native terminal for macOS.** See every tmux session on your Mac and on your servers, watch them live, know when Claude Code is done, and work in them from a built-in terminal.
+**The macOS terminal for people who run many tmux sessions, on many machines, with many Claude Codes.** See every session on your Mac, your servers and their docker containers in one window, know the moment Claude is done, open terminals side by side, and browse, edit, download and upload remote files without leaving the app.
 
 > Status: **public beta**, free during the beta. · 📖 **[Guide](GUIDE.md)** · **[한국어 사용설명서](GUIDE.ko.md)**
 
 <picture>
-  <source media="(prefers-color-scheme: dark)" srcset="screenshots/home-dark.png">
-  <img src="screenshots/home.png" alt="Initia home: every tmux session as a card with a live preview and Claude status, with machines and their sessions in the sidebar">
+  <source media="(prefers-color-scheme: dark)" srcset="screenshots/files-dark.png">
+  <img src="screenshots/files.png" alt="Initia: sessions on this Mac, a GPU server and a docker container in the sidebar; a file tree, Claude Code working in the terminal, and a rendered README beside it">
 </picture>
-
-<table>
-<tr>
-<td><picture>
-  <source media="(prefers-color-scheme: dark)" srcset="screenshots/overview-dark.png">
-  <img src="screenshots/overview.png" alt="Session overview: a live preview of every window, with Exit and terminal controls">
-</picture></td>
-<td><picture>
-  <source media="(prefers-color-scheme: dark)" srcset="screenshots/ssh-host-dark.png">
-  <img src="screenshots/ssh-host.png" alt="A remote machine over SSH: its tmux sessions and the editable ssh config entry">
-</picture></td>
-</tr>
-<tr>
-<td align="center">Live overview of every window</td>
-<td align="center">A remote machine and its tmux sessions</td>
-</tr>
-</table>
 
 ## Highlights
 
@@ -33,11 +16,62 @@
 | 🏠 **A home for all your tmux sessions** | Every session on this Mac, your SSH servers and the docker containers on them, as live cards in one window |
 | 🤖 **Knows when Claude Code is done** | Working, waiting, or stopped at the usage limit (with the reset time). A notification the moment it finishes, even on a remote server or inside a container |
 | 🗂 **File tree beside the terminal** | ⇧⌘E. Follows the session's folder, on your Mac, servers and containers. Right-click a file to hand it to Claude as `@path` |
-| ✏️ **Edit files without vim** | Double-click a `.md`, `.html`, `.sh`, `.py`, `.json`, `.yaml`… to open it next to the terminal. Markdown and HTML preview, ⌘S saves straight back to the server |
+| ✏️ **Edit files without vim** | Double-click a `.md`, `.html`, `.sh`, `.py`, `.json`, `.yaml`… to open it next to the terminal, with syntax colors. Markdown and HTML preview, ⌘S saves straight back to the server |
 | ⬇️⬆️ **Download and upload** | Right-click to download a file or folder to any folder you pick, drag from Finder to upload. A progress bar with size and percent, and a Cancel button |
-| 🪟 **Terminals side by side** | Drag a tab onto the terminal to open it beside the current one. Watch Claude on two servers at once |
+| 🪟 **Terminals side by side** | ⌘D, the split button, or drag a tab onto the terminal. Side by side or stacked. Watch Claude on two servers at once |
 | 🐳 **Docker containers, first class** | Enter containers for you, find the tmux sessions inside them, and open them in a tab |
 | 🔐 **Server-friendly SSH** | Uses your `~/.ssh/config`, keys or passwords, one shared connection per machine. Nothing to install on the server |
+
+## See it
+
+### Every session, one home
+Every tmux session on your Mac, your servers and inside their containers, as live cards. Claude's state on each, and a 🔔 when one is done.
+
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="screenshots/home-dark.png">
+  <img src="screenshots/home.png" alt="Home: every tmux session as a card with a live preview and Claude status">
+</picture>
+
+### Two machines, side by side
+Claude on your Mac and Claude inside a container on the GPU server, next to each other. Drag a tab onto the terminal, press ⌘D, or use the split button.
+
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="screenshots/split-dark.png">
+  <img src="screenshots/split.png" alt="Two Claude Code sessions side by side: one on this Mac, one in a docker container on gpu-box">
+</picture>
+
+### Edit without vim
+Double-click a script or config in the file tree and edit it next to the terminal, with syntax colors. ⌘S saves straight back to the server.
+
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="screenshots/editor-dark.png">
+  <img src="screenshots/editor.png" alt="Editing deploy.sh beside the terminal with syntax highlighting and an unsaved-changes dot">
+</picture>
+
+### Pull results off the server
+Download a checkpoint or a whole folder from a container with a progress bar, drop files from Finder to upload, and read the results as rendered Markdown.
+
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="screenshots/transfer-dark.png">
+  <img src="screenshots/transfer.png" alt="A container's file tree with a 1.84 GB download at 61%, an upload in progress, and RESULTS.md rendered beside the terminal">
+</picture>
+
+<table>
+<tr>
+<td><picture>
+  <source media="(prefers-color-scheme: dark)" srcset="screenshots/ssh-host-dark.png">
+  <img src="screenshots/ssh-host.png" alt="A remote machine: its tmux sessions, containers and editable ssh config">
+</picture></td>
+<td><picture>
+  <source media="(prefers-color-scheme: dark)" srcset="screenshots/palette-dark.png">
+  <img src="screenshots/palette.png" alt="⌘K command palette searching sessions, machines and commands">
+</picture></td>
+</tr>
+<tr>
+<td align="center">Machines from your <code>~/.ssh/config</code></td>
+<td align="center">⌘K to jump anywhere</td>
+</tr>
+</table>
 
 ## Why I built Initia
 
@@ -64,8 +98,8 @@ Initia is the app I wanted for that:
 - **Machines**: this Mac and your `~/.ssh/config` machines side by side in the sidebar. Connect (key or password) to see and open each machine's tmux sessions, and add or edit machines in the app. Initia keeps one SSH session per machine, so your server sees a single login
 - **Docker containers**: keep tmux on the server and work inside a container. A session or preset can name a container, and Initia runs `docker exec` into it for you (with your folder and startup command). Initia also finds the tmux sessions running *inside* each container and opens them with `docker exec -it <container> tmux attach`. Each machine page lists its running containers
 - **File tree** (⇧⌘E, shown by default): a folder tree beside the terminal that follows the session's folder, on this Mac, SSH machines and inside containers. Right-click a file to type its path into the terminal (as `@path` for Claude). Download files and folders, or drag them in from Finder to upload, with a progress bar and Cancel
-- **Built-in editor**: double-click a text file (`.md`, `.html`, `.sh`, `.py`, `.json`, `.yaml`, …) to open it next to the terminal. Markdown and HTML have a live preview. ⌘S saves back to the machine or container, and Initia warns you if the file changed since you opened it. Other files open in their app, or in VS Code Remote on SSH machines
-- **Side by side**: drag a tab onto the terminal (or right-click a tab → Open Beside Current Tab) to see up to four terminals and files at once
+- **Built-in editor** with syntax colors: double-click a text file (`.md`, `.html`, `.sh`, `.py`, `.json`, `.yaml`, …) to open it next to the terminal. Markdown and HTML have a live preview. ⌘S saves back to the machine or container, and Initia warns you if the file changed since you opened it. Other files open in their app, or in VS Code Remote on SSH machines
+- **Side by side**: ⌘D opens a new terminal beside the current one (⇧⌘D below it). The split button in the header also opens any tab or session beside it, and you can drag a tab onto the terminal. Up to four terminals and files, side by side or stacked
 - **Snippets**: one-click buttons under the terminal that type text for you (`/clear`, `/compact`, …)
 - **Manage tmux**: create sessions; rename sessions and windows; create and close windows
 - **Opens in Initia by default**, and still one click away in iTerm2, Terminal, cmux, Ghostty, WezTerm, kitty or Alacritty

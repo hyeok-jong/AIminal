@@ -140,12 +140,16 @@ Double-click a text file in the file tree and it opens in a pane beside the term
 - **Markdown** (`.md`) opens as a rendered preview (tables, task lists, code blocks); switch to **Edit** to change it. **HTML** has a preview too. Everything else (`.sh`, `.py`, `.json`, `.yaml`, `.toml`, `Dockerfile`, dotfiles, …) opens straight in the editor.
 - **⌘S** saves back to where the file lives: this Mac, an SSH machine or a container. An orange dot means unsaved changes.
 - If the file changed since you opened it (another person on the server, or Claude), Initia asks before overwriting.
-- The editor is made for code: no smart quotes or auto-correct. ⌘F finds.
+- The editor is made for code: syntax colors for shell, Python, JavaScript/TypeScript, C-family, Go, Rust, Swift, YAML, JSON, HTML, SQL and Dockerfiles; no smart quotes or auto-correct. ⌘F finds.
 - Closing a pane with unsaved changes asks to save. Files over 5 MB or that aren't UTF-8 text don't open in the editor; right-click → Open with Default App / Open in VS Code / Open a Copy instead.
 
 ## Side by side
 
-Watch more than one thing at once: **drag a tab** from the tab bar onto the terminal and drop it on the highlighted area on the right. Or right-click a tab → **Open Beside Current Tab**.
+Watch more than one thing at once:
+
+- **⌘D** opens a new terminal beside the current one, in the same machine and folder (**⇧⌘D** below it).
+- The **split button** in the session header opens a new terminal, any open tab, or any session that isn't open yet beside the current one, and switches between **Side by Side** and **Stacked**.
+- **Drag a tab** from the tab bar onto the terminal and drop it on the highlighted area. Or right-click a tab → **Open Beside Current Tab**.
 
 - Up to four panes: the current terminal plus three terminals or files.
 - Each pane has **Go to this tab** and **✕** (closes only the pane; the tab stays open).
@@ -249,6 +253,7 @@ Hold **⌘** for half a second to see all shortcuts; the tabs show their numbers
 | ⌘= / ⌘- / ⌘0 | Zoom the terminal in / out / reset |
 | ⇧⌘E | Show or hide the file tree |
 | ⌘S | Save the file open beside the terminal |
+| ⌘D / ⇧⌘D | New terminal beside / below |
 | ⌘R | Refresh |
 | ⌃⌘S | Show or hide the sidebar |
 | ⌃⌘F | Full screen |
