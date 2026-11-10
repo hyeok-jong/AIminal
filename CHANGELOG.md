@@ -1,5 +1,11 @@
 # Changelog
 
+## 0.8.1-beta
+
+### Fixes
+
+- **File tree: downloading files with Korean (or other non-English) names from a Linux server failed** with "Cannot stat: No such file or directory". macOS changed the name's Unicode form on its way to the server, so the server didn't recognize it. Names now reach the server byte for byte, for downloads, uploads, folder listings and opening in VS Code
+
 ## 0.8.0-beta
 
 ### New: file tree
