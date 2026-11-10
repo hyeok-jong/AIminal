@@ -17,7 +17,7 @@ MAJOR=$(sw_vers -productVersion | cut -d. -f1)
 URL="${AIMINAL_URL:-${TERMOOR_URL:-${INITIA_URL:-}}}"
 if [[ -z "$URL" ]]; then
 bold "==> Finding the latest Aiminal release"
-# Includes beta (prerelease) builds. Each release also carries Termoor-*.zip and Initia-*.zip for older updaters; skip those.
+# Includes beta (prerelease) builds. Each release also carries Termoor-*.zip and 0-Initia-*.zip for older updaters; skip those.
 URL=$(curl -fsSL "https://api.github.com/repos/$REPO/releases" \
     | grep -o '"browser_download_url": *"[^"]*/Aiminal-[^"]*\.zip"' \
     | head -n 1 | sed -E 's/.*"(https[^"]+)"/\1/')
