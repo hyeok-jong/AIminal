@@ -123,7 +123,8 @@ If you detach from inside tmux (Ctrl-b d), the tab shows **Reconnect** instead o
 A folder tree sits to the left of the terminal, like VS Code's Explorer. It is on by default; **⇧⌘E** (or the sidebar button in the session header) hides and shows it. It works the same on this Mac, SSH machines and docker containers.
 
 - It **follows the session's current folder**: `cd` in the terminal and the tree moves there a few seconds later. If a window is inside a container (`docker exec`), the tree shows the container's home.
-- **Click a folder** to expand it. **Click a file** to type its path into the terminal, without pressing Enter. When Claude is running, it types `@path` so Claude picks up the file.
+- **Click a folder** to expand it. Clicking a file only selects it.
+- **Right-click → Insert Path** types the file's path into the terminal, without pressing Enter. When Claude is running it's **Insert as @mention**, which types `@path` so Claude picks up the file.
 - **Double-click a text file** (`.md`, `.html`, `.sh`, `.py`, `.json`, `.yaml`, …) to edit it right next to the terminal; see [Editing files](#editing-files). Other files (images, PDFs, spreadsheets) open in their app on this Mac, in VS Code Remote on an SSH machine if VS Code is installed, or as a downloaded copy. Double-click a folder to make it the top.
 - **Right-click** for Copy Path, Copy Relative Path, cd Here, Show in Finder, **Download To…** (pick any folder; Initia remembers the last one), **Download to Downloads** and **Upload Here…**. On this Mac, **Copy To…** does the same.
 - **Upload** by dropping files or folders from Finder onto a folder (or onto empty space for the top folder). Initia asks before replacing anything.
