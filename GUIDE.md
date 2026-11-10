@@ -7,6 +7,7 @@ Initia is a home for your tmux sessions: on this Mac, on your servers over SSH, 
 - [Home](#home)
 - [The sidebar](#the-sidebar)
 - [Working in a session](#working-in-a-session)
+- [File tree](#file-tree)
 - [Starting sessions and presets](#starting-sessions-and-presets)
 - [Closing things](#closing-things)
 - [Claude Code](#claude-code)
@@ -115,6 +116,19 @@ Selecting a session opens it in Initia's terminal. The header shows its machine 
 
 If you detach from inside tmux (Ctrl-b d), the tab shows **Reconnect** instead of disappearing. If an SSH tab ends, it stays open with the last output and the exit code, so you can see why.
 
+## File tree
+
+Press **⇧⌘E** (or the sidebar button in the session header) to show a folder tree to the left of the terminal, like VS Code's Explorer. It works the same on this Mac, SSH machines and docker containers.
+
+- It **follows the session's current folder**: `cd` in the terminal and the tree moves there a few seconds later. If a window is inside a container (`docker exec`), the tree shows the container's home.
+- **Click a folder** to expand it. **Click a file** to type its path into the terminal, without pressing Enter. When Claude is running, it types `@path` so Claude picks up the file.
+- **Double-click** a file to open it: with its default app on this Mac; on an SSH machine with VS Code Remote if VS Code is installed (otherwise a copy); in a container, a copy. Double-click a folder to make it the top.
+- **Right-click** for Copy Path, Copy Relative Path, cd Here, Show in Finder, **Download to Downloads** and **Upload Here…**.
+- **Upload** by dropping files or folders from Finder onto a folder (or onto empty space for the top folder). Initia asks before replacing anything.
+- The header has Parent folder, Go to the terminal's folder, show/hide hidden files, Upload and Refresh. Drag the divider to resize.
+
+Transfers use `tar` over Initia's existing SSH connection (and `docker exec` for containers), so folders work and nothing has to be installed on the server. Listing folders reuses one extra SSH session per machine, opened the first time you use the tree.
+
 ## Starting sessions and presets
 
 **New tmux session** (⌘N, or the ⊕ card on Home) asks for:
@@ -211,6 +225,7 @@ Hold **⌘** for half a second to see all shortcuts; the tabs show their numbers
 | ⌘W | Close window (Ctrl-b d) for the current tab |
 | ⌘N / ⌘T / ⇧⌘N | New tmux session / new terminal (no tmux) / new preset |
 | ⌘= / ⌘- / ⌘0 | Zoom the terminal in / out / reset |
+| ⇧⌘E | Show or hide the file tree |
 | ⌘R | Refresh |
 | ⌃⌘S | Show or hide the sidebar |
 | ⌃⌘F | Full screen |
@@ -248,5 +263,6 @@ Errors and warnings are saved to `~/Library/Logs/Initia/initia.log` (it opens in
 | `~/.ssh/config` | your SSH machines (edited only when you save a machine; backup in `config.initia-backup`) |
 | `~/.config/initia/ssh/` (or `/tmp/initia-<uid>`) | Initia's own SSH connection-sharing sockets |
 | `~/Library/Logs/Initia/initia.log` | logs |
+| `~/Downloads` | files you download from the file tree |
 
 Initia never stores passwords. On each machine it reads tmux's state, the process list, the bottom of each pane's screen, the running containers, and the account fields of `~/.claude.json` (email and plan, not tokens). It sends nothing anywhere except the update check to GitHub.

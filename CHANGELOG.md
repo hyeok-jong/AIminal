@@ -1,5 +1,15 @@
 # Changelog
 
+## 0.8.0-beta
+
+### New: file tree
+
+- **A folder tree beside the terminal** (⇧⌘E, or the sidebar button in the session header), like VS Code's Explorer. It follows the session's current folder and works on this Mac, SSH machines and docker containers
+- **Click a file** to type its path into the terminal (no Enter). In a Claude session it types `@path`, so Claude reads the file
+- **Double-click** to open: the default app on this Mac, VS Code Remote on an SSH machine (if VS Code is installed), or a downloaded copy
+- **Download and upload**: right-click → Download to Downloads, or drop files and folders from Finder onto a folder to upload. Folders work too, and Initia asks before replacing anything. Transfers run over Initia's existing SSH connection with `tar`, so nothing needs to be installed on the server
+- Right-click also has Copy Path, Copy Relative Path, cd Here and Show in Finder; the header has Parent folder, Go to the terminal's folder, hidden files and Refresh
+
 ## 0.7.3-beta
 
 ### Fixes
