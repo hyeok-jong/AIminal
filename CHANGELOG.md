@@ -1,5 +1,11 @@
 # Changelog
 
+## 0.9.2-beta
+
+### Changes
+
+- **Clicking a file in the file tree only selects it**; it no longer types the path into the terminal. To insert a path, right-click → **Insert Path** (or **Insert as @mention** in a Claude session)
+
 ## 0.9.1-beta
 
 ### New
