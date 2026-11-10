@@ -1,6 +1,6 @@
-# Termoor Guide
+# Aiminal Guide
 
-Termoor is a home for your tmux sessions: on this Mac, on your servers over SSH, and inside docker containers on those servers. This guide walks through everything it does. For a quick overview, see the [README](README.md). 한국어: [GUIDE.ko.md](GUIDE.ko.md).
+Aiminal is a home for your tmux sessions: on this Mac, on your servers over SSH, and inside docker containers on those servers. This guide walks through everything it does. For a quick overview, see the [README](README.md). 한국어: [GUIDE.ko.md](GUIDE.ko.md).
 
 - [Install and update](#install-and-update)
 - [The big picture](#the-big-picture)
@@ -22,27 +22,27 @@ Termoor is a home for your tmux sessions: on this Mac, on your servers over SSH,
 
 ---
 
-> **Initia is now Termoor** (0.10). Installed copies of Initia update themselves to Termoor: the app is renamed to Termoor.app, `~/.config/initia` moves to `~/.config/termoor`, and your settings, presets, notifications and open tabs carry over.
+> **Termoor is now Aiminal** (0.11; before 0.10 the app was called Initia). Installed copies of Termoor or Initia update themselves to Aiminal: the app is renamed to Aiminal.app, `~/.config/termoor` (or `~/.config/initia`) moves to `~/.config/aiminal`, and your settings, presets, notifications and open tabs carry over.
 
 ## Install and update
 
 Requirements: macOS 15 or later, and [tmux](https://github.com/tmux/tmux) (`brew install tmux`).
 
 ```sh
-curl -fsSL https://raw.githubusercontent.com/hyeok-jong/Termoor/beta/install.sh | bash
+curl -fsSL https://raw.githubusercontent.com/hyeok-jong/Aiminal/beta/install.sh | bash
 ```
 
-The script downloads the newest release, checks its checksum and installs Termoor into `/Applications` (or `~/Applications`). Termoor is not notarized yet, so if you install the zip by hand, run `xattr -dr com.apple.quarantine /Applications/Termoor.app` once.
+The script downloads the newest release, checks its checksum and installs Aiminal into `/Applications` (or `~/Applications`). Aiminal is not notarized yet, so if you install the zip by hand, run `xattr -dr com.apple.quarantine /Applications/Aiminal.app` once.
 
-**Updates.** Termoor checks for a new version when it starts and every 6 hours. When one is out, the **Update** button in the toolbar (and in the menu bar popover) says so; click it to download, verify and restart. Your tmux sessions keep running and the tabs you had open come back. You'll also get a notification, at most once a day. Settings → General → Updates lets you check now, turn automatic checks off, or skip beta versions.
+**Updates.** Aiminal checks for a new version when it starts and every 6 hours. When one is out, the **Update** button in the toolbar (and in the menu bar popover) says so; click it to download, verify and restart. Your tmux sessions keep running and the tabs you had open come back. You'll also get a notification, at most once a day. Settings → General → Updates lets you check now, turn automatic checks off, or skip beta versions.
 
-**First launch.** macOS asks whether Termoor may send notifications. Allow it if you want "Claude finished" alerts. You can change it later in System Settings → Notifications → Termoor.
+**First launch.** macOS asks whether Aiminal may send notifications. Allow it if you want "Claude finished" alerts. You can change it later in System Settings → Notifications → Aiminal.
 
-Termoor lives in the menu bar and the Dock. Clicking the Dock icon (or launching it again) opens the main window, which always starts at Home.
+Aiminal lives in the menu bar and the Dock. Clicking the Dock icon (or launching it again) opens the main window, which always starts at Home.
 
 ## The big picture
 
-Termoor organizes everything as a tree:
+Aiminal organizes everything as a tree:
 
 ```
 Machine            this Mac, or a server from ~/.ssh/config
@@ -53,21 +53,21 @@ Machine            this Mac, or a server from ~/.ssh/config
 ```
 
 - A **machine** is one place you log in to: this Mac, or one SSH account on a server.
-- A **tmux session** keeps running whether or not you are looking at it. Termoor shows it, previews it, and opens it.
-- A **tab** is Termoor's own terminal attached to a session. Closing a tab only detaches; the session keeps running.
+- A **tmux session** keeps running whether or not you are looking at it. Aiminal shows it, previews it, and opens it.
+- A **tab** is Aiminal's own terminal attached to a session. Closing a tab only detaches; the session keeps running.
 - A **plain terminal** is a tab without tmux (⌘T). It ends when you close it.
 
 Each session has a colored dot that tells you where it is open:
 
 | Dot | Meaning |
 |---|---|
-| 🟢 green | Open in an Termoor tab |
+| 🟢 green | Open in an Aiminal tab |
 | 🔵 blue | Attached in another terminal (iTerm2, Terminal, …) |
 | ⚪ gray | Running in the background, not open anywhere |
 
 ## Home
 
-Home is the start screen. At the top, four tiles count your tmux sessions and windows, sessions open in Termoor, Claude sessions (working, waiting, or at the usage limit), and background sessions.
+Home is the start screen. At the top, four tiles count your tmux sessions and windows, sessions open in Aiminal, Claude sessions (working, waiting, or at the usage limit), and background sessions.
 
 Below, every machine and every container with tmux gets its own section of **session cards**. A card shows:
 
@@ -108,7 +108,7 @@ PRESETS
 
 ## Working in a session
 
-Selecting a session opens it in Termoor's terminal. The header shows its machine (or container), folder and windows, plus:
+Selecting a session opens it in Aiminal's terminal. The header shows its machine (or container), folder and windows, plus:
 
 - **Terminal / Overview**: Overview shows a live preview of every window, where you can rename, add or close windows (double-click a name to rename).
 - **Close**: see [Closing things](#closing-things).
@@ -128,12 +128,12 @@ A folder tree sits to the left of the terminal, like VS Code's Explorer. It is o
 - **Click a folder** to expand it. Clicking a file only selects it.
 - **Right-click → Insert Path** types the file's path into the terminal, without pressing Enter. When Claude is running it's **Insert as @mention**, which types `@path` so Claude picks up the file.
 - **Double-click a text file** (`.md`, `.html`, `.sh`, `.py`, `.json`, `.yaml`, …) to edit it right next to the terminal; see [Editing files](#editing-files). Other files (images, PDFs, spreadsheets) open in their app on this Mac, in VS Code Remote on an SSH machine if VS Code is installed, or as a downloaded copy. Double-click a folder to make it the top.
-- **Right-click** for Copy Path, Copy Relative Path, cd Here, Show in Finder, **Download To…** (pick any folder; Termoor remembers the last one), **Download to Downloads** and **Upload Here…**. On this Mac, **Copy To…** does the same.
-- **Upload** by dropping files or folders from Finder onto a folder (or onto empty space for the top folder). Termoor asks before replacing anything.
+- **Right-click** for Copy Path, Copy Relative Path, cd Here, Show in Finder, **Download To…** (pick any folder; Aiminal remembers the last one), **Download to Downloads** and **Upload Here…**. On this Mac, **Copy To…** does the same.
+- **Upload** by dropping files or folders from Finder onto a folder (or onto empty space for the top folder). Aiminal asks before replacing anything.
 - **Progress**: big transfers show a progress bar with the size and percent under the tree, and a **Cancel** button. A cancelled download leaves nothing behind; a cancelled upload may leave a partial file on the server.
 - The header has Parent folder, Go to the terminal's folder, show/hide hidden files, Upload and Refresh. Drag the divider to resize.
 
-Nothing has to be installed on the server: transfers run over Termoor's existing SSH connection, and folders work too.
+Nothing has to be installed on the server: transfers run over Aiminal's existing SSH connection, and folders work too.
 
 ## Editing files
 
@@ -141,7 +141,7 @@ Double-click a text file in the file tree and it opens in a pane beside the term
 
 - **Markdown** (`.md`) opens as a rendered preview (tables, task lists, code blocks); switch to **Edit** to change it. **HTML** has a preview too. Everything else (`.sh`, `.py`, `.json`, `.yaml`, `.toml`, `Dockerfile`, dotfiles, …) opens straight in the editor.
 - **⌘S** saves back to where the file lives: this Mac, an SSH machine or a container. An orange dot means unsaved changes.
-- If the file changed since you opened it (another person on the server, or Claude), Termoor asks before overwriting.
+- If the file changed since you opened it (another person on the server, or Claude), Aiminal asks before overwriting.
 - The editor is made for code: syntax colors for shell, Python, JavaScript/TypeScript, C-family, Go, Rust, Swift, YAML, JSON, HTML, SQL and Dockerfiles; no smart quotes or auto-correct. ⌘F finds.
 - Closing a pane with unsaved changes asks to save. Files over 5 MB or that aren't UTF-8 text don't open in the editor; right-click → Open with Default App / Open in VS Code / Open a Copy instead.
 
@@ -169,9 +169,9 @@ Watch more than one thing at once:
 | Keep running in the background (tmux) | on by default; turn off for a plain terminal |
 | Session name / Startup command | for example `claude` or `npm run dev` |
 
-**Presets** save that recipe so a session is one click away. Start one from Home (Quick start), the sidebar, or ⌘K. Mark a preset **autostart** to bring it up with the **Autostart** button, or automatically when Termoor launches (Settings → General). A new install comes with an `example` preset that opens Claude Code in your home folder.
+**Presets** save that recipe so a session is one click away. Start one from Home (Quick start), the sidebar, or ⌘K. Mark a preset **autostart** to bring it up with the **Autostart** button, or automatically when Aiminal launches (Settings → General). A new install comes with an `example` preset that opens Claude Code in your home folder.
 
-Presets live in `~/.config/termoor/config.json`:
+Presets live in `~/.config/aiminal/config.json`:
 
 ```json
 "presets": [
@@ -189,20 +189,20 @@ The **Close** menu in the session header (and in every session's right-click men
 
 | Action | What happens |
 |---|---|
-| **Close window (Ctrl-b d)** | Closes Termoor's tab. The tmux session and Claude keep running. Same as the tab's ✕ and ⌘W. |
+| **Close window (Ctrl-b d)** | Closes Aiminal's tab. The tmux session and Claude keep running. Same as the tab's ✕ and ⌘W. |
 | **Quit Claude (/exit)** | Sends `/exit` to Claude. The shell and the session stay. |
-| **End tmux session…** | Ends the session. If Claude runs in it, Termoor quits Claude with `/exit` first, waits for it, then ends the session. |
+| **End tmux session…** | Ends the session. If Claude runs in it, Aiminal quits Claude with `/exit` first, waits for it, then ends the session. |
 
 ## Claude Code
 
-Termoor notices Claude Code in any tmux window: on this Mac, over SSH, and inside containers.
+Aiminal notices Claude Code in any tmux window: on this Mac, over SSH, and inside containers.
 
-- **Working or waiting.** While Claude works, its status line says "esc to interrupt"; Termoor reads the bottom of the pane every few seconds. (Inside tmux, Claude keeps its window title fixed, so the title alone can't tell.)
+- **Working or waiting.** While Claude works, its status line says "esc to interrupt"; Aiminal reads the bottom of the pane every few seconds. (Inside tmux, Claude keeps its window title fixed, so the title alone can't tell.)
 - **Finished.** When Claude goes from working to waiting in a session you aren't looking at, you get a notification with the task name, a bell on the session, and a Dock badge. Click the notification to jump to it.
 - **Usage limit.** When Claude stops at its usage limit ("Usage limit reached · resets 8:50pm"), the session shows ⚠ **Limit · 8:50pm** and you get one notification instead of "finished".
-- **Account.** Machine pages, container rows and Claude session headers show which account Claude Code is signed in with there, and its plan (for example `you@example.com · Max 5x`). Termoor reads this from `~/.claude.json`; it never reads tokens.
-- **Happy.** Sessions started with `happy claude` show **Happy**. In Happy's remote mode (the phone screen), Claude's own screen is hidden, so Termoor can't tell when it is working; the badge says so.
-- **Trust prompt.** In a folder Claude hasn't been trusted in yet, Claude waits on a "trust this folder?" prompt; Termoor shows it as waiting.
+- **Account.** Machine pages, container rows and Claude session headers show which account Claude Code is signed in with there, and its plan (for example `you@example.com · Max 5x`). Aiminal reads this from `~/.claude.json`; it never reads tokens.
+- **Happy.** Sessions started with `happy claude` show **Happy**. In Happy's remote mode (the phone screen), Claude's own screen is hidden, so Aiminal can't tell when it is working; the badge says so.
+- **Trust prompt.** In a folder Claude hasn't been trusted in yet, Claude waits on a "trust this folder?" prompt; Aiminal shows it as waiting.
 
 Turn notifications or their sound off in Settings → General → Notifications.
 
@@ -210,21 +210,21 @@ Turn notifications or their sound off in Settings → General → Notifications.
 
 The **Machines (SSH)** section lists the hosts in your `~/.ssh/config` next to this Mac.
 
-**Connecting.** Click a machine and **Connect**. With an SSH key, it connects in the background. If the server wants a password (or a host key confirmation), a terminal tab opens so you can type it once; Termoor reuses that login while you stay connected. If the server can't be reached (Tailscale off, wrong address), Termoor shows the actual SSH error instead.
+**Connecting.** Click a machine and **Connect**. With an SSH key, it connects in the background. If the server wants a password (or a host key confirmation), a terminal tab opens so you can type it once; Aiminal reuses that login while you stay connected. If the server can't be reached (Tailscale off, wrong address), Aiminal shows the actual SSH error instead.
 
-**One login.** Termoor keeps a single SSH session per machine and streams the session list, Claude status and previews over it every 3 seconds, so a login monitor on the server sees one login, not one every few seconds. Opening a session in a tab is its own login, as usual.
+**One login.** Aiminal keeps a single SSH session per machine and streams the session list, Claude status and previews over it every 3 seconds, so a login monitor on the server sees one login, not one every few seconds. Opening a session in a tab is its own login, as usual.
 
-**Editing machines.** Add a machine with **Add machine (SSH)**, or edit one on its page: name (Host), address (HostName), user, port, key file and jump host. Termoor only rewrites the lines you change, keeps your comments and other options, writes through symlinks (dotfiles setups), and keeps the previous file as `~/.ssh/config.termoor-backup`. Hosts from `Include`d files are shown read-only.
+**Editing machines.** Add a machine with **Add machine (SSH)**, or edit one on its page: name (Host), address (HostName), user, port, key file and jump host. Aiminal only rewrites the lines you change, keeps your comments and other options, writes through symlinks (dotfiles setups), and keeps the previous file as `~/.ssh/config.aiminal-backup`. Hosts from `Include`d files are shown read-only.
 
 **Notes**
-- Termoor runs tmux with `-u`, so it works on servers whose SSH sessions have no language setting (macOS servers in particular), and Korean or box-drawing characters show correctly.
+- Aiminal runs tmux with `-u`, so it works on servers whose SSH sessions have no language setting (macOS servers in particular), and Korean or box-drawing characters show correctly.
 - Renaming a machine changes its connection; connect again afterwards.
 
 ## Docker containers
 
-Termoor supports both common ways of working in containers.
+Aiminal supports both common ways of working in containers.
 
-**1. tmux on the machine, work inside the container.** Keep tmux on the server and `docker exec` into a container from a tmux session. Give a new session or preset a **Container**, and Termoor runs
+**1. tmux on the machine, work inside the container.** Keep tmux on the server and `docker exec` into a container from a tmux session. Give a new session or preset a **Container**, and Aiminal runs
 
 ```
 docker exec -it -w <folder> <container> bash -lc '<command>; exec bash -l'
@@ -232,13 +232,13 @@ docker exec -it -w <folder> <container> bash -lc '<command>; exec bash -l'
 
 for you, so the session lands in the container's folder with your command running, and stays in the container shell after it ends. Session cards show 🐳 and the container name. Claude inside the container is detected from its title and screen, since its processes aren't under the tmux pane.
 
-**2. tmux inside the container.** Termoor also reads the tmux sessions running *inside* each container (every 15 seconds, over the machine's existing SSH session). They appear under the machine as 🐳 container → sessions, and opening one runs `docker exec -it <container> tmux attach -t <session>` in Termoor's terminal. Claude detection, notifications, Close and rename all work there too.
+**2. tmux inside the container.** Aiminal also reads the tmux sessions running *inside* each container (every 15 seconds, over the machine's existing SSH session). They appear under the machine as 🐳 container → sessions, and opening one runs `docker exec -it <container> tmux attach -t <session>` in Aiminal's terminal. Claude detection, notifications, Close and rename all work there too.
 
 A machine's page lists its running containers with:
 - **tmux + docker exec**: a new tmux session on the machine that enters the container
 - **docker exec**: a shell in the container, without tmux
 
-Your account needs permission to run `docker` on that machine. With it, Termoor shows every container there (a docker user is effectively an admin of the machine).
+Your account needs permission to run `docker` on that machine. With it, Aiminal shows every container there (a docker user is effectively an admin of the machine).
 
 ## Keyboard
 
@@ -268,13 +268,13 @@ The **Go** menu lists the navigation shortcuts. They work while the terminal has
 
 Open with ⌘,.
 
-- **General**: language (English, 한국어), where clicking a session opens it (Termoor by default, or your external terminal), terminal font size, Dock icon, launch at login, autostart presets, notifications, and updates.
+- **General**: language (English, 한국어), where clicking a session opens it (Aiminal by default, or your external terminal), terminal font size, Dock icon, launch at login, autostart presets, notifications, and updates.
 - **Terminals**: your default external terminal (iTerm2, Terminal, cmux, Ghostty, WezTerm, kitty, Alacritty) and its options. For cmux, set its socket access to `password` in cmux Settings → Automation and enter the same password here.
 - **Advanced**: tmux path and version, the log file, and the config file.
 
 ## Logs and troubleshooting
 
-Errors and warnings are saved to `~/Library/Logs/Termoor/termoor.log` (it opens in Console.app too). **Show Logs** (⇧⌘L) lets you filter, search, expand details and copy. Failed commands are logged with the exact command, its exit code and its output. When something fails, the toolbar shows a red count and the message has a **Log** button.
+Errors and warnings are saved to `~/Library/Logs/Aiminal/aiminal.log` (it opens in Console.app too). **Show Logs** (⇧⌘L) lets you filter, search, expand details and copy. Failed commands are logged with the exact command, its exit code and its output. When something fails, the toolbar shows a red count and the message has a **Log** button.
 
 | Problem | Try |
 |---|---|
@@ -282,17 +282,17 @@ Errors and warnings are saved to `~/Library/Logs/Termoor/termoor.log` (it opens 
 | A machine won't connect | The machine page and the log show the SSH error. Check Tailscale/VPN, the address, and that `ssh <host>` works in a terminal. |
 | A password prompt tab closes at once | Look at the tab's last line (it now stays open) or the log; usually the server is unreachable. |
 | Sessions on a server don't appear | Make sure tmux is installed there and you are connected (green dot). |
-| No notifications | Allow Termoor in System Settings → Notifications, and check Settings → General → Notifications. In Happy's remote mode, Claude can't be tracked. |
-| Claude in a container isn't detected | Use a recent Claude Code; Termoor reads its title and screen, so the session should show Claude's normal screen. |
+| No notifications | Allow Aiminal in System Settings → Notifications, and check Settings → General → Notifications. In Happy's remote mode, Claude can't be tracked. |
+| Claude in a container isn't detected | Use a recent Claude Code; Aiminal reads its title and screen, so the session should show Claude's normal screen. |
 
 ## Files and privacy
 
 | File | |
 |---|---|
-| `~/.config/termoor/config.json` | settings and presets |
-| `~/.ssh/config` | your SSH machines (edited only when you save a machine; backup in `config.termoor-backup`) |
-| `~/.config/termoor/ssh/` (or `/tmp/termoor-<uid>`) | Termoor's own SSH connection-sharing sockets |
-| `~/Library/Logs/Termoor/termoor.log` | logs |
+| `~/.config/aiminal/config.json` | settings and presets |
+| `~/.ssh/config` | your SSH machines (edited only when you save a machine; backup in `config.aiminal-backup`) |
+| `~/.config/aiminal/ssh/` (or `/tmp/aiminal-<uid>`) | Aiminal's own SSH connection-sharing sockets |
+| `~/Library/Logs/Aiminal/aiminal.log` | logs |
 | `~/Downloads` | files you download from the file tree |
 
-Termoor never stores passwords. On each machine it reads tmux's state, the process list, the bottom of each pane's screen, the running containers, and the account fields of `~/.claude.json` (email and plan, not tokens). It sends nothing anywhere except the update check to GitHub.
+Aiminal never stores passwords. On each machine it reads tmux's state, the process list, the bottom of each pane's screen, the running containers, and the account fields of `~/.claude.json` (email and plan, not tokens). It sends nothing anywhere except the update check to GitHub.

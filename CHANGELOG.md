@@ -1,5 +1,17 @@
 # Changelog
 
+## 0.11.0-beta
+
+### Termoor is now Aiminal
+
+Same app, new name, one more time. "Termoor" turned out to be taken by another tmux app (termoor.app, tmux on iPad) and sits one letter from Termora, an existing terminal. **Aiminal** (AI + terminal) is unique and says what this app is for: a terminal for many tmux sessions on many machines, with Claude Code agents running in them.
+
+- **Updating is automatic.** Termoor (and Initia) update themselves to Aiminal like any other update. On its first launch the app renames itself to Aiminal.app
+- **Everything carries over**: settings, presets and snippets move from `~/.config/termoor` (or `~/.config/initia`) to `~/.config/aiminal`, with links left at the old paths; notification permission, open tabs and the sidebar layout stay as they were
+- The GitHub repository is now [hyeok-jong/Aiminal](https://github.com/hyeok-jong/Aiminal). Old links and the old install commands keep working
+- New install command: `curl -fsSL https://raw.githubusercontent.com/hyeok-jong/Aiminal/beta/install.sh | bash`. It also removes an old Termoor.app or Initia.app next to it
+- Logs now live in `~/Library/Logs/Aiminal/aiminal.log`, and the ssh config backup is `~/.ssh/config.aiminal-backup`
+
 ## 0.10.0-beta
 
 ### Initia is now Termoor
