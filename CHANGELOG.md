@@ -1,5 +1,14 @@
 # Changelog
 
+## 0.9.0-beta
+
+### New
+
+- **Edit files without vim.** Double-click a text file in the file tree (`.md`, `.html`, `.sh`, `.py`, `.json`, `.yaml`, and more) to open it beside the terminal. Markdown opens as a rendered preview (tables, task lists, code blocks) and HTML has a preview too. ⌘S saves back to this Mac, the SSH machine or the container, and Initia warns you if the file changed since you opened it
+- **Terminals side by side.** Drag a tab onto the terminal, or right-click a tab → Open Beside Current Tab, to see up to four terminals and files at once
+- **Progress bar for transfers**, with the size, percent and a Cancel button
+- **The file tree is now shown by default** (⇧⌘E still hides it)
+
 ## 0.8.1-beta
 
 ### Fixes

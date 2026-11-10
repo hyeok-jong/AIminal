@@ -8,6 +8,8 @@ Initia is a home for your tmux sessions: on this Mac, on your servers over SSH, 
 - [The sidebar](#the-sidebar)
 - [Working in a session](#working-in-a-session)
 - [File tree](#file-tree)
+- [Editing files](#editing-files)
+- [Side by side](#side-by-side)
 - [Starting sessions and presets](#starting-sessions-and-presets)
 - [Closing things](#closing-things)
 - [Claude Code](#claude-code)
@@ -118,16 +120,35 @@ If you detach from inside tmux (Ctrl-b d), the tab shows **Reconnect** instead o
 
 ## File tree
 
-Press **⇧⌘E** (or the sidebar button in the session header) to show a folder tree to the left of the terminal, like VS Code's Explorer. It works the same on this Mac, SSH machines and docker containers.
+A folder tree sits to the left of the terminal, like VS Code's Explorer. It is on by default; **⇧⌘E** (or the sidebar button in the session header) hides and shows it. It works the same on this Mac, SSH machines and docker containers.
 
 - It **follows the session's current folder**: `cd` in the terminal and the tree moves there a few seconds later. If a window is inside a container (`docker exec`), the tree shows the container's home.
 - **Click a folder** to expand it. **Click a file** to type its path into the terminal, without pressing Enter. When Claude is running, it types `@path` so Claude picks up the file.
-- **Double-click** a file to open it: with its default app on this Mac; on an SSH machine with VS Code Remote if VS Code is installed (otherwise a copy); in a container, a copy. Double-click a folder to make it the top.
+- **Double-click a text file** (`.md`, `.html`, `.sh`, `.py`, `.json`, `.yaml`, …) to edit it right next to the terminal; see [Editing files](#editing-files). Other files (images, PDFs, spreadsheets) open in their app on this Mac, in VS Code Remote on an SSH machine if VS Code is installed, or as a downloaded copy. Double-click a folder to make it the top.
 - **Right-click** for Copy Path, Copy Relative Path, cd Here, Show in Finder, **Download to Downloads** and **Upload Here…**.
 - **Upload** by dropping files or folders from Finder onto a folder (or onto empty space for the top folder). Initia asks before replacing anything.
+- **Progress**: big transfers show a progress bar with the size and percent under the tree, and a **Cancel** button. A cancelled download leaves nothing behind; a cancelled upload may leave a partial file on the server.
 - The header has Parent folder, Go to the terminal's folder, show/hide hidden files, Upload and Refresh. Drag the divider to resize.
 
-Transfers use `tar` over Initia's existing SSH connection (and `docker exec` for containers), so folders work and nothing has to be installed on the server. Listing folders reuses one extra SSH session per machine, opened the first time you use the tree.
+Nothing has to be installed on the server: transfers run over Initia's existing SSH connection, and folders work too.
+
+## Editing files
+
+Double-click a text file in the file tree and it opens in a pane beside the terminal, so you don't need vim for a quick change.
+
+- **Markdown** (`.md`) opens as a rendered preview (tables, task lists, code blocks); switch to **Edit** to change it. **HTML** has a preview too. Everything else (`.sh`, `.py`, `.json`, `.yaml`, `.toml`, `Dockerfile`, dotfiles, …) opens straight in the editor.
+- **⌘S** saves back to where the file lives: this Mac, an SSH machine or a container. An orange dot means unsaved changes.
+- If the file changed since you opened it (another person on the server, or Claude), Initia asks before overwriting.
+- The editor is made for code: no smart quotes or auto-correct. ⌘F finds.
+- Closing a pane with unsaved changes asks to save. Files over 5 MB or that aren't UTF-8 text don't open in the editor; right-click → Open with Default App / Open in VS Code / Open a Copy instead.
+
+## Side by side
+
+Watch more than one thing at once: **drag a tab** from the tab bar onto the terminal and drop it on the highlighted area on the right. Or right-click a tab → **Open Beside Current Tab**.
+
+- Up to four panes: the current terminal plus three terminals or files.
+- Each pane has **Go to this tab** and **✕** (closes only the pane; the tab stays open).
+- Tabs shown beside the current one are outlined in the tab bar. Every tab keeps its own layout.
 
 ## Starting sessions and presets
 
@@ -226,6 +247,7 @@ Hold **⌘** for half a second to see all shortcuts; the tabs show their numbers
 | ⌘N / ⌘T / ⇧⌘N | New tmux session / new terminal (no tmux) / new preset |
 | ⌘= / ⌘- / ⌘0 | Zoom the terminal in / out / reset |
 | ⇧⌘E | Show or hide the file tree |
+| ⌘S | Save the file open beside the terminal |
 | ⌘R | Refresh |
 | ⌃⌘S | Show or hide the sidebar |
 | ⌃⌘F | Full screen |
