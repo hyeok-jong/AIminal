@@ -1,5 +1,11 @@
 # Changelog
 
+## 0.9.1-beta
+
+### New
+
+- **Choose where downloads go.** Right-click a file or folder → **Download To…** to pick any folder (Initia starts in the last one you used). **Download to Downloads** still saves in one click. On this Mac, **Copy To…** copies a file or folder anywhere
+
 ## 0.9.0-beta
 
 ### New
