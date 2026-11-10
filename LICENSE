@@ -1,19 +1,19 @@
-Initia — Copyright (c) 2026 hyeok-jong. All rights reserved.
+AIminal — Copyright (c) 2026 hyeok-jong. All rights reserved.
 
-Initia is proprietary software. The source code is not public.
+AIminal is proprietary software. The source code is not public.
 
 During the beta you may download the binary releases published at
-https://github.com/hyeok-jong/Initia and use them free of charge on your
+https://github.com/hyeok-jong/AIminal and use them free of charge on your
 own computers.
 
 You may not, except where applicable law expressly allows it:
-  - redistribute, sell, rent or sublicense Initia or any part of it;
-  - modify, reverse engineer, decompile or disassemble Initia;
+  - redistribute, sell, rent or sublicense AIminal or any part of it;
+  - modify, reverse engineer, decompile or disassemble AIminal;
   - remove or alter any copyright or license notices.
 
-Initia is provided "AS IS", without warranty of any kind, express or
+AIminal is provided "AS IS", without warranty of any kind, express or
 implied. In no event shall the author be liable for any claim, damages or
-other liability arising from the use of Initia.
+other liability arising from the use of AIminal.
 
 Third-party components:
   - SwiftTerm (https://github.com/migueldeicaza/SwiftTerm), MIT License,

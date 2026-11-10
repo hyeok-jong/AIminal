@@ -1,5 +1,16 @@
 # Changelog
 
+## 0.12.0-beta
+
+### Aiminal is now spelled AIminal
+
+Same app, same name, capital **AI**: the app is a terminal for AI agents, and the name now says so at a glance. Nothing else changes.
+
+- **Updating is automatic.** Aiminal 0.11 (and Termoor or Initia) update themselves like any other release; on its first launch the app renames itself to AIminal.app
+- Settings stay in `~/.config/aiminal` and logs in `~/Library/Logs/AIminal/aiminal.log`; notification permission, presets, open tabs and the sidebar layout carry over
+- The GitHub repository is now [hyeok-jong/AIminal](https://github.com/hyeok-jong/AIminal). The old links and install commands keep working
+- Install command: `curl -fsSL https://raw.githubusercontent.com/hyeok-jong/AIminal/beta/install.sh | bash`
+
 ## 0.11.0-beta
 
 ### Termoor is now Aiminal
