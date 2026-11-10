@@ -1,5 +1,16 @@
 # Changelog
 
+## 0.10.0-beta
+
+### Initia is now Termoor
+
+Same app, new name. Termoor is a terminal for people who run many tmux sessions on many machines, often with several Claude Code agents, and it deserved a name that says so (and that no other tool already uses).
+
+- **Updating is automatic.** Initia updates itself to Termoor like any other update. On its first launch the app renames itself to Termoor.app
+- **Everything carries over**: settings, presets and snippets move from `~/.config/initia` to `~/.config/termoor` (a link is left at the old path), and notification permission, open tabs and the sidebar layout stay as they were
+- The GitHub repository is now [hyeok-jong/Termoor](https://github.com/hyeok-jong/Termoor). Old links and the old install command keep working
+- New install command: `curl -fsSL https://raw.githubusercontent.com/hyeok-jong/Termoor/beta/install.sh | bash`. It also removes an old Initia.app next to it
+
 ## 0.9.3-beta
 
 ### New
