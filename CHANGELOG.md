@@ -1,5 +1,11 @@
 # Changelog
 
+## 0.12.11-beta
+
+### Fixed
+
+- **Clicking the terminal gives it the keyboard back.** After clicking into the message box (or an editor pane), a click on the terminal didn't move the focus there, so you had to use ⌘↩ or a tab switch to get back
+
 ## 0.12.10-beta
 
 ### Fixed
