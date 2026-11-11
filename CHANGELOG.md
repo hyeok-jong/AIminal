@@ -1,5 +1,15 @@
 # Changelog
 
+## 0.12.5-beta
+
+### Changed
+
+- **The multi-line input box is now always there** under every terminal (hide or show it with the ✎ button in the session header or ⇧⌘M; the choice is remembered). Drafts are still kept per tab
+
+### Fixed
+
+- **Korean (and other IME) typing in the multi-line box and the file editor no longer drops letters.** The editor re-coloured the text on every keystroke, which interrupted the input method while it was composing a syllable; it now waits until the syllable is committed
+
 ## 0.12.4-beta
 
 ### New
