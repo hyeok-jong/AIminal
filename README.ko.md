@@ -9,6 +9,11 @@
 > **Termoor가 AIminal로 이름을 바꿨습니다.** 같은 앱, 새 이름입니다(0.11에서는 "Aiminal"로 썼고, 0.10 전에는 Initia였습니다). Aiminal·Termoor·Initia가 설치돼 있으면 스스로 AIminal로 업데이트되고, 설정·프리셋·열린 탭은 그대로 이어집니다.
 
 <picture>
+  <source media="(prefers-color-scheme: dark)" srcset="screenshots/setup-dark.svg">
+  <img src="screenshots/setup.svg" alt="내 환경: MacBook Air 여러 대가 SSH로 Mac mini와 GPU 연구 서버 두 대에 붙는다. Mac mini는 tmux 세션 여러 개와 Claude Code 여러 개를 동시에 돌린다. 각 서버에는 호스트의 관리자 tmux 하나와 docker 컨테이너 여러 개가 있고 컨테이너마다 그 안에 tmux가 있다. 내 컨테이너에서는 Claude Code도 돈다. AIminal은 이 모두를 창 하나에 보여 준다.">
+</picture>
+
+<picture>
   <source media="(prefers-color-scheme: dark)" srcset="screenshots/files-dark.png">
   <img src="screenshots/files.png" alt="AIminal: 사이드바에 이 Mac·GPU 서버·docker 컨테이너의 세션, 파일 트리, 터미널에서 작업 중인 Claude Code, 옆에 렌더링된 README">
 </picture>
@@ -79,16 +84,11 @@
 
 ## 왜 만들었나
 
-제 하루는 tmux 위에서 돌아가는데, 터미널 창 하나로 감당하기엔 머신이 너무 많습니다. 실제 제 환경은 이렇습니다:
+제 하루는 tmux 위에서 돌아가는데, 터미널 창 하나로 감당하기엔 머신이 너무 많습니다. 실제 제 환경은 이렇습니다(이 페이지 맨 위 그림):
 
 - **Mac mini 한 대**가 주 개발 머신. 프로젝트마다 tmux 세션이 하나씩 있고, 그중 여러 개가 동시에 Claude Code를 돌립니다
-- **MacBook Air 여러 대**는 밖에서 일할 때용. SSH로 Mac mini에 붙으니 실제 세션은 늘 mini에 남아 있습니다
-- **GPU 연구 서버 두 대**에는 SSH로. 관리자라서 연구실 사람들의 docker 컨테이너도 띄워 주고, 제 연구는 제 컨테이너 안에서 tmux + Claude Code로 합니다
-
-<picture>
-  <source media="(prefers-color-scheme: dark)" srcset="screenshots/setup-dark.svg">
-  <img src="screenshots/setup.svg" alt="내 환경: MacBook Air 여러 대가 SSH로 Mac mini에 붙고, Mac mini는 tmux 세션 여러 개와 Claude Code 여러 개를 동시에 돌린다. GPU 연구 서버 두 대에는 SSH로 들어가며, 각 서버에 호스트 tmux, tmux와 Claude가 든 내 docker 컨테이너, 관리자로 띄워 둔 연구실 컨테이너들이 있다. AIminal은 이 모두를 창 하나에 보여 준다.">
-</picture>
+- **MacBook Air 여러 대**는 밖에서 일할 때용. 자기 세션은 없고 SSH로 Mac mini와 서버들에 붙으니, 실제 작업은 늘 그쪽에 남아 있습니다
+- **GPU 연구 서버 두 대**에는 SSH로. 관리자라서 호스트에 tmux 하나, 그리고 연구실 사람들을 위해 띄워 둔 docker 컨테이너 여러 개가 있고 컨테이너마다 그 안에 또 tmux가 있습니다. 제 연구는 제 컨테이너 안에서 tmux + Claude Code로 합니다
 
 보통 터미널에서는 이 모든 관리를 손으로 해야 했습니다. 어느 세션이 어느 머신, 어느 컨테이너 안에 있지? 저 세션의 Claude는 끝났나, 아직 돌고 있나, 내 답을 기다리나? 그 프로젝트의 폴더와 명령이 뭐였더라? `ssh`, `docker exec`, `tmux ls`, `tmux attach -t …`를 계속 반복해서 치고 있었습니다.
 

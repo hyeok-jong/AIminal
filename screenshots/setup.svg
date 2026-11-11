@@ -1,116 +1,118 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="760" viewBox="0 0 1200 760" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif">
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="680" viewBox="0 0 1200 680" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif">
 <defs><marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M 0 0 L 10 5 L 0 10 z" fill="#0969da"/></marker></defs>
-<rect width="1200" height="760" fill="#ffffff"/>
-<rect x="20" y="28" width="1160" height="704" rx="16" fill="none" stroke="#d0d7de" stroke-width="1.5" stroke-dasharray="6 6"/>
+<rect width="1200" height="680" fill="#ffffff"/>
+<rect x="20" y="28" width="1160" height="624" rx="16" fill="none" stroke="#d0d7de" stroke-width="1.5" stroke-dasharray="6 6"/>
 <rect x="44" y="16" width="70" height="22" rx="11.0" fill="#0969da"/>
 <text x="79.0" y="31.32" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="12" font-weight="600" fill="#ffffff" text-anchor="middle">AIminal</text>
 <text x="124" y="33" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="13" font-weight="normal" fill="#656d76" text-anchor="start">one window, every machine</text>
-<text x="60" y="92" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="16" font-weight="700" fill="#1f2328" text-anchor="start">MacBook Air × a few</text>
-<text x="60" y="112" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="13" font-weight="normal" fill="#656d76" text-anchor="start">wherever I am</text>
-<rect x="80" y="295" width="230" height="150" rx="12" fill="#f6f8fa" stroke="#d0d7de" stroke-width="1" opacity="0.55"/>
-<rect x="70" y="305" width="230" height="150" rx="12" fill="#f6f8fa" stroke="#d0d7de" stroke-width="1" opacity="0.75"/>
-<rect x="60" y="315" width="230" height="150" rx="12" fill="#f6f8fa" stroke="#d0d7de" stroke-width="1"/>
-<text x="76" y="347" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="15" font-weight="700" fill="#1f2328" text-anchor="start">MacBook Air</text>
-<rect x="76" y="361" width="70" height="22" rx="11.0" fill="#0969da"/>
-<text x="111.0" y="376.32" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="12" font-weight="600" fill="#ffffff" text-anchor="middle">AIminal</text>
-<text x="76" y="411" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="12" font-weight="normal" fill="#656d76" text-anchor="start">No sessions of its own.</text>
-<text x="76" y="429" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="12" font-weight="normal" fill="#656d76" text-anchor="start">Opens the Mac mini and the</text>
-<text x="76" y="447" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="12" font-weight="normal" fill="#656d76" text-anchor="start">servers over SSH.</text>
-<text x="360" y="92" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="16" font-weight="700" fill="#1f2328" text-anchor="start">Mac mini</text>
-<text x="360" y="112" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="13" font-weight="normal" fill="#656d76" text-anchor="start">main development · tmux + Claude Code</text>
-<rect x="360" y="130" width="320" height="520" rx="12" fill="#f6f8fa" stroke="#d0d7de" stroke-width="1"/>
-<text x="376" y="160" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="15" font-weight="700" fill="#1f2328" text-anchor="start">Mac mini</text>
-<rect x="596" y="144" width="70" height="22" rx="11.0" fill="#0969da"/>
-<text x="631.0" y="159.32" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="12" font-weight="600" fill="#ffffff" text-anchor="middle">AIminal</text>
-<text x="376" y="182" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="12" font-weight="normal" fill="#656d76" text-anchor="start">tmux sessions · one per project</text>
-<rect x="376" y="196" width="288" height="36" rx="8" fill="#ffffff" stroke="#d0d7de" stroke-width="1"/>
-<text x="388" y="219" font-family="SFMono-Regular, Menlo, Consolas, 'Liberation Mono', monospace" font-size="13" font-weight="600" fill="#1f2328" text-anchor="start">aiminal</text>
-<circle cx="526.8" cy="214" r="5" fill="#1a7f37"/>
-<text x="652" y="218" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="12" font-weight="normal" fill="#1a7f37" text-anchor="end">Claude · working</text>
-<rect x="376" y="240" width="288" height="36" rx="8" fill="#ffffff" stroke="#d0d7de" stroke-width="1"/>
-<text x="388" y="263" font-family="SFMono-Regular, Menlo, Consolas, 'Liberation Mono', monospace" font-size="13" font-weight="600" fill="#1f2328" text-anchor="start">kmi</text>
-<circle cx="476.4" cy="258" r="5" fill="#9a6700"/>
-<text x="652" y="262" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="12" font-weight="normal" fill="#9a6700" text-anchor="end">Claude · waiting for me</text>
-<rect x="376" y="284" width="288" height="36" rx="8" fill="#ffffff" stroke="#d0d7de" stroke-width="1"/>
-<text x="388" y="307" font-family="SFMono-Regular, Menlo, Consolas, 'Liberation Mono', monospace" font-size="13" font-weight="600" fill="#1f2328" text-anchor="start">paper</text>
-<circle cx="469.2" cy="302" r="5" fill="#8250df"/>
-<text x="652" y="306" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="12" font-weight="normal" fill="#8250df" text-anchor="end">Claude · done → notified</text>
-<rect x="376" y="328" width="288" height="36" rx="8" fill="#ffffff" stroke="#d0d7de" stroke-width="1"/>
-<text x="388" y="351" font-family="SFMono-Regular, Menlo, Consolas, 'Liberation Mono', monospace" font-size="13" font-weight="600" fill="#1f2328" text-anchor="start">blog</text>
-<circle cx="526.8" cy="346" r="5" fill="#1a7f37"/>
-<text x="652" y="350" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="12" font-weight="normal" fill="#1a7f37" text-anchor="end">Claude · working</text>
-<rect x="376" y="372" width="288" height="36" rx="8" fill="#ffffff" stroke="#d0d7de" stroke-width="1"/>
-<text x="388" y="395" font-family="SFMono-Regular, Menlo, Consolas, 'Liberation Mono', monospace" font-size="13" font-weight="600" fill="#1f2328" text-anchor="start">thesis</text>
-<circle cx="476.4" cy="390" r="5" fill="#9a6700"/>
-<text x="652" y="394" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="12" font-weight="normal" fill="#9a6700" text-anchor="end">Claude · waiting for me</text>
-<rect x="376" y="416" width="288" height="36" rx="8" fill="#ffffff" stroke="#d0d7de" stroke-width="1"/>
-<text x="388" y="439" font-family="SFMono-Regular, Menlo, Consolas, 'Liberation Mono', monospace" font-size="13" font-weight="600" fill="#1f2328" text-anchor="start">server</text>
-<circle cx="606.0" cy="434" r="5" fill="#8c959f"/>
-<text x="652" y="438" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="12" font-weight="normal" fill="#8c959f" text-anchor="end">shell</text>
-<rect x="376" y="460" width="288" height="36" rx="8" fill="#ffffff" stroke="#d0d7de" stroke-width="1"/>
-<text x="388" y="483" font-family="SFMono-Regular, Menlo, Consolas, 'Liberation Mono', monospace" font-size="13" font-weight="600" fill="#1f2328" text-anchor="start">notes</text>
-<circle cx="606.0" cy="478" r="5" fill="#8c959f"/>
-<text x="652" y="482" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="12" font-weight="normal" fill="#8c959f" text-anchor="end">shell</text>
-<text x="376" y="608" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="12" font-weight="normal" fill="#656d76" text-anchor="start">Several Claude Code runs at once;</text>
-<text x="376" y="626" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="12" font-weight="normal" fill="#656d76" text-anchor="start">AIminal tells me which one needs me.</text>
-<text x="760" y="92" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="16" font-weight="700" fill="#1f2328" text-anchor="start">GPU research servers × 2</text>
-<text x="760" y="112" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="13" font-weight="normal" fill="#656d76" text-anchor="start">over SSH · admin: I keep the lab's docker containers running</text>
-<rect x="760" y="130" width="400" height="250" rx="12" fill="#f6f8fa" stroke="#d0d7de" stroke-width="1"/>
-<text x="776" y="160" font-family="SFMono-Regular, Menlo, Consolas, 'Liberation Mono', monospace" font-size="15" font-weight="700" fill="#1f2328" text-anchor="start">gpu-box</text>
-<text x="1144" y="160" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="12" font-weight="normal" fill="#656d76" text-anchor="end">admin</text>
-<rect x="776" y="174" width="368" height="36" rx="8" fill="#ffffff" stroke="#d0d7de" stroke-width="1"/>
-<text x="788" y="197" font-family="SFMono-Regular, Menlo, Consolas, 'Liberation Mono', monospace" font-size="13" font-weight="600" fill="#1f2328" text-anchor="start">server</text>
-<circle cx="999.6" cy="192" r="5" fill="#8c959f"/>
-<text x="1132" y="196" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="12" font-weight="normal" fill="#8c959f" text-anchor="end">shell · host tmux</text>
-<rect x="776" y="222" width="368" height="112" rx="10" fill="#ffffff" stroke="#1b7c83" stroke-width="1.5"/>
-<text x="788" y="239" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="12" font-weight="700" fill="#1b7c83" text-anchor="start">docker · my container</text>
-<text x="1132" y="239" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="11" font-weight="normal" fill="#656d76" text-anchor="end">tmux + Claude inside</text>
-<rect x="788" y="248" width="344" height="36" rx="8" fill="#ffffff" stroke="#d0d7de" stroke-width="1"/>
-<text x="800" y="271" font-family="SFMono-Regular, Menlo, Consolas, 'Liberation Mono', monospace" font-size="13" font-weight="600" fill="#1f2328" text-anchor="start">research</text>
-<circle cx="994.8" cy="266" r="5" fill="#1a7f37"/>
-<text x="1120" y="270" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="12" font-weight="normal" fill="#1a7f37" text-anchor="end">Claude · working</text>
-<rect x="788" y="288" width="344" height="36" rx="8" fill="#ffffff" stroke="#d0d7de" stroke-width="1"/>
-<text x="800" y="311" font-family="SFMono-Regular, Menlo, Consolas, 'Liberation Mono', monospace" font-size="13" font-weight="600" fill="#1f2328" text-anchor="start">dl</text>
-<circle cx="944.4" cy="306" r="5" fill="#9a6700"/>
-<text x="1120" y="310" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="12" font-weight="normal" fill="#9a6700" text-anchor="end">Claude · waiting for me</text>
-<text x="776" y="360" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="12" font-weight="normal" fill="#656d76" text-anchor="start">docker · lab containers:</text>
-<rect x="944" y="346" width="32" height="20" rx="10" fill="#eaeef2"/>
-<text x="960.0" y="360" font-family="SFMono-Regular, Menlo, Consolas, 'Liberation Mono', monospace" font-size="11" font-weight="normal" fill="#57606a" text-anchor="middle">jw</text>
-<rect x="982" y="346" width="61" height="20" rx="10" fill="#eaeef2"/>
-<text x="1012.5" y="360" font-family="SFMono-Regular, Menlo, Consolas, 'Liberation Mono', monospace" font-size="11" font-weight="normal" fill="#57606a" text-anchor="middle">intern</text>
-<rect x="1049" y="346" width="39" height="20" rx="10" fill="#eaeef2"/>
-<text x="1068.5" y="360" font-family="SFMono-Regular, Menlo, Consolas, 'Liberation Mono', monospace" font-size="11" font-weight="normal" fill="#57606a" text-anchor="middle">lyw</text>
-<rect x="760" y="400" width="400" height="250" rx="12" fill="#f6f8fa" stroke="#d0d7de" stroke-width="1"/>
-<text x="776" y="430" font-family="SFMono-Regular, Menlo, Consolas, 'Liberation Mono', monospace" font-size="15" font-weight="700" fill="#1f2328" text-anchor="start">lab-server</text>
-<text x="1144" y="430" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="12" font-weight="normal" fill="#656d76" text-anchor="end">admin</text>
-<rect x="776" y="444" width="368" height="36" rx="8" fill="#ffffff" stroke="#d0d7de" stroke-width="1"/>
-<text x="788" y="467" font-family="SFMono-Regular, Menlo, Consolas, 'Liberation Mono', monospace" font-size="13" font-weight="600" fill="#1f2328" text-anchor="start">server</text>
-<circle cx="999.6" cy="462" r="5" fill="#8c959f"/>
-<text x="1132" y="466" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="12" font-weight="normal" fill="#8c959f" text-anchor="end">shell · host tmux</text>
-<rect x="776" y="492" width="368" height="112" rx="10" fill="#ffffff" stroke="#1b7c83" stroke-width="1.5"/>
-<text x="788" y="509" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="12" font-weight="700" fill="#1b7c83" text-anchor="start">docker · my container</text>
-<text x="1132" y="509" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="11" font-weight="normal" fill="#656d76" text-anchor="end">tmux + Claude inside</text>
-<rect x="788" y="518" width="344" height="36" rx="8" fill="#ffffff" stroke="#d0d7de" stroke-width="1"/>
-<text x="800" y="541" font-family="SFMono-Regular, Menlo, Consolas, 'Liberation Mono', monospace" font-size="13" font-weight="600" fill="#1f2328" text-anchor="start">mimic</text>
-<circle cx="994.8" cy="536" r="5" fill="#1a7f37"/>
-<text x="1120" y="540" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="12" font-weight="normal" fill="#1a7f37" text-anchor="end">Claude · working</text>
-<rect x="788" y="558" width="344" height="36" rx="8" fill="#ffffff" stroke="#d0d7de" stroke-width="1"/>
-<text x="800" y="581" font-family="SFMono-Regular, Menlo, Consolas, 'Liberation Mono', monospace" font-size="13" font-weight="600" fill="#1f2328" text-anchor="start">ecg</text>
-<circle cx="937.2" cy="576" r="5" fill="#8250df"/>
-<text x="1120" y="580" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="12" font-weight="normal" fill="#8250df" text-anchor="end">Claude · done → notified</text>
-<text x="776" y="630" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="12" font-weight="normal" fill="#656d76" text-anchor="start">docker · lab containers:</text>
-<rect x="944" y="616" width="39" height="20" rx="10" fill="#eaeef2"/>
-<text x="963.5" y="630" font-family="SFMono-Regular, Menlo, Consolas, 'Liberation Mono', monospace" font-size="11" font-weight="normal" fill="#57606a" text-anchor="middle">ana</text>
-<rect x="989" y="616" width="61" height="20" rx="10" fill="#eaeef2"/>
-<text x="1019.5" y="630" font-family="SFMono-Regular, Menlo, Consolas, 'Liberation Mono', monospace" font-size="11" font-weight="normal" fill="#57606a" text-anchor="middle">vscode</text>
-<rect x="1056" y="616" width="68" height="20" rx="10" fill="#eaeef2"/>
-<text x="1090.0" y="630" font-family="SFMono-Regular, Menlo, Consolas, 'Liberation Mono', monospace" font-size="11" font-weight="normal" fill="#57606a" text-anchor="middle">jupyter</text>
-<line x1="294" y1="390" x2="354" y2="390" stroke="#0969da" stroke-width="2" marker-end="url(#arrow)"/>
-<text x="324.0" y="382.0" font-family="SFMono-Regular, Menlo, Consolas, 'Liberation Mono', monospace" font-size="12" font-weight="600" fill="#0969da" text-anchor="middle">SSH</text>
-<line x1="684" y1="255" x2="754" y2="255" stroke="#0969da" stroke-width="2" marker-end="url(#arrow)"/>
-<text x="719.0" y="247.0" font-family="SFMono-Regular, Menlo, Consolas, 'Liberation Mono', monospace" font-size="12" font-weight="600" fill="#0969da" text-anchor="middle">SSH</text>
-<line x1="684" y1="525" x2="754" y2="525" stroke="#0969da" stroke-width="2" marker-end="url(#arrow)"/>
-<text x="719.0" y="517.0" font-family="SFMono-Regular, Menlo, Consolas, 'Liberation Mono', monospace" font-size="12" font-weight="600" fill="#0969da" text-anchor="middle">SSH</text>
-<text x="600.0" y="692" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="14" font-weight="600" fill="#1f2328" text-anchor="middle">All of it in one AIminal window on whichever Mac I'm at:</text>
-<text x="600.0" y="714" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="13" font-weight="normal" fill="#656d76" text-anchor="middle">every tmux session, whether each Claude is working, waiting or done, every container, and the files beside them.</text>
+<rect x="486" y="46" width="260" height="104" rx="12" fill="#f6f8fa" stroke="#d0d7de" stroke-width="1" opacity="0.55"/>
+<rect x="478" y="54" width="260" height="104" rx="12" fill="#f6f8fa" stroke="#d0d7de" stroke-width="1" opacity="0.75"/>
+<rect x="470" y="62" width="260" height="104" rx="12" fill="#f6f8fa" stroke="#d0d7de" stroke-width="1"/>
+<text x="486" y="90" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="15" font-weight="700" fill="#1f2328" text-anchor="start">MacBook Air × a few</text>
+<rect x="646" y="74" width="70" height="22" rx="11.0" fill="#0969da"/>
+<text x="681.0" y="89.32" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="12" font-weight="600" fill="#ffffff" text-anchor="middle">AIminal</text>
+<text x="486" y="114" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="12" font-weight="normal" fill="#656d76" text-anchor="start">wherever I am · no sessions of its own</text>
+<text x="486" y="132" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="12" font-weight="normal" fill="#656d76" text-anchor="start">SSH into the Mac mini and both servers;</text>
+<text x="486" y="150" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="12" font-weight="normal" fill="#656d76" text-anchor="start">the real work stays on them.</text>
+<rect x="40" y="236" width="320" height="340" rx="12" fill="#f6f8fa" stroke="#d0d7de" stroke-width="1"/>
+<text x="56" y="266" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="15" font-weight="700" fill="#1f2328" text-anchor="start">Mac mini</text>
+<rect x="276" y="250" width="70" height="22" rx="11.0" fill="#0969da"/>
+<text x="311.0" y="265.32" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="12" font-weight="600" fill="#ffffff" text-anchor="middle">AIminal</text>
+<text x="56" y="288" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="12" font-weight="normal" fill="#656d76" text-anchor="start">main development · tmux + Claude Code</text>
+<rect x="56" y="302" width="288" height="36" rx="8" fill="#ffffff" stroke="#d0d7de" stroke-width="1"/>
+<text x="68" y="325" font-family="SFMono-Regular, Menlo, Consolas, 'Liberation Mono', monospace" font-size="13" font-weight="600" fill="#1f2328" text-anchor="start">aiminal</text>
+<circle cx="206.8" cy="320" r="5" fill="#1a7f37"/>
+<text x="332" y="324" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="12" font-weight="normal" fill="#1a7f37" text-anchor="end">Claude · working</text>
+<rect x="56" y="346" width="288" height="36" rx="8" fill="#ffffff" stroke="#d0d7de" stroke-width="1"/>
+<text x="68" y="369" font-family="SFMono-Regular, Menlo, Consolas, 'Liberation Mono', monospace" font-size="13" font-weight="600" fill="#1f2328" text-anchor="start">kmi</text>
+<circle cx="156.4" cy="364" r="5" fill="#9a6700"/>
+<text x="332" y="368" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="12" font-weight="normal" fill="#9a6700" text-anchor="end">Claude · waiting for me</text>
+<rect x="56" y="390" width="288" height="36" rx="8" fill="#ffffff" stroke="#d0d7de" stroke-width="1"/>
+<text x="68" y="413" font-family="SFMono-Regular, Menlo, Consolas, 'Liberation Mono', monospace" font-size="13" font-weight="600" fill="#1f2328" text-anchor="start">paper</text>
+<circle cx="149.2" cy="408" r="5" fill="#8250df"/>
+<text x="332" y="412" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="12" font-weight="normal" fill="#8250df" text-anchor="end">Claude · done → notified</text>
+<rect x="56" y="434" width="288" height="36" rx="8" fill="#ffffff" stroke="#d0d7de" stroke-width="1"/>
+<text x="68" y="457" font-family="SFMono-Regular, Menlo, Consolas, 'Liberation Mono', monospace" font-size="13" font-weight="600" fill="#1f2328" text-anchor="start">blog</text>
+<circle cx="206.8" cy="452" r="5" fill="#1a7f37"/>
+<text x="332" y="456" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="12" font-weight="normal" fill="#1a7f37" text-anchor="end">Claude · working</text>
+<rect x="56" y="478" width="288" height="36" rx="8" fill="#ffffff" stroke="#d0d7de" stroke-width="1"/>
+<text x="68" y="501" font-family="SFMono-Regular, Menlo, Consolas, 'Liberation Mono', monospace" font-size="13" font-weight="600" fill="#1f2328" text-anchor="start">server</text>
+<circle cx="286.0" cy="496" r="5" fill="#8c959f"/>
+<text x="332" y="500" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="12" font-weight="normal" fill="#8c959f" text-anchor="end">shell</text>
+<text x="56" y="546" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="12" font-weight="normal" fill="#656d76" text-anchor="start">Several Claude Code runs at once;</text>
+<text x="56" y="563" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="12" font-weight="normal" fill="#656d76" text-anchor="start">AIminal tells me which one needs me.</text>
+<rect x="420" y="236" width="370" height="340" rx="12" fill="#f6f8fa" stroke="#d0d7de" stroke-width="1"/>
+<text x="436" y="266" font-family="SFMono-Regular, Menlo, Consolas, 'Liberation Mono', monospace" font-size="15" font-weight="700" fill="#1f2328" text-anchor="start">gpu-box</text>
+<text x="774" y="266" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="12" font-weight="normal" fill="#656d76" text-anchor="end">GPU research server · admin</text>
+<rect x="436" y="280" width="338" height="36" rx="8" fill="#ffffff" stroke="#d0d7de" stroke-width="1"/>
+<text x="448" y="303" font-family="SFMono-Regular, Menlo, Consolas, 'Liberation Mono', monospace" font-size="13" font-weight="600" fill="#1f2328" text-anchor="start">admin</text>
+<circle cx="629.6" cy="298" r="5" fill="#8c959f"/>
+<text x="762" y="302" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="12" font-weight="normal" fill="#8c959f" text-anchor="end">host tmux · shell</text>
+<rect x="436" y="328" width="338" height="152" rx="10" fill="#ffffff" stroke="#1b7c83" stroke-width="1.5"/>
+<text x="448" y="345" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="12" font-weight="700" fill="#1b7c83" text-anchor="start">docker · my container</text>
+<text x="762" y="345" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="11" font-weight="normal" fill="#656d76" text-anchor="end">tmux + Claude inside</text>
+<rect x="448" y="354" width="314" height="36" rx="8" fill="#ffffff" stroke="#d0d7de" stroke-width="1"/>
+<text x="460" y="377" font-family="SFMono-Regular, Menlo, Consolas, 'Liberation Mono', monospace" font-size="13" font-weight="600" fill="#1f2328" text-anchor="start">research</text>
+<circle cx="624.8" cy="372" r="5" fill="#1a7f37"/>
+<text x="750" y="376" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="12" font-weight="normal" fill="#1a7f37" text-anchor="end">Claude · working</text>
+<rect x="448" y="394" width="314" height="36" rx="8" fill="#ffffff" stroke="#d0d7de" stroke-width="1"/>
+<text x="460" y="417" font-family="SFMono-Regular, Menlo, Consolas, 'Liberation Mono', monospace" font-size="13" font-weight="600" fill="#1f2328" text-anchor="start">dl</text>
+<circle cx="574.4" cy="412" r="5" fill="#9a6700"/>
+<text x="750" y="416" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="12" font-weight="normal" fill="#9a6700" text-anchor="end">Claude · waiting for me</text>
+<rect x="448" y="434" width="314" height="36" rx="8" fill="#ffffff" stroke="#d0d7de" stroke-width="1"/>
+<text x="460" y="457" font-family="SFMono-Regular, Menlo, Consolas, 'Liberation Mono', monospace" font-size="13" font-weight="600" fill="#1f2328" text-anchor="start">notebook</text>
+<circle cx="704.0" cy="452" r="5" fill="#8c959f"/>
+<text x="750" y="456" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="12" font-weight="normal" fill="#8c959f" text-anchor="end">shell</text>
+<text x="436" y="505" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="12" font-weight="normal" fill="#656d76" text-anchor="start">docker · lab containers (admin) · tmux in each:</text>
+<rect x="436" y="516" width="107.33333333333333" height="36" rx="8" fill="#ffffff" stroke="#1b7c83" stroke-width="1" opacity="0.8"/>
+<text x="446" y="531" font-family="SFMono-Regular, Menlo, Consolas, 'Liberation Mono', monospace" font-size="12" font-weight="600" fill="#1f2328" text-anchor="start">jw</text>
+<text x="446" y="545" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="10" font-weight="normal" fill="#656d76" text-anchor="start">tmux inside</text>
+<rect x="551.3333333333334" y="516" width="107.33333333333333" height="36" rx="8" fill="#ffffff" stroke="#1b7c83" stroke-width="1" opacity="0.8"/>
+<text x="561.3333333333334" y="531" font-family="SFMono-Regular, Menlo, Consolas, 'Liberation Mono', monospace" font-size="12" font-weight="600" fill="#1f2328" text-anchor="start">intern</text>
+<text x="561.3333333333334" y="545" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="10" font-weight="normal" fill="#656d76" text-anchor="start">tmux inside</text>
+<rect x="666.6666666666667" y="516" width="107.33333333333333" height="36" rx="8" fill="#ffffff" stroke="#1b7c83" stroke-width="1" opacity="0.8"/>
+<text x="676.6666666666667" y="531" font-family="SFMono-Regular, Menlo, Consolas, 'Liberation Mono', monospace" font-size="12" font-weight="600" fill="#1f2328" text-anchor="start">lyw</text>
+<text x="676.6666666666667" y="545" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="10" font-weight="normal" fill="#656d76" text-anchor="start">tmux inside</text>
+<rect x="810" y="236" width="370" height="340" rx="12" fill="#f6f8fa" stroke="#d0d7de" stroke-width="1"/>
+<text x="826" y="266" font-family="SFMono-Regular, Menlo, Consolas, 'Liberation Mono', monospace" font-size="15" font-weight="700" fill="#1f2328" text-anchor="start">lab-server</text>
+<text x="1164" y="266" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="12" font-weight="normal" fill="#656d76" text-anchor="end">GPU research server · admin</text>
+<rect x="826" y="280" width="338" height="36" rx="8" fill="#ffffff" stroke="#d0d7de" stroke-width="1"/>
+<text x="838" y="303" font-family="SFMono-Regular, Menlo, Consolas, 'Liberation Mono', monospace" font-size="13" font-weight="600" fill="#1f2328" text-anchor="start">admin</text>
+<circle cx="1019.5999999999999" cy="298" r="5" fill="#8c959f"/>
+<text x="1152" y="302" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="12" font-weight="normal" fill="#8c959f" text-anchor="end">host tmux · shell</text>
+<rect x="826" y="328" width="338" height="152" rx="10" fill="#ffffff" stroke="#1b7c83" stroke-width="1.5"/>
+<text x="838" y="345" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="12" font-weight="700" fill="#1b7c83" text-anchor="start">docker · my container</text>
+<text x="1152" y="345" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="11" font-weight="normal" fill="#656d76" text-anchor="end">tmux + Claude inside</text>
+<rect x="838" y="354" width="314" height="36" rx="8" fill="#ffffff" stroke="#d0d7de" stroke-width="1"/>
+<text x="850" y="377" font-family="SFMono-Regular, Menlo, Consolas, 'Liberation Mono', monospace" font-size="13" font-weight="600" fill="#1f2328" text-anchor="start">mimic</text>
+<circle cx="1014.8" cy="372" r="5" fill="#1a7f37"/>
+<text x="1140" y="376" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="12" font-weight="normal" fill="#1a7f37" text-anchor="end">Claude · working</text>
+<rect x="838" y="394" width="314" height="36" rx="8" fill="#ffffff" stroke="#d0d7de" stroke-width="1"/>
+<text x="850" y="417" font-family="SFMono-Regular, Menlo, Consolas, 'Liberation Mono', monospace" font-size="13" font-weight="600" fill="#1f2328" text-anchor="start">ecg</text>
+<circle cx="957.2" cy="412" r="5" fill="#8250df"/>
+<text x="1140" y="416" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="12" font-weight="normal" fill="#8250df" text-anchor="end">Claude · done → notified</text>
+<rect x="838" y="434" width="314" height="36" rx="8" fill="#ffffff" stroke="#d0d7de" stroke-width="1"/>
+<text x="850" y="457" font-family="SFMono-Regular, Menlo, Consolas, 'Liberation Mono', monospace" font-size="13" font-weight="600" fill="#1f2328" text-anchor="start">preproc</text>
+<circle cx="1014.8" cy="452" r="5" fill="#1a7f37"/>
+<text x="1140" y="456" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="12" font-weight="normal" fill="#1a7f37" text-anchor="end">Claude · working</text>
+<text x="826" y="505" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="12" font-weight="normal" fill="#656d76" text-anchor="start">docker · lab containers (admin) · tmux in each:</text>
+<rect x="826" y="516" width="107.33333333333333" height="36" rx="8" fill="#ffffff" stroke="#1b7c83" stroke-width="1" opacity="0.8"/>
+<text x="836" y="531" font-family="SFMono-Regular, Menlo, Consolas, 'Liberation Mono', monospace" font-size="12" font-weight="600" fill="#1f2328" text-anchor="start">ana</text>
+<text x="836" y="545" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="10" font-weight="normal" fill="#656d76" text-anchor="start">tmux inside</text>
+<rect x="941.3333333333334" y="516" width="107.33333333333333" height="36" rx="8" fill="#ffffff" stroke="#1b7c83" stroke-width="1" opacity="0.8"/>
+<text x="951.3333333333334" y="531" font-family="SFMono-Regular, Menlo, Consolas, 'Liberation Mono', monospace" font-size="12" font-weight="600" fill="#1f2328" text-anchor="start">vscode</text>
+<text x="951.3333333333334" y="545" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="10" font-weight="normal" fill="#656d76" text-anchor="start">tmux inside</text>
+<rect x="1056.6666666666667" y="516" width="107.33333333333333" height="36" rx="8" fill="#ffffff" stroke="#1b7c83" stroke-width="1" opacity="0.8"/>
+<text x="1066.6666666666667" y="531" font-family="SFMono-Regular, Menlo, Consolas, 'Liberation Mono', monospace" font-size="12" font-weight="600" fill="#1f2328" text-anchor="start">jupyter</text>
+<text x="1066.6666666666667" y="545" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="10" font-weight="normal" fill="#656d76" text-anchor="start">tmux inside</text>
+<line x1="600.0" y1="170" x2="260.0" y2="230" stroke="#0969da" stroke-width="2" marker-end="url(#arrow)"/>
+<line x1="600.0" y1="170" x2="605.0" y2="230" stroke="#0969da" stroke-width="2" marker-end="url(#arrow)"/>
+<line x1="600.0" y1="170" x2="935.0" y2="230" stroke="#0969da" stroke-width="2" marker-end="url(#arrow)"/>
+<text x="420.0" y="196" font-family="SFMono-Regular, Menlo, Consolas, 'Liberation Mono', monospace" font-size="12" font-weight="600" fill="#0969da" text-anchor="middle">SSH</text>
+<text x="790.0" y="196" font-family="SFMono-Regular, Menlo, Consolas, 'Liberation Mono', monospace" font-size="12" font-weight="600" fill="#0969da" text-anchor="middle">SSH</text>
+<text x="614.0" y="204" font-family="SFMono-Regular, Menlo, Consolas, 'Liberation Mono', monospace" font-size="12" font-weight="600" fill="#0969da" text-anchor="start">SSH</text>
+<line x1="364" y1="406.0" x2="414" y2="406.0" stroke="#0969da" stroke-width="2" marker-end="url(#arrow)"/>
+<text x="389.0" y="398.0" font-family="SFMono-Regular, Menlo, Consolas, 'Liberation Mono', monospace" font-size="12" font-weight="600" fill="#0969da" text-anchor="middle">SSH</text>
+<text x="600.0" y="624" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="14" font-weight="600" fill="#1f2328" text-anchor="middle">All of it in one AIminal window on whichever Mac I'm at:</text>
+<text x="600.0" y="646" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="13" font-weight="normal" fill="#656d76" text-anchor="middle">every tmux session, whether each Claude is working, waiting or done, every container, and the files beside them.</text>
 </svg>
