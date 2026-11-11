@@ -85,6 +85,11 @@ My day runs on tmux, across more machines than one terminal window was built for
 - **A few MacBook Airs** for working somewhere else. They reach the Mac mini over SSH, so the real sessions always stay on the mini
 - **Two GPU research servers** over SSH. I am an admin there, so I keep docker containers running for the lab, and I do my own research inside my own container, with tmux and Claude Code running in it
 
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="screenshots/setup-dark.svg">
+  <img src="screenshots/setup.svg" alt="My setup: a few MacBook Airs reach a Mac mini over SSH; the Mac mini runs many tmux sessions with several Claude Code at once; two GPU research servers over SSH each run a host tmux, my own docker container with tmux and Claude inside, and the lab's containers I keep running as admin. AIminal shows all of it in one window.">
+</picture>
+
 A plain terminal made me do all the bookkeeping by hand. Which session is on which machine, or inside which container? Is Claude in that one done, or still working, or waiting for me? What was the folder and command for that project again? I kept typing `ssh`, then `docker exec`, then `tmux ls`, then `tmux attach -t …`, over and over.
 
 AIminal is the app I wanted for that:
