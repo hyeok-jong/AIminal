@@ -1,5 +1,11 @@
 # Changelog
 
+## 0.12.9-beta
+
+### Fixed
+
+- **Send + Enter now always empties the box.** The text is read straight from the box (including a syllable the Korean input method is still composing) and the box is cleared directly, instead of going through SwiftUI state, which the input method could override
+
 ## 0.12.8-beta
 
 ### Fixed
