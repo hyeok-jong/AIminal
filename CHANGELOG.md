@@ -1,5 +1,11 @@
 # Changelog
 
+## 0.12.12-beta
+
+### Fixed
+
+- Clicking the terminal after the message box really moves the keyboard focus now (0.12.11 tried, but looked up the clicked view in the wrong coordinate space)
+
 ## 0.12.11-beta
 
 ### Fixed
