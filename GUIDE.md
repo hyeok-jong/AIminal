@@ -171,6 +171,8 @@ Watch more than one thing at once:
 
 **Presets** save that recipe so a session is one click away. Start one from Home (Quick start), the sidebar, or ⌘K. Mark a preset **autostart** to bring it up with the **Autostart** button, or automatically when AIminal launches (Settings → General). A new install comes with an `example` preset that opens Claude Code in your home folder.
 
+**Keep presets in iCloud Drive (one file per Mac).** Click the folder button next to **Presets** in the sidebar → **Save to Folder…** and pick a folder, for example `iCloud Drive/AIminal`. From then on, every change is saved there as `AIminal presets (<this Mac's name>).json`. On another Mac, the same button offers **Load from Folder** with one entry per Mac (or **Load from File…** for any backup); you choose **Merge** (add only what isn't there yet) or **Replace**. Each Mac keeps its own file, so presets that point at local folders never mix, and nothing is loaded automatically. The first time AIminal touches iCloud Drive, macOS asks for permission.
+
 Presets live in `~/.config/aiminal/config.json`:
 
 ```json

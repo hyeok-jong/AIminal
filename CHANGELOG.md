@@ -1,5 +1,11 @@
 # Changelog
 
+## 0.12.2-beta
+
+### New
+
+- **Presets in iCloud Drive, one file per Mac.** The folder button next to **Presets** in the sidebar saves your presets to a folder you pick (iCloud Drive/AIminal by default) as `AIminal presets (<Mac name>).json`, and keeps it updated. On another Mac, **Load from Folder** lists each Mac's file; choose **Merge** or **Replace**. Nothing is loaded automatically, so each Mac's own presets stay as they are
+
 ## 0.12.1-beta
 
 ### New

@@ -116,7 +116,7 @@ AIminal is the app I wanted for that:
 - **Snippets**: one-click buttons under the terminal that type text for you (`/clear`, `/compact`, …)
 - **Manage tmux**: create sessions; rename sessions and windows; create and close windows
 - **Opens in AIminal by default**, and still one click away in iTerm2, Terminal, cmux, Ghostty, WezTerm, kitty or Alacritty
-- **Presets and autostart**: save a machine, folder and startup command, and bring your sessions up at login
+- **Presets and autostart**: save a machine, folder and startup command, and bring your sessions up at login. Keep them in iCloud Drive, one file per Mac, and load another Mac's presets with a click
 - **Automatic updates**: AIminal checks for new versions and updates itself in one click. Your tmux sessions keep running
 - **Menu bar and Dock**, English and Korean UI
 
