@@ -1,5 +1,11 @@
 # Changelog
 
+## 0.12.10-beta
+
+### Fixed
+
+- **Korean typing in the message box dropped letters again** (0.12.7 to 0.12.9): while the input method was composing a syllable, a routine refresh could overwrite the box with its last saved text. The box is now left alone whenever a syllable is being composed. Reproduced and verified with a simulated input-method sequence
+
 ## 0.12.9-beta
 
 ### Fixed
