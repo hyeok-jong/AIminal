@@ -161,7 +161,7 @@ Watch more than one thing at once:
 - The **split button** in the session header opens a new terminal, any open tab, or any session that isn't open yet beside the current one, and switches between **Side by Side** and **Stacked**.
 - **Drag a tab** from the tab bar onto the terminal and drop it on the highlighted area. Or right-click a tab → **Open Beside Current Tab**.
 
-- Up to four panes: the current terminal plus three terminals or files.
+- Up to six panes: the current terminal plus five terminals or files. **Drag the divider** between panes to resize them (the split menu has **Equal Sizes**).
 - Each pane has **Go to this tab** and **✕** (closes only the pane; the tab stays open).
 - Tabs shown beside the current one are outlined in the tab bar. Every tab keeps its own layout.
 
