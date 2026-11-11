@@ -119,7 +119,7 @@ AIminal is the app I wanted for that:
 - **Docker containers**: keep tmux on the server and work inside a container. A session or preset can name a container, and AIminal runs `docker exec` into it for you (with your folder and startup command). AIminal also finds the tmux sessions running *inside* each container and opens them with `docker exec -it <container> tmux attach`. Each machine page lists its running containers
 - **File tree** (⇧⌘E, shown by default): a folder tree beside the terminal that follows the session's folder, on this Mac, SSH machines and inside containers. Right-click a file to type its path into the terminal (as `@path` for Claude). Download files and folders, or drag them in from Finder to upload, with a progress bar and Cancel
 - **Built-in editor** with syntax colors: double-click a text file (`.md`, `.html`, `.sh`, `.py`, `.json`, `.yaml`, …) to open it next to the terminal. Markdown and HTML have a live preview. ⌘S saves back to the machine or container, and AIminal warns you if the file changed since you opened it. Other files open in their app, or in VS Code Remote on SSH machines
-- **Side by side**: ⌘D opens a new terminal beside the current one (⇧⌘D below it). The split button in the header also opens any tab or session beside it, and you can drag a tab onto the terminal. Up to four terminals and files, side by side or stacked
+- **Side by side**: ⌘D opens a new terminal beside the current one (⇧⌘D below it). The split button in the header also opens any tab or session beside it, and you can drag a tab onto the terminal. Up to six terminals and files, side by side or stacked, with draggable dividers
 - **Multi-line input** (the **Message for Claude** button under every terminal, or ⇧⌘M): write a long prompt with Markdown and code blocks in a box under the terminal, preview it, and send it to Claude as one message with ⌘↩
 - **Snippets**: one-click buttons under the terminal that type text for you (`/clear`, `/compact`, …)
 - **Manage tmux**: create sessions; rename sessions and windows; create and close windows
@@ -147,6 +147,8 @@ xattr -dr com.apple.quarantine /Applications/AIminal.app
 ## Presets
 
 A preset is a session you start often: a machine, a folder, and a startup command. Start it in one click from Home, or mark it **autostart** to bring it up when AIminal launches. A new install comes with an `example` preset that opens Claude Code in your home folder; edit or delete it in the sidebar.
+
+The folder button next to **Presets** in the sidebar saves them to a folder you pick (iCloud Drive, say) as one file per Mac, and loads another Mac's presets with a click.
 
 Presets are stored in `~/.config/aiminal/config.json`, so you can also write them by hand:
 
