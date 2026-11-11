@@ -79,16 +79,20 @@ Download a checkpoint or a whole folder from a container with a progress bar, dr
 
 ## Why I built AIminal
 
-My day runs on tmux. Every project lives in its own tmux session, most of them running Claude Code, and they are spread over several machines: my Mac, a GPU server, a lab server, each reached over SSH and each holding several tmux sessions of its own.
+My day runs on tmux, across more machines than one terminal window was built for. This is my actual setup:
 
-A plain terminal made me do all the bookkeeping by hand. Which session is on which machine? Is Claude in that one done, or still working, or waiting for me? What was the folder and command for that project again? I kept typing `ssh`, then `tmux ls`, then `tmux attach -t …`, over and over.
+- **One Mac mini** is the main development machine. Every project has its own tmux session there, and several of them run Claude Code at the same time
+- **A few MacBook Airs** for working somewhere else. They reach the Mac mini over SSH, so the real sessions always stay on the mini
+- **Two GPU research servers** over SSH. I am an admin there, so I keep docker containers running for the lab, and I do my own research inside my own container, with tmux and Claude Code running in it
+
+A plain terminal made me do all the bookkeeping by hand. Which session is on which machine, or inside which container? Is Claude in that one done, or still working, or waiting for me? What was the folder and command for that project again? I kept typing `ssh`, then `docker exec`, then `tmux ls`, then `tmux attach -t …`, over and over.
 
 AIminal is the app I wanted for that:
 
 - **Manage tmux sessions comfortably.** Every session is a card with a live preview. Open, rename, split into windows, or close it in a click, and closing a tab never kills the work
 - **Presets for the things you start every day.** A machine, a folder and a startup command (like `claude`) become one click, or start on their own when AIminal launches
 - **Know when Claude is done.** AIminal sees which sessions run Claude Code and whether it is working or waiting, and notifies you when it finishes, even on a remote server
-- **Many machines, one window.** Your `~/.ssh/config` machines sit next to this Mac. Connect once and see every tmux session running on each of them, and open any of them in a tab
+- **Many machines, one window.** Your `~/.ssh/config` machines sit next to this Mac, whether they are Linux servers or another Mac. Connect once and see every tmux session running on each of them, and open any of them in a tab
 - **And containers inside them.** Real work often happens one level deeper, in a docker container on the server. AIminal keeps tmux on the server, enters the container for you, and still knows when Claude in there is done
 - **A home, not just a terminal.** Start from an overview of everything that is running, then dive into a session in AIminal's own terminal
 
