@@ -1,5 +1,15 @@
 # Changelog
 
+## 0.12.7-beta
+
+### Fixed
+
+- **Send + Enter left the text in the box** after typing Korean, and the last syllable could be missing from what was sent: the input method still held that syllable as "composing". The box now commits it before sending and clears properly
+
+### Changed
+
+- **"Message for Claude" is a button.** Every terminal has a slim bar with a **Message for Claude** button (or **Multi-line input** where Claude isn't running); click it or press ⇧⌘M to unfold the text box, ✕ to fold it. The bar shows the first line of an unsent draft. The box no longer takes space until you ask for it
+
 ## 0.12.6-beta
 
 ### Fixed
