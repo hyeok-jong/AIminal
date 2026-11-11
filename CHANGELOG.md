@@ -1,5 +1,11 @@
 # Changelog
 
+## 0.12.3-beta
+
+### New
+
+- **Multi-line input box** (⇧⌘M, or the ✎ button under the terminal). Write long prompts with Markdown and code blocks below the terminal, preview them, and send them with **Send + Enter** (⌘↩) as one message, or **Send** to paste without Enter. The text is pasted as one block (tmux paste buffer, or the terminal's own paste), so Claude Code gets line breaks instead of an early submit. Drafts are kept per tab; drag the top edge to resize
+
 ## 0.12.2-beta
 
 ### New
