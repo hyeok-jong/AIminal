@@ -6,8 +6,6 @@
 
 > Status: **public beta**, free during the beta. · 📖 **[Guide](GUIDE.md)** · **[한국어 README](README.ko.md)** · **[한국어 사용설명서](GUIDE.ko.md)**
 
-> **Termoor is now AIminal.** Same app, new name (spelled "Aiminal" in 0.11, and called Initia before 0.10): if you have Aiminal, Termoor or Initia installed, it updates itself to AIminal and keeps your settings, presets and open tabs.
-
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="screenshots/setup-dark.svg">
   <img src="screenshots/setup.svg" alt="My setup: a few MacBook Airs SSH into a Mac mini and two GPU research servers. The Mac mini runs many tmux sessions with several Claude Code at once. Each server has one admin tmux on the host and several docker containers, each with its own tmux inside; my own container also runs Claude Code. AIminal shows all of it in one window.">
