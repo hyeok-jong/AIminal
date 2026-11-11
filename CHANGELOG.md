@@ -1,5 +1,12 @@
 # Changelog
 
+## 0.12.4-beta
+
+### New
+
+- **Resizable split panes.** Drag the divider between side-by-side (or stacked) panes to change their size; the split menu has **Equal Sizes**. Up to six panes now (the current terminal plus five), instead of four
+- The multi-line input box shows icon-only buttons when its pane is narrow
+
 ## 0.12.3-beta
 
 ### New
