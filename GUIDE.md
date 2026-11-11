@@ -147,7 +147,7 @@ Double-click a text file in the file tree and it opens in a pane beside the term
 
 ## Multi-line input
 
-Typing a long prompt straight into a terminal is awkward: Enter submits, and every tool has its own trick for a line break. Press **⇧⌘M** (or the ✎ button under the terminal) to open a text box below the terminal and write there instead: several paragraphs, Markdown, code blocks, anything.
+Typing a long prompt straight into a terminal is awkward: Enter submits, and every tool has its own trick for a line break. A text box sits below every terminal by default; write there instead: several paragraphs, Markdown, code blocks, anything. The ✎ button in the session header (or **⇧⌘M**) hides and shows it, and AIminal remembers your choice.
 
 - **Send + Enter** (⌘↩) pastes the whole text into the terminal as one block and then presses Enter, so Claude Code (or your shell) receives it as a single message. **Send** pastes without Enter, so you can keep editing in the terminal.
 - **Preview** renders the Markdown; what is sent is always the raw text. The box keeps its own draft per tab, and you can drag its top edge to resize it.
