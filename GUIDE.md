@@ -200,6 +200,7 @@ AIminal notices Claude Code in any tmux window: on this Mac, over SSH, and insid
 - **Working or waiting.** While Claude works, its status line says "esc to interrupt"; AIminal reads the bottom of the pane every few seconds. (Inside tmux, Claude keeps its window title fixed, so the title alone can't tell.)
 - **Finished.** When Claude goes from working to waiting in a session you aren't looking at, you get a notification with the task name, a bell on the session, and a Dock badge. Click the notification to jump to it.
 - **Usage limit.** When Claude stops at its usage limit ("Usage limit reached · resets 8:50pm"), the session shows ⚠ **Limit · 8:50pm** and you get one notification instead of "finished".
+- **Model.** The Claude badge on cards, session headers and window cards says which model that Claude is using, like **Claude · Fable 5.1** or **Opus 5.5** (the full id is in the tooltip). AIminal reads it from Claude Code's own session files (`~/.claude/sessions`, and the last reply in the session's transcript); it never reads your conversation or tokens. If a session's windows use different models, both are listed.
 - **Account.** Machine pages, container rows and Claude session headers show which account Claude Code is signed in with there, and its plan (for example `you@example.com · Max 5x`). AIminal reads this from `~/.claude.json`; it never reads tokens.
 - **Happy.** Sessions started with `happy claude` show **Happy**. In Happy's remote mode (the phone screen), Claude's own screen is hidden, so AIminal can't tell when it is working; the badge says so.
 - **Trust prompt.** In a folder Claude hasn't been trusted in yet, Claude waits on a "trust this folder?" prompt; AIminal shows it as waiting.
@@ -295,4 +296,4 @@ Errors and warnings are saved to `~/Library/Logs/AIminal/aiminal.log` (it opens 
 | `~/Library/Logs/AIminal/aiminal.log` | logs |
 | `~/Downloads` | files you download from the file tree |
 
-AIminal never stores passwords. On each machine it reads tmux's state, the process list, the bottom of each pane's screen, the running containers, and the account fields of `~/.claude.json` (email and plan, not tokens). It sends nothing anywhere except the update check to GitHub.
+AIminal never stores passwords. On each machine it reads tmux's state, the process list, the bottom of each pane's screen, the running containers, the account fields of `~/.claude.json` (email and plan, not tokens), and the model name from Claude Code's session files (not the conversation). It sends nothing anywhere except the update check to GitHub.

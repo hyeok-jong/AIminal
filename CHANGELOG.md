@@ -1,5 +1,20 @@
 # Changelog
 
+## 0.12.1-beta
+
+### New
+
+- **Claude model badge.** Every Claude badge (home cards, session header, window cards; tooltip in the sidebar and tabs) now says which model that Claude is using, like **Claude · Fable 5.1**. AIminal reads it from Claude Code's own session files on each machine and container (`~/.claude/sessions` plus the last reply in the transcript), never the conversation or tokens
+- **Happy remote mode** (phone screen) now shows working/waiting too, using Claude Code's own busy/idle state instead of the hidden screen
+
+### Fixed
+
+- **Korean (non-ASCII) session names and folders on remote machines.** macOS turned them into decomposed characters on the way to `ssh`, so tmux on a Linux server reported "session not found" for rename, /exit and new sessions. Every command now goes through the same byte-safe path the file browser already used
+- An upload whose target folder doesn't exist (or isn't writable) now fails with the server's message right away instead of hanging in the transfer list
+- A command that printed a lot to stderr could hang the refresh forever; stderr is now read concurrently
+- **Unsaved edits are no longer lost silently.** Closing a tab, "Close All Panes", or quitting AIminal first asks to save each changed file; if a terminal ends on its own, its unsaved editor panes move to the next tab
+- The updater refuses a release that has no checksum file instead of installing it unverified
+
 ## 0.12.0-beta
 
 ### Aiminal is now spelled AIminal
