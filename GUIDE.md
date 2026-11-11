@@ -145,6 +145,14 @@ Double-click a text file in the file tree and it opens in a pane beside the term
 - The editor is made for code: syntax colors for shell, Python, JavaScript/TypeScript, C-family, Go, Rust, Swift, YAML, JSON, HTML, SQL and Dockerfiles; no smart quotes or auto-correct. ⌘F finds.
 - Closing a pane with unsaved changes asks to save. Files over 5 MB or that aren't UTF-8 text don't open in the editor; right-click → Open with Default App / Open in VS Code / Open a Copy instead.
 
+## Multi-line input
+
+Typing a long prompt straight into a terminal is awkward: Enter submits, and every tool has its own trick for a line break. Press **⇧⌘M** (or the ✎ button under the terminal) to open a text box below the terminal and write there instead: several paragraphs, Markdown, code blocks, anything.
+
+- **Send + Enter** (⌘↩) pastes the whole text into the terminal as one block and then presses Enter, so Claude Code (or your shell) receives it as a single message. **Send** pastes without Enter, so you can keep editing in the terminal.
+- **Preview** renders the Markdown; what is sent is always the raw text. The box keeps its own draft per tab, and you can drag its top edge to resize it.
+- Works in tmux sessions on this Mac, over SSH and inside containers (the text goes through tmux's paste buffer), and in plain terminal tabs.
+
 ## Side by side
 
 Watch more than one thing at once:
