@@ -23,7 +23,7 @@
 | | |
 |---|---|
 | 🏠 **A home for all your tmux sessions** | Every session on this Mac, your SSH servers and the docker containers on them, as live cards in one window |
-| 🤖 **Knows when Claude Code is done** | Working, waiting, or stopped at the usage limit (with the reset time). A notification the moment it finishes, even on a remote server or inside a container |
+| 🤖 **Knows when Claude Code is done** | Working, waiting, or stopped at the usage limit (with the reset time), and which model it runs. A notification the moment it finishes, even on a remote server or inside a container |
 | 🗂 **File tree beside the terminal** | ⇧⌘E. Follows the session's folder, on your Mac, servers and containers. Right-click a file to hand it to Claude as `@path` |
 | ✏️ **Edit files without vim** | Double-click a `.md`, `.html`, `.sh`, `.py`, `.json`, `.yaml`… to open it next to the terminal, with syntax colors. Markdown and HTML preview, ⌘S saves straight back to the server |
 | ⬇️⬆️ **Download and upload** | Right-click to download a file or folder to any folder you pick, drag from Finder to upload. A progress bar with size and percent, and a Cancel button |
@@ -107,7 +107,7 @@ AIminal is the app I wanted for that:
 - **Built-in terminal**: open any tmux session in a real terminal inside AIminal, with a tab for each one. Plain terminals without tmux work too (⌘T)
 - **Clear close actions**: Close window (Ctrl-b d) keeps the session running, Quit Claude (/exit) ends only Claude, End tmux session ends it all
 - **Keyboard first**: hold ⌘ to see every shortcut, ⌘K to jump to any session, machine or command, ⌘1…⌘9 for tabs, ⌘= / ⌘- to zoom the terminal
-- **Claude Code aware**: see which sessions run Claude (or `happy claude`) and whether it is working or waiting, even inside a docker container. Get a notification when Claude finishes or hits its usage limit (with the reset time), see which account and plan Claude is signed in with on each machine, and quit it cleanly with **Quit Claude (/exit)**
+- **Claude Code aware**: see which sessions run Claude (or `happy claude`) and whether it is working or waiting, even inside a docker container. Get a notification when Claude finishes or hits its usage limit (with the reset time), see which model each Claude is using (**Claude · Fable 5.1**) and which account and plan it is signed in with on each machine, and quit it cleanly with **Quit Claude (/exit)**
 - **Machines**: this Mac and your `~/.ssh/config` machines side by side in the sidebar. Connect (key or password) to see and open each machine's tmux sessions, and add or edit machines in the app. AIminal keeps one SSH session per machine, so your server sees a single login
 - **Docker containers**: keep tmux on the server and work inside a container. A session or preset can name a container, and AIminal runs `docker exec` into it for you (with your folder and startup command). AIminal also finds the tmux sessions running *inside* each container and opens them with `docker exec -it <container> tmux attach`. Each machine page lists its running containers
 - **File tree** (⇧⌘E, shown by default): a folder tree beside the terminal that follows the session's folder, on this Mac, SSH machines and inside containers. Right-click a file to type its path into the terminal (as `@path` for Claude). Download files and folders, or drag them in from Finder to upload, with a progress bar and Cancel

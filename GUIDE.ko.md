@@ -200,6 +200,7 @@ AIminal는 어느 tmux 창이든 Claude Code를 알아봅니다. 이 Mac, SSH �
 - **작업 중 / 대기.** Claude는 일하는 동안 상태 줄에 "esc to interrupt"를 띄웁니다. AIminal는 몇 초마다 pane 아래쪽을 읽어 판단합니다. (tmux 안에서는 Claude가 창 제목을 고정해서 제목만으로는 알 수 없습니다.)
 - **완료.** 보고 있지 않은 세션에서 Claude가 작업을 마치면 작업명이 담긴 알림, 세션의 🔔, Dock 배지가 생깁니다. 알림을 누르면 그 세션으로 갑니다.
 - **사용 한도.** Claude가 한도에 걸려 멈추면("Usage limit reached · resets 8:50pm") 세션에 ⚠ **한도 · 8:50pm**이 표시되고, "완료" 대신 한도 알림이 한 번 옵니다.
+- **모델.** 카드·세션 머리·창 카드의 Claude 배지에 그 Claude가 쓰는 모델이 보입니다(예: **Claude · Fable 5.1**, **Opus 5.5**. 전체 id는 툴팁에). Claude Code가 남기는 세션 파일(`~/.claude/sessions`와 그 세션 기록의 마지막 답)에서 읽으며, 대화 내용이나 토큰은 읽지 않습니다. 한 세션의 창들이 다른 모델을 쓰면 둘 다 보입니다.
 - **계정.** 머신 화면, 컨테이너 줄, Claude 세션 위쪽에 그곳의 Claude Code가 어떤 계정·요금제로 로그인했는지 보입니다(예: `you@example.com · Max 5x`). `~/.claude.json`에서 읽으며, 토큰은 읽지 않습니다.
 - **Happy.** `happy claude`로 띄운 세션은 **Happy**로 표시됩니다. Happy 원격 모드(휴대폰 화면)에서는 Claude 화면이 가려져 작업 중인지 알 수 없고, 배지에 그렇게 나옵니다.
 - **폴더 신뢰 확인.** Claude가 아직 신뢰하지 않은 폴더에서는 "이 폴더를 신뢰할까요?" 화면에서 기다립니다. AIminal는 대기로 보여줍니다.
@@ -295,4 +296,4 @@ docker exec -it -w <폴더> <컨테이너> bash -lc '<명령>; exec bash -l'
 | `~/Library/Logs/AIminal/aiminal.log` | 로그 |
 | `~/Downloads` | 파일 트리에서 받은 파일 |
 
-AIminal는 비밀번호를 저장하지 않습니다. 각 머신에서 tmux 상태, 프로세스 목록, 각 pane 화면의 아래쪽, 실행 중인 컨테이너, `~/.claude.json`의 계정 항목(이메일·요금제, 토큰 아님)을 읽습니다. GitHub의 업데이트 확인 외에는 아무 데도 보내지 않습니다.
+AIminal는 비밀번호를 저장하지 않습니다. 각 머신에서 tmux 상태, 프로세스 목록, 각 pane 화면의 아래쪽, 실행 중인 컨테이너, `~/.claude.json`의 계정 항목(이메일·요금제, 토큰 아님), Claude Code 세션 파일의 모델 이름(대화 내용 아님)을 읽습니다. GitHub의 업데이트 확인 외에는 아무 데도 보내지 않습니다.
