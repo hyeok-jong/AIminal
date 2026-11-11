@@ -50,6 +50,14 @@
   <img src="screenshots/split.png" alt="Claude Code 세션 두 개를 나란히: 하나는 이 Mac, 하나는 gpu-box의 docker 컨테이너">
 </picture>
 
+### Claude에게 문서처럼 쓰기
+긴 프롬프트를 터미널 한 줄에 넣을 필요가 없습니다. 모든 터미널 아래 **Claude에게 보낼 글** 버튼을 누르면 문단·마크다운·코드 블록을 쓸 수 있는 글상자가 펼쳐지고, ⌘↩로 Claude에게 메시지 하나로 보냅니다.
+
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="screenshots/compose-dark.png">
+  <img src="screenshots/compose.png" alt="Claude Code 터미널 아래 글상자에 체크리스트와 코드 블록이 든 마크다운 메시지를 써 놓고 ⌘↩로 보내기 직전">
+</picture>
+
 ### vim 없이 편집
 파일 트리에서 스크립트나 설정 파일을 더블클릭해 터미널 옆에서 구문 색상과 함께 고치고, ⌘S로 서버에 바로 저장.
 

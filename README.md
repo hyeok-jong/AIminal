@@ -50,6 +50,14 @@ Claude on your Mac and Claude inside a container on the GPU server, next to each
   <img src="screenshots/split.png" alt="Two Claude Code sessions side by side: one on this Mac, one in a docker container on gpu-box">
 </picture>
 
+### Write to Claude like a document
+Long prompts don't belong on one terminal line. The **Message for Claude** button under every terminal unfolds a box for paragraphs, Markdown and code blocks; ⌘↩ sends it to Claude as one message.
+
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="screenshots/compose-dark.png">
+  <img src="screenshots/compose.png" alt="A Markdown message with a checklist and a code block written in the box under the Claude Code terminal, ready to send with ⌘↩">
+</picture>
+
 ### Edit without vim
 Double-click a script or config in the file tree and edit it next to the terminal, with syntax colors. ⌘S saves straight back to the server.
 
