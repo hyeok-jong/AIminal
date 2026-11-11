@@ -85,6 +85,11 @@
 - **MacBook Air 여러 대**는 밖에서 일할 때용. SSH로 Mac mini에 붙으니 실제 세션은 늘 mini에 남아 있습니다
 - **GPU 연구 서버 두 대**에는 SSH로. 관리자라서 연구실 사람들의 docker 컨테이너도 띄워 주고, 제 연구는 제 컨테이너 안에서 tmux + Claude Code로 합니다
 
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="screenshots/setup-dark.svg">
+  <img src="screenshots/setup.svg" alt="내 환경: MacBook Air 여러 대가 SSH로 Mac mini에 붙고, Mac mini는 tmux 세션 여러 개와 Claude Code 여러 개를 동시에 돌린다. GPU 연구 서버 두 대에는 SSH로 들어가며, 각 서버에 호스트 tmux, tmux와 Claude가 든 내 docker 컨테이너, 관리자로 띄워 둔 연구실 컨테이너들이 있다. AIminal은 이 모두를 창 하나에 보여 준다.">
+</picture>
+
 보통 터미널에서는 이 모든 관리를 손으로 해야 했습니다. 어느 세션이 어느 머신, 어느 컨테이너 안에 있지? 저 세션의 Claude는 끝났나, 아직 돌고 있나, 내 답을 기다리나? 그 프로젝트의 폴더와 명령이 뭐였더라? `ssh`, `docker exec`, `tmux ls`, `tmux attach -t …`를 계속 반복해서 치고 있었습니다.
 
 AIminal은 그래서 만든 앱입니다:
