@@ -6,8 +6,6 @@
 
 > 상태: **공개 베타**, 베타 기간에는 무료. · 📖 **[사용설명서](GUIDE.ko.md)** · **[Guide (English)](GUIDE.md)**
 
-> **Termoor가 AIminal로 이름을 바꿨습니다.** 같은 앱, 새 이름입니다(0.11에서는 "Aiminal"로 썼고, 0.10 전에는 Initia였습니다). Aiminal·Termoor·Initia가 설치돼 있으면 스스로 AIminal로 업데이트되고, 설정·프리셋·열린 탭은 그대로 이어집니다.
-
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="screenshots/setup-dark.svg">
   <img src="screenshots/setup.svg" alt="내 환경: MacBook Air 여러 대가 SSH로 Mac mini와 GPU 연구 서버 두 대에 붙는다. Mac mini는 tmux 세션 여러 개와 Claude Code 여러 개를 동시에 돌린다. 각 서버에는 호스트의 관리자 tmux 하나와 docker 컨테이너 여러 개가 있고 컨테이너마다 그 안에 tmux가 있다. 내 컨테이너에서는 Claude Code도 돈다. AIminal은 이 모두를 창 하나에 보여 준다.">

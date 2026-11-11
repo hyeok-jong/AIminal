@@ -1,5 +1,13 @@
 # Changelog
 
+## 0.12.8-beta
+
+### Fixed
+
+- **Split panes are first-class.** Every pane of a split view now has its own **Message for Claude** button and box, and ⇧⌘M / ⌘↩ go to the pane you last clicked or typed in, not always the left one
+- **The box really clears after Send + Enter.** Sending now resets the input method's state too, so a syllable the Korean IME was still composing can't come back
+- Removed the old "Termoor is now AIminal" notice from the README and guide
+
 ## 0.12.7-beta
 
 ### Fixed

@@ -22,8 +22,6 @@ AIminal is a home for your tmux sessions: on this Mac, on your servers over SSH,
 
 ---
 
-> **Termoor is now AIminal** (0.11, spelled "Aiminal" until 0.12; before 0.10 the app was called Initia). Installed copies of Aiminal, Termoor or Initia update themselves to AIminal: the app is renamed to AIminal.app, `~/.config/termoor` (or `~/.config/initia`) moves to `~/.config/aiminal`, and your settings, presets, notifications and open tabs carry over.
-
 ## Install and update
 
 Requirements: macOS 15 or later, and [tmux](https://github.com/tmux/tmux) (`brew install tmux`).
@@ -147,7 +145,7 @@ Double-click a text file in the file tree and it opens in a pane beside the term
 
 ## Multi-line input
 
-Typing a long prompt straight into a terminal is awkward: Enter submits, and every tool has its own trick for a line break. Under every terminal there is a **Message for Claude** button (just **Multi-line input** when Claude isn't running there). Click it, or press **⇧⌘M**, and a text box unfolds; write there instead: several paragraphs, Markdown, code blocks, anything. Fold it back with ✕ or ⇧⌘M; AIminal remembers whether it was open, and the button shows the first line of an unsent draft.
+Typing a long prompt straight into a terminal is awkward: Enter submits, and every tool has its own trick for a line break. Under every terminal, including each pane of a split view, there is a **Message for Claude** button (just **Multi-line input** when Claude isn't running there). Click it, or press **⇧⌘M**, and a text box unfolds; write there instead: several paragraphs, Markdown, code blocks, anything. Fold it back with ✕ or ⇧⌘M. Each pane has its own box and draft, and ⇧⌘M and ⌘↩ act on the pane you last clicked or typed in; the button shows the first line of an unsent draft.
 
 - **Send + Enter** (⌘↩) pastes the whole text into the terminal as one block and then presses Enter, so Claude Code (or your shell) receives it as a single message. **Send** pastes without Enter, so you can keep editing in the terminal.
 - **Preview** renders the Markdown; what is sent is always the raw text. The box keeps its own draft per tab, and you can drag its top edge to resize it.
