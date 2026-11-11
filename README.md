@@ -9,6 +9,11 @@
 > **Termoor is now AIminal.** Same app, new name (spelled "Aiminal" in 0.11, and called Initia before 0.10): if you have Aiminal, Termoor or Initia installed, it updates itself to AIminal and keeps your settings, presets and open tabs.
 
 <picture>
+  <source media="(prefers-color-scheme: dark)" srcset="screenshots/setup-dark.svg">
+  <img src="screenshots/setup.svg" alt="My setup: a few MacBook Airs SSH into a Mac mini and two GPU research servers. The Mac mini runs many tmux sessions with several Claude Code at once. Each server has one admin tmux on the host and several docker containers, each with its own tmux inside; my own container also runs Claude Code. AIminal shows all of it in one window.">
+</picture>
+
+<picture>
   <source media="(prefers-color-scheme: dark)" srcset="screenshots/files-dark.png">
   <img src="screenshots/files.png" alt="AIminal: sessions on this Mac, a GPU server and a docker container in the sidebar; a file tree, Claude Code working in the terminal, and a rendered README beside it">
 </picture>
@@ -79,16 +84,11 @@ Download a checkpoint or a whole folder from a container with a progress bar, dr
 
 ## Why I built AIminal
 
-My day runs on tmux, across more machines than one terminal window was built for. This is my actual setup:
+My day runs on tmux, across more machines than one terminal window was built for. This is my actual setup (the figure at the top of this page):
 
 - **One Mac mini** is the main development machine. Every project has its own tmux session there, and several of them run Claude Code at the same time
-- **A few MacBook Airs** for working somewhere else. They reach the Mac mini over SSH, so the real sessions always stay on the mini
-- **Two GPU research servers** over SSH. I am an admin there, so I keep docker containers running for the lab, and I do my own research inside my own container, with tmux and Claude Code running in it
-
-<picture>
-  <source media="(prefers-color-scheme: dark)" srcset="screenshots/setup-dark.svg">
-  <img src="screenshots/setup.svg" alt="My setup: a few MacBook Airs reach a Mac mini over SSH; the Mac mini runs many tmux sessions with several Claude Code at once; two GPU research servers over SSH each run a host tmux, my own docker container with tmux and Claude inside, and the lab's containers I keep running as admin. AIminal shows all of it in one window.">
-</picture>
+- **A few MacBook Airs** for working somewhere else. They have no sessions of their own and reach the Mac mini and the servers over SSH, so the real work always stays there
+- **Two GPU research servers** over SSH. I am an admin there: one tmux on the host, and several docker containers I keep running for the lab, each with its own tmux inside. My own research happens in my own container, with tmux and Claude Code running in it
 
 A plain terminal made me do all the bookkeeping by hand. Which session is on which machine, or inside which container? Is Claude in that one done, or still working, or waiting for me? What was the folder and command for that project again? I kept typing `ssh`, then `docker exec`, then `tmux ls`, then `tmux attach -t …`, over and over.
 
