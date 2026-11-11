@@ -1,5 +1,11 @@
 # Changelog
 
+## 0.12.6-beta
+
+### Fixed
+
+- The multi-line box showed icon-only buttons even in a wide pane; it now drops the hint text first and the labels only in a narrow pane
+
 ## 0.12.5-beta
 
 ### Changed
