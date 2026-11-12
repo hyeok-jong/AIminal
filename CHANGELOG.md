@@ -1,5 +1,11 @@
 # Changelog
 
+## 0.12.13-beta
+
+### Changed
+
+- **Sessions stay under their machine in the sidebar when you open them.** Opening a session used to move it from the machine tree into "Open in AIminal"; now it appears in both places, so the machine tree always shows everything that is running there
+
 ## 0.12.12-beta
 
 ### Fixed
