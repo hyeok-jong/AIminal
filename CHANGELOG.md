@@ -1,5 +1,11 @@
 # Changelog
 
+## 0.12.14-beta
+
+### Fixed
+
+- A terminal that gets (re)attached to the window no longer takes the keyboard away from a message box or editor you are typing in. Suspected cause of dropped letters in a message box while another pane's Claude was working; this build also logs focus moves (⇧⌘L, categories `terminal` and `compose`) to confirm
+
 ## 0.12.13-beta
 
 ### Changed
