@@ -81,7 +81,7 @@ Click a heading to collapse it (Expand all / Collapse all are at the top); conta
 
 ```
 🏠 Home
-OPEN IN AIMINAL        sessions you have open in tabs
+OPEN IN AIMINAL        sessions you have open in tabs (they stay listed under their machine too)
 MACHINES (SSH)   ⤢ ⤡   expand all / collapse all
  ▾ 💻 This Mac
      session …
