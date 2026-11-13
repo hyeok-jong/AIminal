@@ -79,7 +79,7 @@ Click a heading to collapse it (Expand all / Collapse all are at the top); conta
 
 ## Clock and machine stats
 
-The middle of the toolbar shows the time (to the second) and date, this Mac's **CPU** and **MEM** in use, and, when you are looking at a session or page of a remote machine, that machine's **load** per core, memory and every **GPU** (utilization and temperature, from `nvidia-smi`). Chips turn orange at 70% and red at 90%. Machine pages show the same, with a bar per GPU for utilization and memory.
+The middle of the toolbar shows the time (to the second) and date, and this Mac's **CPU** and **MEM** in use. Each remote machine's page shows that machine's **load** per core, memory and every **GPU** (utilization and temperature, from `nvidia-smi`), with a bar per GPU for utilization and memory. Chips turn orange at 70% and red at 90%.
 
 Remote numbers ride along with the tmux snapshot AIminal already receives every few seconds, so they cost no extra logins. This Mac shows no GPU or temperature because macOS gives apps no public reading for them. Turn the strip off in Settings → General.
 

@@ -27,7 +27,7 @@
 | ✏️ **Edit files without vim** | Double-click a `.md`, `.html`, `.sh`, `.py`, `.json`, `.yaml`… to open it next to the terminal, with syntax colors. Markdown and HTML preview, ⌘S saves straight back to the server |
 | ⬇️⬆️ **Download and upload** | Right-click to download a file or folder to any folder you pick, drag from Finder to upload. A progress bar with size and percent, and a Cancel button |
 | 🪟 **Terminals side by side** | ⌘D, the split button, or drag a tab onto the terminal. Side by side or stacked, up to six panes, drag the dividers to resize. Watch Claude on two servers at once |
-| ⏱ **Clock and machine stats in the toolbar** | Time and date, this Mac's CPU and memory, and the remote machine's load, memory and every GPU's utilization and temperature while you look at it |
+| ⏱ **Clock and machine stats** | Time, date, this Mac's CPU and memory in the toolbar; each server's load, memory and every GPU's utilization and temperature on its machine page |
 | 🐳 **Docker containers, first class** | Enter containers for you, find the tmux sessions inside them, open them in a tab, and start new ones inside |
 | 🔐 **Server-friendly SSH** | Uses your `~/.ssh/config`, keys or passwords, one shared connection per machine. Nothing to install on the server |
 
@@ -127,7 +127,7 @@ AIminal is the app I wanted for that:
 - **Opens in AIminal by default**, and still one click away in iTerm2, Terminal, cmux, Ghostty, WezTerm, kitty or Alacritty
 - **Presets and autostart**: save a machine, folder and startup command, and bring your sessions up at login. Keep them in iCloud Drive, one file per Mac, and load another Mac's presets with a click
 - **Automatic updates**: AIminal checks for new versions and updates itself in one click. Your tmux sessions keep running
-- **Clock and stats** in the toolbar: time, date, CPU and memory of this Mac, and load, memory and GPUs (utilization, temperature) of the remote machine you are looking at
+- **Clock and stats**: time, date, CPU and memory of this Mac in the toolbar; load, memory and GPUs (utilization, temperature) on each server's page
 - **Menu bar and Dock**, English and Korean UI
 
 ## Install
