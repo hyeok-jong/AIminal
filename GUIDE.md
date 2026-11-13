@@ -77,6 +77,12 @@ Below, every machine and every container with tmux gets its own section of **ses
 
 Click a heading to collapse it (Expand all / Collapse all are at the top); containers sit inside their machine's section. Click a card to open it, or drag it to reorder. Presets you haven't started yet appear under **Quick start**, and machines that aren't connected are listed with a **Connect** button.
 
+## Clock and machine stats
+
+The middle of the toolbar shows the time (to the second) and date, this Mac's **CPU** and **MEM** in use, and, when you are looking at a session or page of a remote machine, that machine's **load** per core, memory and every **GPU** (utilization and temperature, from `nvidia-smi`). Chips turn orange at 70% and red at 90%. Machine pages show the same, with a bar per GPU for utilization and memory.
+
+Remote numbers ride along with the tmux snapshot AIminal already receives every few seconds, so they cost no extra logins. This Mac shows no GPU or temperature because macOS gives apps no public reading for them. Turn the strip off in Settings → General.
+
 ## The sidebar
 
 ```
