@@ -53,10 +53,7 @@ Claude on your Mac and Claude inside a container on the GPU server, next to each
 ### Write to Claude like a document
 Long prompts don't belong on one terminal line. The **Message for Claude** button under every terminal unfolds a box for paragraphs, Markdown and code blocks; ⌘↩ sends it to Claude as one message.
 
-<picture>
-  <source media="(prefers-color-scheme: dark)" srcset="screenshots/compose-dark.png">
-  <img src="screenshots/compose.png" alt="A Markdown message with a checklist and a code block written in the box under the Claude Code terminal, ready to send with ⌘↩">
-</picture>
+<img src="screenshots/compose.gif" alt="Writing a Markdown message with a list and a code block in the box under the Claude Code terminal, then sending it with ⌘↩: the text goes up into Claude's prompt and the box empties">
 
 ### Know what the machine is doing
 The toolbar keeps the time and this Mac's CPU and memory in view; each server's page shows its load, memory and every GPU with utilization and temperature.
