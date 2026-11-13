@@ -53,10 +53,7 @@
 ### Claude에게 문서처럼 쓰기
 긴 프롬프트를 터미널 한 줄에 넣을 필요가 없습니다. 모든 터미널 아래 **Claude에게 보낼 글** 버튼을 누르면 문단·마크다운·코드 블록을 쓸 수 있는 글상자가 펼쳐지고, ⌘↩로 Claude에게 메시지 하나로 보냅니다.
 
-<picture>
-  <source media="(prefers-color-scheme: dark)" srcset="screenshots/compose-dark.png">
-  <img src="screenshots/compose.png" alt="Claude Code 터미널 아래 글상자에 체크리스트와 코드 블록이 든 마크다운 메시지를 써 놓고 ⌘↩로 보내기 직전">
-</picture>
+<img src="screenshots/compose.gif" alt="Claude Code 터미널 아래 글상자에 목록과 코드 블록이 든 마크다운 메시지를 쓰고 ⌘↩로 보내는 모습: 글이 Claude 입력으로 올라가고 상자가 비워짐">
 
 ### 머신이 뭘 하는지 바로 보기
 툴바에 시각과 이 Mac의 CPU·메모리가 늘 보이고, 서버 화면에는 부하·메모리와 GPU마다의 사용률·온도가 나옵니다.
