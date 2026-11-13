@@ -1,5 +1,14 @@
 # Changelog
 
+## 0.12.23-beta
+
+### Changed
+
+- **Sidebar**: sessions that are already open in a tab are dimmed under their machine, and the "Open in AIminal" group can be collapsed
+- **Home**: the "New session" card is a slim row instead of a full-size card
+- **Session header**: fewer buttons (opening in another terminal moved to the ⋯ menu), a pencil next to the name for renaming, and the ⌘ shortcut overlay now explains the header buttons
+- **Settings → General**: "Keep typing in the message box after sending" keeps the keyboard in the box; by default it goes to the terminal
+
 ## 0.12.22-beta
 
 ### Changed
