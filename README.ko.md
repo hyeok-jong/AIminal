@@ -28,6 +28,7 @@
 | ⬇️⬆️ **다운로드와 업로드** | 오른쪽 클릭으로 파일·폴더를 원하는 폴더에 내려받고, Finder에서 끌어다 올리기. 크기·퍼센트 진행률과 취소 버튼 |
 | 🪟 **터미널 나란히** | ⌘D, 나누기 버튼, 또는 탭을 터미널 위로 드래그. 좌우 또는 위아래, 최대 여섯 칸, 가름선을 끌어 크기 조절. 두 서버의 Claude를 동시에 지켜보기 |
 | ⏱ **시계와 머신 상태** | 툴바에 시각·날짜·이 Mac의 CPU·메모리, 서버 화면에는 그 서버의 부하·메모리·GPU별 사용률과 온도 |
+| 🔍 **클릭한 패널만 확대** | ⌘= / ⌘-가 마지막에 클릭한 터미널·칸·글상자·편집기·파일 트리만 키우고 줄임 |
 | 🐳 **docker 컨테이너도 일급** | 컨테이너에 대신 들어가고, 그 안의 tmux 세션을 찾아 탭으로 열고, 안에 새 세션도 만들어줌 |
 | 🔐 **서버에 부담 없는 SSH** | `~/.ssh/config`를 그대로 사용, 키·비밀번호 모두, 머신당 연결 하나를 공유. 서버에 설치할 것 없음 |
 
@@ -42,7 +43,7 @@
 </picture>
 
 ### 두 머신을 나란히
-내 Mac의 Claude와 GPU 서버 컨테이너 안의 Claude를 옆에 나란히. 탭을 터미널 위로 끌거나, ⌘D를 누르거나, 나누기 버튼을 쓰면 됩니다.
+내 Mac의 Claude와 GPU 서버 컨테이너 안의 Claude를 옆에 나란히. 탭을 터미널 위로 끌거나, ⌘D를 누르거나, 나누기 버튼을 쓰면 됩니다. 최대 여섯 칸, 가름선을 끌어 크기 조절, ⌘=는 클릭한 칸만 확대. 칸마다 **Claude에게 보낼 글** 상자가 따로 있습니다.
 
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="screenshots/split-dark.png">
@@ -55,6 +56,14 @@
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="screenshots/compose-dark.png">
   <img src="screenshots/compose.png" alt="Claude Code 터미널 아래 글상자에 체크리스트와 코드 블록이 든 마크다운 메시지를 써 놓고 ⌘↩로 보내기 직전">
+</picture>
+
+### 머신이 뭘 하는지 바로 보기
+툴바에 시각과 이 Mac의 CPU·메모리가 늘 보이고, 서버 화면에는 부하·메모리와 GPU마다의 사용률·온도가 나옵니다.
+
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="screenshots/stats-dark.png">
+  <img src="screenshots/stats.png" alt="툴바 상태 띠: 시각·날짜, 이 Mac의 CPU·메모리">
 </picture>
 
 ### vim 없이 편집

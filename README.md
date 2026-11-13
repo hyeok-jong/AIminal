@@ -28,6 +28,7 @@
 | ⬇️⬆️ **Download and upload** | Right-click to download a file or folder to any folder you pick, drag from Finder to upload. A progress bar with size and percent, and a Cancel button |
 | 🪟 **Terminals side by side** | ⌘D, the split button, or drag a tab onto the terminal. Side by side or stacked, up to six panes, drag the dividers to resize. Watch Claude on two servers at once |
 | ⏱ **Clock and machine stats** | Time, date, this Mac's CPU and memory in the toolbar; each server's load, memory and every GPU's utilization and temperature on its machine page |
+| 🔍 **Zoom the panel you click** | ⌘= / ⌘- grow or shrink just the terminal, pane, message box, editor or file tree you clicked last |
 | 🐳 **Docker containers, first class** | Enter containers for you, find the tmux sessions inside them, open them in a tab, and start new ones inside |
 | 🔐 **Server-friendly SSH** | Uses your `~/.ssh/config`, keys or passwords, one shared connection per machine. Nothing to install on the server |
 
@@ -42,7 +43,7 @@ Every tmux session on your Mac, your servers and inside their containers, as liv
 </picture>
 
 ### Two machines, side by side
-Claude on your Mac and Claude inside a container on the GPU server, next to each other. Drag a tab onto the terminal, press ⌘D, or use the split button.
+Claude on your Mac and Claude inside a container on the GPU server, next to each other. Drag a tab onto the terminal, press ⌘D, or use the split button. Up to six panes, drag the dividers, and ⌘= zooms just the pane you clicked. Each pane has its own **Message for Claude** box.
 
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="screenshots/split-dark.png">
@@ -55,6 +56,14 @@ Long prompts don't belong on one terminal line. The **Message for Claude** butto
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="screenshots/compose-dark.png">
   <img src="screenshots/compose.png" alt="A Markdown message with a checklist and a code block written in the box under the Claude Code terminal, ready to send with ⌘↩">
+</picture>
+
+### Know what the machine is doing
+The toolbar keeps the time and this Mac's CPU and memory in view; each server's page shows its load, memory and every GPU with utilization and temperature.
+
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="screenshots/stats-dark.png">
+  <img src="screenshots/stats.png" alt="Toolbar strip: clock and date, CPU and memory of this Mac">
 </picture>
 
 ### Edit without vim
