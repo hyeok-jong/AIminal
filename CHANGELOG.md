@@ -1,5 +1,11 @@
 # Changelog
 
+## 0.12.18-beta
+
+### Changed
+
+- The toolbar strip shows only the Mac AIminal runs on (clock, date, CPU, memory). Remote load, memory and GPU readings stay on each machine's page
+
 ## 0.12.17-beta
 
 ### New
