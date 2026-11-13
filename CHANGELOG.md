@@ -1,5 +1,11 @@
 # Changelog
 
+## 0.12.16-beta
+
+### Changed
+
+- The three container buttons on a machine page now say what they do: **New tmux inside** (tmux lives in the container), **Machine tmux → docker exec** (tmux on the machine, shell in the container), **Shell only** (docker exec, no tmux), each with a one-line caption and a fuller tooltip
+
 ## 0.12.15-beta
 
 ### New

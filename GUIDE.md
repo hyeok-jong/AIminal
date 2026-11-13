@@ -241,12 +241,12 @@ docker exec -it -w <folder> <container> bash -lc '<command>; exec bash -l'
 
 for you, so the session lands in the container's folder with your command running, and stays in the container shell after it ends. Session cards show 🐳 and the container name. Claude inside the container is detected from its title and screen, since its processes aren't under the tmux pane.
 
-**2. tmux inside the container.** AIminal also reads the tmux sessions running *inside* each container (every 15 seconds, over the machine's existing SSH session). They appear under the machine as 🐳 container → sessions, and opening one runs `docker exec -it <container> tmux attach -t <session>` in AIminal's terminal. Claude detection, notifications, Close and rename all work there too. **Start more of them** from AIminal: the ⊕ next to the container in the sidebar (or right-click → New tmux session inside…), the "new session" card in the container's group on Home, or **tmux inside** on the machine page. The session is created inside the container (`docker exec <container> tmux new -s …`), so you can keep several tmux sessions per container, each with its own Claude.
+**2. tmux inside the container.** AIminal also reads the tmux sessions running *inside* each container (every 15 seconds, over the machine's existing SSH session). They appear under the machine as 🐳 container → sessions, and opening one runs `docker exec -it <container> tmux attach -t <session>` in AIminal's terminal. Claude detection, notifications, Close and rename all work there too. **Start more of them** from AIminal: the ⊕ next to the container in the sidebar (or right-click → New tmux session inside…), the "new session" card in the container's group on Home, or **New tmux inside** on the machine page. The session is created inside the container (`docker exec <container> tmux new -s …`), so you can keep several tmux sessions per container, each with its own Claude.
 
 A machine's page lists its running containers with:
-- **tmux inside**: a new tmux session inside the container
-- **tmux + docker exec**: a new tmux session on the machine that enters the container
-- **docker exec**: a shell in the container, without tmux
+- **New tmux inside**: a new tmux session inside the container (tmux lives in the container; keep several)
+- **Machine tmux → docker exec**: a new tmux session on the machine that immediately enters the container (shows up under the machine)
+- **Shell only**: `docker exec` in a plain tab, no tmux; nothing keeps running after you close it
 
 Your account needs permission to run `docker` on that machine. With it, AIminal shows every container there (a docker user is effectively an admin of the machine).
 
