@@ -1,5 +1,11 @@
 # Changelog
 
+## 0.12.22-beta
+
+### Changed
+
+- UI/UX pass: **esc** in the message box returns the keyboard to the terminal; the box's hint now reads "⌘↩ sends it as one message · esc back to the terminal"; container names in the sidebar no longer get truncated before the "docker" caption does
+
 ## 0.12.21-beta
 
 ### Fixed
