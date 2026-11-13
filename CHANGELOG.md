@@ -1,5 +1,11 @@
 # Changelog
 
+## 0.12.17-beta
+
+### New
+
+- **Clock and machine stats in the toolbar.** Time to the second, the date, this Mac's CPU and memory, and, while you look at a remote session or machine, that machine's load per core, memory and each GPU's utilization and temperature (`nvidia-smi`). Machine pages show the same with a bar per GPU. Remote numbers come with the existing tmux snapshot, so no extra logins. Settings → General turns the strip off
+
 ## 0.12.16-beta
 
 ### Changed
