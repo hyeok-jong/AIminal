@@ -120,7 +120,7 @@ Selecting a session opens it in AIminal's terminal. The header shows its machine
 
 **Snippets** are buttons under the terminal that type text for you. The defaults (`/clear`, `/compact`, `continue`, Esc) appear when Claude runs in the session. Click the slider icon to add your own; `\e` sends Esc and `\n` a new line.
 
-**Zoom** the terminal with ⌘= and ⌘-, and reset with ⌘0. Copy and paste work as usual.
+**Zoom** with ⌘= and ⌘-, reset with ⌘0. They act on the panel you clicked last: this terminal, a side-by-side pane, the message box, an editor pane, or the file tree. Copy and paste work as usual.
 
 If you detach from inside tmux (Ctrl-b d), the tab shows **Reconnect** instead of disappearing. If an SSH tab ends, it stays open with the last output and the exit code, so you can see why.
 
@@ -268,7 +268,7 @@ Hold **⌘** for half a second to see all shortcuts; the tabs show their numbers
 | ⇧⌘] / ⇧⌘[ | Next / previous tab |
 | ⌘W | Close window (Ctrl-b d) for the current tab |
 | ⌘N / ⌘T / ⇧⌘N | New tmux session / new terminal (no tmux) / new preset |
-| ⌘= / ⌘- / ⌘0 | Zoom the terminal in / out / reset |
+| ⌘= / ⌘- / ⌘0 | Zoom the last-clicked panel in / out / reset |
 | ⇧⌘E | Show or hide the file tree |
 | ⌘S | Save the file open beside the terminal |
 | ⌘D / ⇧⌘D | New terminal beside / below |

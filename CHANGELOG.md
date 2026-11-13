@@ -1,5 +1,15 @@
 # Changelog
 
+## 0.12.19-beta
+
+### New
+
+- **Zoom the panel you clicked.** ⌘= / ⌘- / ⌘0 now act on the last panel you clicked: a terminal (each side-by-side pane separately), the message box, an editor pane, or the file tree. With nothing clicked yet they act on the current terminal, as before. Settings → General still sets the default terminal size for new terminals
+
+### Fixed
+
+- A click inside the message box can no longer be mistaken for a click on the terminal behind it (terminal hit-testing now uses the visible area and skips text editors). Logged under `terminal` if it ever happens, to chase the remaining "dropped letters after switching tabs" report
+
 ## 0.12.18-beta
 
 ### Changed
