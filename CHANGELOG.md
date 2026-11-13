@@ -1,5 +1,11 @@
 # Changelog
 
+## 0.12.21-beta
+
+### Fixed
+
+- **⌘= / ⌘- zoomed only the file tree** no matter where you clicked, and a click on the terminal might not have given it the keyboard back (both since 0.12.19): the click-location test used a view property that lies inside SwiftUI. Both now use plain window coordinates
+
 ## 0.12.20-beta
 
 ### Fixed
