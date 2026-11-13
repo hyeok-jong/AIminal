@@ -37,18 +37,12 @@
 ### Every session, one home
 Every tmux session on your Mac, your servers and inside their containers, as live cards. Claude's state on each, and a 🔔 when one is done.
 
-<picture>
-  <source media="(prefers-color-scheme: dark)" srcset="screenshots/home-dark.png">
-  <img src="screenshots/home.png" alt="Home: every tmux session as a card with a live preview and Claude status">
-</picture>
+<img src="screenshots/home.gif" alt="Home: every tmux session as a card with a live preview; when Claude finishes, the card shows a bell and a Done chip">
 
 ### Two machines, side by side
 Claude on your Mac and Claude inside a container on the GPU server, next to each other. Drag a tab onto the terminal, press ⌘D, or use the split button. Up to six panes, drag the dividers, and ⌘= zooms just the pane you clicked. Each pane has its own **Message for Claude** box.
 
-<picture>
-  <source media="(prefers-color-scheme: dark)" srcset="screenshots/split-dark.png">
-  <img src="screenshots/split.png" alt="Two Claude Code sessions side by side: one on this Mac, one in a docker container on gpu-box">
-</picture>
+<img src="screenshots/split.gif" alt="A gpu-box container session opens beside the local Claude session; the divider is dragged, then the layout switches to stacked">
 
 ### Write to Claude like a document
 Long prompts don't belong on one terminal line. The **Message for Claude** button under every terminal unfolds a box for paragraphs, Markdown and code blocks; ⌘↩ sends it to Claude as one message.
@@ -63,21 +57,22 @@ The toolbar keeps the time and this Mac's CPU and memory in view; each server's 
   <img src="screenshots/stats.png" alt="Toolbar strip: clock and date, CPU and memory of this Mac">
 </picture>
 
+<img src="screenshots/machine.gif" alt="A GPU server's page: load, memory and two GPUs whose utilization and temperature update live">
+
+### Zoom just the panel you clicked
+⌘= and ⌘- act on the last panel you clicked: the file tree, a terminal, a pane or the message box, each independently.
+
+<img src="screenshots/zoom.gif" alt="The file tree grows with ⌘= while the terminal stays the same size, then the message box grows on its own">
+
 ### Edit without vim
 Double-click a script or config in the file tree and edit it next to the terminal, with syntax colors. ⌘S saves straight back to the server.
 
-<picture>
-  <source media="(prefers-color-scheme: dark)" srcset="screenshots/editor-dark.png">
-  <img src="screenshots/editor.png" alt="Editing deploy.sh beside the terminal with syntax highlighting and an unsaved-changes dot">
-</picture>
+<img src="screenshots/files.gif" alt="Expanding folders in the file tree, previewing README.md beside the terminal, then editing deploy.sh with syntax colors and an unsaved-changes dot">
 
 ### Pull results off the server
 Download a checkpoint or a whole folder from a container with a progress bar, drop files from Finder to upload, and read the results as rendered Markdown.
 
-<picture>
-  <source media="(prefers-color-scheme: dark)" srcset="screenshots/transfer-dark.png">
-  <img src="screenshots/transfer.png" alt="A container's file tree with a 1.84 GB download at 61%, an upload in progress, and RESULTS.md rendered beside the terminal">
-</picture>
+<img src="screenshots/transfer.gif" alt="A 1.84 GB checkpoint downloading from a container with a progress bar while a dataset uploads, then RESULTS.md rendered beside the terminal">
 
 <table>
 <tr>
