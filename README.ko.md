@@ -37,18 +37,12 @@
 ### 모든 세션, 하나의 홈
 내 Mac, 서버, 그 안의 컨테이너에 있는 모든 tmux 세션을 실시간 카드로. 각각의 Claude 상태와, 끝난 세션에는 🔔.
 
-<picture>
-  <source media="(prefers-color-scheme: dark)" srcset="screenshots/home-dark.png">
-  <img src="screenshots/home.png" alt="홈: 모든 tmux 세션이 실시간 미리보기와 Claude 상태가 있는 카드로">
-</picture>
+<img src="screenshots/home.gif" alt="홈: 모든 tmux 세션이 실시간 미리보기 카드로, Claude가 끝나면 카드에 종과 완료 칩">
 
 ### 두 머신을 나란히
 내 Mac의 Claude와 GPU 서버 컨테이너 안의 Claude를 옆에 나란히. 탭을 터미널 위로 끌거나, ⌘D를 누르거나, 나누기 버튼을 쓰면 됩니다. 최대 여섯 칸, 가름선을 끌어 크기 조절, ⌘=는 클릭한 칸만 확대. 칸마다 **Claude에게 보낼 글** 상자가 따로 있습니다.
 
-<picture>
-  <source media="(prefers-color-scheme: dark)" srcset="screenshots/split-dark.png">
-  <img src="screenshots/split.png" alt="Claude Code 세션 두 개를 나란히: 하나는 이 Mac, 하나는 gpu-box의 docker 컨테이너">
-</picture>
+<img src="screenshots/split.gif" alt="gpu-box 컨테이너 세션을 이 Mac의 Claude 옆에 열고, 가름선을 끌고, 위아래 배치로 바꾸는 모습">
 
 ### Claude에게 문서처럼 쓰기
 긴 프롬프트를 터미널 한 줄에 넣을 필요가 없습니다. 모든 터미널 아래 **Claude에게 보낼 글** 버튼을 누르면 문단·마크다운·코드 블록을 쓸 수 있는 글상자가 펼쳐지고, ⌘↩로 Claude에게 메시지 하나로 보냅니다.
@@ -63,21 +57,22 @@
   <img src="screenshots/stats.png" alt="툴바 상태 띠: 시각·날짜, 이 Mac의 CPU·메모리">
 </picture>
 
+<img src="screenshots/machine.gif" alt="GPU 서버 화면: 부하·메모리와 GPU 두 개의 사용률·온도가 실시간으로 바뀜">
+
+### 클릭한 패널만 확대
+⌘=와 ⌘-는 마지막에 클릭한 패널에만 듭니다. 파일 트리, 터미널, 칸, 글상자 각각 따로.
+
+<img src="screenshots/zoom.gif" alt="⌘=로 파일 트리만 커지고 터미널은 그대로, 이어서 글상자만 커지는 모습">
+
 ### vim 없이 편집
 파일 트리에서 스크립트나 설정 파일을 더블클릭해 터미널 옆에서 구문 색상과 함께 고치고, ⌘S로 서버에 바로 저장.
 
-<picture>
-  <source media="(prefers-color-scheme: dark)" srcset="screenshots/editor-dark.png">
-  <img src="screenshots/editor.png" alt="터미널 옆에서 deploy.sh를 구문 강조와 함께 편집 중, 저장 안 된 변경 표시">
-</picture>
+<img src="screenshots/files.gif" alt="파일 트리에서 폴더를 펼치고 README.md를 터미널 옆에서 미리 본 뒤 deploy.sh를 구문 색상과 함께 편집하는 모습">
 
 ### 서버에서 결과 가져오기
 컨테이너에서 체크포인트나 폴더 전체를 진행률과 함께 내려받고, Finder에서 파일을 떨어뜨려 올리고, 결과는 렌더링된 Markdown으로 읽기.
 
-<picture>
-  <source media="(prefers-color-scheme: dark)" srcset="screenshots/transfer-dark.png">
-  <img src="screenshots/transfer.png" alt="컨테이너의 파일 트리, 1.84 GB 다운로드 61%, 진행 중인 업로드, 터미널 옆에 렌더링된 RESULTS.md">
-</picture>
+<img src="screenshots/transfer.gif" alt="컨테이너에서 1.84GB 체크포인트가 진행 막대와 함께 내려오고 데이터셋이 올라간 뒤 RESULTS.md가 터미널 옆에 렌더링되는 모습">
 
 <table>
 <tr>
