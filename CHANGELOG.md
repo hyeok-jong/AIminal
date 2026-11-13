@@ -1,5 +1,11 @@
 # Changelog
 
+## 0.12.15-beta
+
+### New
+
+- **Start tmux sessions inside a container.** The ⊕ next to a container in the sidebar (or right-click → New tmux session inside…), the "new session" card in the container's group on Home, and **tmux inside** on the machine page create the session inside the container (`docker exec <container> tmux new -s …`), so one container can hold several tmux sessions, each with its own Claude. Opening a shell inside the container is in the same right-click menu
+
 ## 0.12.14-beta
 
 ### Fixed
