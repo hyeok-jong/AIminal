@@ -1,5 +1,11 @@
 # Changelog
 
+## 0.12.20-beta
+
+### Fixed
+
+- **Closing the message box sometimes only changed the button's colour.** The ✎ button and ⇧⌘M could act on a box in a tab you had clicked earlier but weren't looking at. The header button now always toggles its own tab's box, and ⇧⌘M only follows the focus to a pane that is on screen
+
 ## 0.12.19-beta
 
 ### New
