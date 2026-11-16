@@ -16,6 +16,8 @@
   <img src="screenshots/files.png" alt="AIminal: 사이드바에 이 Mac·GPU 서버·docker 컨테이너의 세션, 파일 트리, 터미널에서 작업 중인 Claude Code, 옆에 렌더링된 README">
 </picture>
 
+<img src="screenshots/tour.gif" alt="25초 둘러보기: 모든 세션이 모인 홈, Claude 완료 알림, 파일 트리, 마크다운 메시지를 써서 Claude에게 보내기, 두 머신 나란히 보기, deploy.sh 편집, 컨테이너에서 진행 막대와 함께 받기, 실시간 GPU 상태, ⌘K 팔레트">
+
 ## 핵심 기능
 
 | | |

@@ -16,6 +16,8 @@
   <img src="screenshots/files.png" alt="AIminal: sessions on this Mac, a GPU server and a docker container in the sidebar; a file tree, Claude Code working in the terminal, and a rendered README beside it">
 </picture>
 
+<img src="screenshots/tour.gif" alt="A 25-second tour: the home with every session, a Claude done notification, the file tree, writing a Markdown message and sending it to Claude, two machines side by side, editing deploy.sh, a download from a container with a progress bar, live GPU stats, and the ⌘K palette">
+
 ## Highlights
 
 | | |
