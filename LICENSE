@@ -18,3 +18,10 @@ other liability arising from the use of AIminal.
 Third-party components:
   - SwiftTerm (https://github.com/migueldeicaza/SwiftTerm), MIT License,
     Copyright (c) Miguel de Icaza.
+  - MarkdownUI (https://github.com/gonzalezreal/swift-markdown-ui), MIT License,
+    Copyright (c) 2020 Guillermo Gonzalez.
+  - NetworkImage (https://github.com/gonzalezreal/NetworkImage), MIT License,
+    Copyright (c) 2020 Guille Gonzalez.
+  - cmark-gfm via swift-cmark (https://github.com/swiftlang/swift-cmark),
+    BSD 2-Clause License, Copyright (c) 2014 John MacFarlane; GitHub, Inc.
+  The full license texts ship inside the app bundle (Contents/Resources/THIRD-PARTY-LICENSES.txt).

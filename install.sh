@@ -20,8 +20,8 @@ bold "==> Finding the latest AIminal release"
 # Includes beta (prerelease) builds. Each release also carries Termoor-*.zip and 0-Initia-*.zip for older updaters; skip those.
 # The grep is case-insensitive so a release spelled Aiminal-*.zip (0.11) would also match.
 URL=$(curl -fsSL "https://api.github.com/repos/$REPO/releases" \
-    | grep -io '"browser_download_url": *"[^"]*/AIminal-[^"]*\.zip"' \
-    | head -n 1 | sed -E 's/.*"(https[^"]+)"/\1/')
+    | grep -m1 -io '"browser_download_url": *"[^"]*/AIminal-[^"]*\.zip"' \
+    | sed -E 's/.*"(https[^"]+)"/\1/' || true)   # grep -m1 rather than | head: head closing early would SIGPIPE grep/curl under pipefail
 [[ -n "$URL" ]] || fail "No release found at https://github.com/$REPO/releases"
 fi
 echo "    $URL"
@@ -32,13 +32,12 @@ trap 'rm -rf "$TMP"' EXIT
 bold "==> Downloading"
 curl -fsSL "$URL" -o "$TMP/AIminal.zip"
 
-# Verify the checksum when the release has one
-if curl -fsSL "$URL.sha256" -o "$TMP/AIminal.zip.sha256" 2>/dev/null; then
-    EXPECTED=$(awk '{print $1}' "$TMP/AIminal.zip.sha256")
-    ACTUAL=$(shasum -a 256 "$TMP/AIminal.zip" | awk '{print $1}')
-    [[ "$EXPECTED" == "$ACTUAL" ]] || fail "Checksum mismatch."
-    echo "    checksum OK"
-fi
+# Verify the checksum. Every release ships a .sha256 next to the zip; refuse to install without it (same rule as the in-app updater)
+curl -fsSL "$URL.sha256" -o "$TMP/AIminal.zip.sha256" 2>/dev/null || fail "No checksum file for $URL"
+EXPECTED=$(awk '{print $1}' "$TMP/AIminal.zip.sha256")
+ACTUAL=$(shasum -a 256 "$TMP/AIminal.zip" | awk '{print $1}')
+[[ "$EXPECTED" == "$ACTUAL" ]] || fail "Checksum mismatch."
+echo "    checksum OK"
 
 ditto -x -k "$TMP/AIminal.zip" "$TMP"
 [[ -d "$TMP/$APP_NAME" ]] || fail "The archive does not contain $APP_NAME."
@@ -56,6 +55,8 @@ pkill -x AIminal 2>/dev/null || true
 pkill -x Aiminal 2>/dev/null || true
 pkill -x Termoor 2>/dev/null || true
 pkill -x Initia 2>/dev/null || true
+# pkill only sends the signal; wait (up to 5 s) for the old app to actually exit before replacing its bundle
+for _ in $(seq 1 25); do pgrep -x AIminal >/dev/null || pgrep -x Aiminal >/dev/null || break; sleep 0.2; done
 rm -rf "$DEST"
 ditto "$TMP/$APP_NAME" "$DEST"
 xattr -dr com.apple.quarantine "$DEST" 2>/dev/null || true

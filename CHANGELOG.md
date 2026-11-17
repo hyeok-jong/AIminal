@@ -1,5 +1,33 @@
 # Changelog
 
+## 0.12.28-beta
+
+Full code and documentation audit before wider release. Nothing changes in how AIminal looks; these are the fixes.
+
+### Fixed
+
+- **Servers whose login shell is csh or tcsh**: every remote query and transfer failed (`Unmatched '''`) because csh can't take a multi-line command in quotes. Remote scripts are now passed in a form that works the same in sh, bash, zsh, fish, csh and tcsh
+- **Renaming a session or machine could crash the app** when a tab with that name had been open before (duplicate keys while moving per-tab state). It also lost the stacked/side-by-side choice, per-pane zoom and the file tree's expanded folders; all are carried over now
+- **A broken `config.json` no longer wipes your presets**: a copy is kept as `config.json.broken`, and **Reload config** keeps your current settings instead of replacing them with empty defaults
+- **`~/.ssh/config.aiminal-backup` was useless when `~/.ssh/config` is a symlink** (the backup was the link itself); it now holds the previous contents
+- **Preset startup commands ending in `;`** (and session names ending in `;`) were silently ignored by tmux; they are escaped now
+- **Message box**: the Clear button didn't clear while the last Korean syllable was still being composed; the Preview toggle leaked between tabs; after switching to a tab with panes beside it, keystrokes went to the side pane instead of the main terminal
+- **Machines with a Korean (non-ASCII) alias** in `~/.ssh/config` connected but never listed sessions or files (the alias reached ssh in a decomposed form); all ssh paths now go through the same safe route
+- File tree showed a stale folder after being hidden and shown again or after returning to a tab; the file-tree and message-box buttons turned the feature *off* when clicked from the Overview page
+- Uploading a file whose name starts with `-` or `@` failed; downloading a symlink produced a dangling link instead of the file it points to
+- Claude's 🔔 badge stayed on for a container session that had been killed, and for machines you renamed or deleted
+- A host alias with trailing spaces was saved with the spaces, leaving presets pointing at a machine that didn't exist
+- Container sessions in **Autostart** and tab restore after an update didn't check the machine's SSH connection
+- Reconnecting a shell tab lost the editor panes and draft beside it
+- Home hid a connected machine that has no tmux; ⌘K could show the wrong row for sessions whose names collide (`ssh:a` + `bc` vs `ssh:ab` + `c`); a pane screen that itself contains `@@INITIA-…` no longer corrupts parsing
+- **Save sessions as presets** → *All sessions* ignored sessions filtered out by the sidebar search
+
+### Changed
+
+- `install.sh` now refuses to install when the release has no checksum file, waits for a running AIminal to quit before replacing it, and no longer depends on `head` closing a pipe
+- LICENSE lists MarkdownUI, NetworkImage and cmark-gfm; the full license texts ship inside the app bundle
+- Guide: table of contents, session-header description, keyboard table (⇧⌘M, ⌘↩), settings list and the SSH "one login" note brought up to date; "nothing to install on the server" now says "beyond tmux"
+
 ## 0.12.27-beta
 
 ### Fixed
