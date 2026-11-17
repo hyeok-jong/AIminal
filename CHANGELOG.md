@@ -1,5 +1,11 @@
 # Changelog
 
+## 0.12.25-beta
+
+### Changed
+
+- Right-click a session → **Save as preset…** now fills in the same things as **Save sessions as presets**: the container and its folder when the session `docker exec`s into one, and `claude`/`happy` when Claude Code runs there
+
 ## 0.12.24-beta
 
 ### Added
