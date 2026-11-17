@@ -19,9 +19,11 @@ if [[ -z "$URL" ]]; then
 bold "==> Finding the latest AIminal release"
 # Includes beta (prerelease) builds. Each release also carries Termoor-*.zip and 0-Initia-*.zip for older updaters; skip those.
 # The grep is case-insensitive so a release spelled Aiminal-*.zip (0.11) would also match.
-URL=$(curl -fsSL "https://api.github.com/repos/$REPO/releases" \
+# Fetch the list first, then search it: if grep/head closed the pipe early, curl would die with "Failure writing output" under pipefail
+RELEASES=$(curl -fsSL "https://api.github.com/repos/$REPO/releases") || fail "Couldn't reach api.github.com"
+URL=$(printf '%s' "$RELEASES" \
     | grep -m1 -io '"browser_download_url": *"[^"]*/AIminal-[^"]*\.zip"' \
-    | sed -E 's/.*"(https[^"]+)"/\1/' || true)   # grep -m1 rather than | head: head closing early would SIGPIPE grep/curl under pipefail
+    | sed -E 's/.*"(https[^"]+)"/\1/' || true)
 [[ -n "$URL" ]] || fail "No release found at https://github.com/$REPO/releases"
 fi
 echo "    $URL"
