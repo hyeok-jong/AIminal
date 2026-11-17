@@ -1,5 +1,15 @@
 # Changelog
 
+## 0.12.24-beta
+
+### Added
+
+- **Save sessions as presets**: the new button next to **Presets** in the sidebar (also in ⌘K) turns the tmux sessions you have running into presets in one go. It handles every kind of session: on this Mac, on an SSH machine, tmux inside a container, and a machine's tmux that `docker exec`s into a container (the container and its `-w` folder are kept). Folders and the `claude`/`happy` command are filled in and editable; sessions that are already presets can be updated in place, and **Include in Autostart** brings the whole setup back with one click
+
+### Fixed
+
+- AIminal crashed at launch when the language was set to Korean (since 0.12.17): three translations were listed twice. A release check now blocks this
+
 ## 0.12.23-beta
 
 ### Changed
