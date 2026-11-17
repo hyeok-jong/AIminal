@@ -32,6 +32,7 @@
 | ⏱ **Clock and machine stats** | Time, date, this Mac's CPU and memory in the toolbar; each server's load, memory and every GPU's utilization and temperature on its machine page |
 | 🔍 **Zoom the panel you click** | ⌘= / ⌘- grow or shrink just the terminal, pane, message box, editor or file tree you clicked last |
 | 🐳 **Docker containers, first class** | Enter containers for you, find the tmux sessions inside them, open them in a tab, and start new ones inside |
+| 💾 **Save your setup as presets** | One button turns the sessions you have running, on your Mac, servers and containers, into presets with their folder and `claude` filled in. Autostart brings them all back |
 | 🔐 **Server-friendly SSH** | Uses your `~/.ssh/config`, keys or passwords, one shared connection per machine. Nothing to install on the server |
 
 ## See it
@@ -128,7 +129,7 @@ AIminal is the app I wanted for that:
 - **Snippets**: one-click buttons under the terminal that type text for you (`/clear`, `/compact`, …)
 - **Manage tmux**: create sessions; rename sessions and windows; create and close windows
 - **Opens in AIminal by default**, and still one click away in iTerm2, Terminal, cmux, Ghostty, WezTerm, kitty or Alacritty
-- **Presets and autostart**: save a machine, folder and startup command, and bring your sessions up at login. Keep them in iCloud Drive, one file per Mac, and load another Mac's presets with a click
+- **Presets and autostart**: save a machine, folder and startup command, and bring your sessions up at login. Turn every running session (local, SSH, container) into presets at once. Keep them in iCloud Drive, one file per Mac, and load another Mac's presets with a click
 - **Automatic updates**: AIminal checks for new versions and updates itself in one click. Your tmux sessions keep running
 - **Clock and stats**: time, date, CPU and memory of this Mac in the toolbar; load, memory and GPUs (utilization, temperature) on each server's page
 - **Menu bar and Dock**, English and Korean UI
@@ -152,6 +153,8 @@ xattr -dr com.apple.quarantine /Applications/AIminal.app
 ## Presets
 
 A preset is a session you start often: a machine, a folder, and a startup command. Start it in one click from Home, or mark it **autostart** to bring it up when AIminal launches. A new install comes with an `example` preset that opens Claude Code in your home folder; edit or delete it in the sidebar.
+
+The ⤓ button next to **Presets** turns the sessions you have running into presets in one go: local, SSH, tmux inside a container, or a machine tmux that `docker exec`s into one, each with its folder and `claude` filled in. Tick **Include in Autostart** and your whole setup comes back with one click.
 
 The folder button next to **Presets** in the sidebar saves them to a folder you pick (iCloud Drive, say) as one file per Mac, and loads another Mac's presets with a click.
 
