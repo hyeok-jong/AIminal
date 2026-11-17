@@ -33,7 +33,7 @@
 | 🔍 **Zoom the panel you click** | ⌘= / ⌘- grow or shrink just the terminal, pane, message box, editor or file tree you clicked last |
 | 🐳 **Docker containers, first class** | Enter containers for you, find the tmux sessions inside them, open them in a tab, and start new ones inside |
 | 💾 **Save your setup as presets** | One button turns the sessions you have running, on your Mac, servers and containers, into presets with their folder and `claude` filled in. Autostart brings them all back |
-| 🔐 **Server-friendly SSH** | Uses your `~/.ssh/config`, keys or passwords, one shared connection per machine. Nothing to install on the server |
+| 🔐 **Server-friendly SSH** | Uses your `~/.ssh/config`, keys or passwords, one shared connection per machine. Nothing to install on the server beyond tmux |
 
 ## See it
 
@@ -176,7 +176,7 @@ Settings live in `~/.config/aiminal/config.json`. Open the Settings window with 
 
 **Logs:** errors and warnings go to `~/Library/Logs/AIminal/aiminal.log`. Open the log viewer with ⇧⌘L.
 
-**SSH:** AIminal reads hosts from `~/.ssh/config`. When you edit a host in AIminal, only the lines you change are rewritten, and the previous file is kept as `~/.ssh/config.aiminal-backup`. AIminal never stores passwords: if a host needs one, you log in once in a terminal tab and AIminal reuses that connection for 30 minutes.
+**SSH:** AIminal reads hosts from `~/.ssh/config`. When you edit a host in AIminal, only the lines you change are rewritten, and the previous file is kept as `~/.ssh/config.aiminal-backup`. AIminal never stores passwords: if a host needs one, you log in once in a terminal tab and AIminal keeps reusing that connection (and for 30 minutes after it was last used).
 
 **cmux:** by default, cmux accepts socket connections only from processes it started itself. To let AIminal open workspaces in cmux, go to cmux **Settings → Automation**, set socket access to `password`, and enter the same password in AIminal under **Settings → Terminals**.
 

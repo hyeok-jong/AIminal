@@ -5,10 +5,12 @@ AIminal is a home for your tmux sessions: on this Mac, on your servers over SSH,
 - [Install and update](#install-and-update)
 - [The big picture](#the-big-picture)
 - [Home](#home)
+- [Clock and machine stats](#clock-and-machine-stats)
 - [The sidebar](#the-sidebar)
 - [Working in a session](#working-in-a-session)
 - [File tree](#file-tree)
 - [Editing files](#editing-files)
+- [Multi-line input](#multi-line-input)
 - [Side by side](#side-by-side)
 - [Starting sessions and presets](#starting-sessions-and-presets)
 - [Closing things](#closing-things)
@@ -116,7 +118,7 @@ Selecting a session opens it in AIminal's terminal. The header shows its machine
 
 - **Terminal / Overview**: Overview shows a live preview of every window, where you can rename, add or close windows (double-click a name to rename).
 - **Close**: see [Closing things](#closing-things).
-- The terminal icon opens the session in your default external terminal; **⋯** has more (another terminal, copy the attach command, save as preset, rename, new window).
+- A pencil next to the name renames the session. Buttons toggle the file tree (⇧⌘E), the message box (⇧⌘M) and splitting (⌘D); **⋯** has the rest (open in another terminal, copy the attach command, save as preset, new window).
 
 **Snippets** are buttons under the terminal that type text for you. The defaults (`/clear`, `/compact`, `continue`, Esc) appear when Claude runs in the session. Click the slider icon to add your own; `\e` sends Esc and `\n` a new line.
 
@@ -137,7 +139,7 @@ A folder tree sits to the left of the terminal, like VS Code's Explorer. It is o
 - **Progress**: big transfers show a progress bar with the size and percent under the tree, and a **Cancel** button. A cancelled download leaves nothing behind; a cancelled upload may leave a partial file on the server.
 - The header has Parent folder, Go to the terminal's folder, show/hide hidden files, Upload and Refresh. Drag the divider to resize.
 
-Nothing has to be installed on the server: transfers run over AIminal's existing SSH connection, and folders work too.
+Nothing has to be installed on the server beyond `tar` (which every system has): transfers run over AIminal's existing SSH connection, and folders work too.
 
 ## Editing files
 
@@ -229,7 +231,7 @@ The **Machines (SSH)** section lists the hosts in your `~/.ssh/config` next to t
 
 **Connecting.** Click a machine and **Connect**. With an SSH key, it connects in the background. If the server wants a password (or a host key confirmation), a terminal tab opens so you can type it once; AIminal reuses that login while you stay connected. If the server can't be reached (Tailscale off, wrong address), AIminal shows the actual SSH error instead.
 
-**One login.** AIminal keeps a single SSH session per machine and streams the session list, Claude status and previews over it every 3 seconds, so a login monitor on the server sees one login, not one every few seconds. Opening a session in a tab is its own login, as usual.
+**One login.** AIminal keeps a single SSH session per machine and streams the session list, Claude status and previews over it every 3 seconds, so a login monitor on the server sees one login, not one every few seconds. Tabs and file transfers reuse that same connection, so the server still sees one login.
 
 **Editing machines.** Add a machine with **Add machine (SSH)**, or edit one on its page: name (Host), address (HostName), user, port, key file and jump host. AIminal only rewrites the lines you change, keeps your comments and other options, writes through symlinks (dotfiles setups), and keeps the previous file as `~/.ssh/config.aiminal-backup`. Hosts from `Include`d files are shown read-only.
 
@@ -272,6 +274,7 @@ Hold **⌘** for half a second to see all shortcuts; the tabs show their numbers
 | ⌘N / ⌘T / ⇧⌘N | New tmux session / new terminal (no tmux) / new preset |
 | ⌘= / ⌘- / ⌘0 | Zoom the last-clicked panel in / out / reset |
 | ⇧⌘E | Show or hide the file tree |
+| ⇧⌘M / ⌘↩ | Show or hide the message box / send it and press Enter |
 | ⌘S | Save the file open beside the terminal |
 | ⌘D / ⇧⌘D | New terminal beside / below |
 | ⌘R | Refresh |
@@ -286,7 +289,7 @@ The **Go** menu lists the navigation shortcuts. They work while the terminal has
 
 Open with ⌘,.
 
-- **General**: language (English, 한국어), where clicking a session opens it (AIminal by default, or your external terminal), terminal font size, Dock icon, launch at login, autostart presets, notifications, and updates.
+- **General**: language (English, 한국어), where clicking a session opens it (AIminal by default, or your external terminal), terminal font size, Dock icon, launch at login, autostart presets, notifications, the clock and stats in the toolbar, keeping the keyboard in the message box after sending, and updates.
 - **Terminals**: your default external terminal (iTerm2, Terminal, cmux, Ghostty, WezTerm, kitty, Alacritty) and its options. For cmux, set its socket access to `password` in cmux Settings → Automation and enter the same password here.
 - **Advanced**: tmux path and version, the log file, and the config file.
 
@@ -313,4 +316,4 @@ Errors and warnings are saved to `~/Library/Logs/AIminal/aiminal.log` (it opens 
 | `~/Library/Logs/AIminal/aiminal.log` | logs |
 | `~/Downloads` | files you download from the file tree |
 
-AIminal never stores passwords. On each machine it reads tmux's state, the process list, the bottom of each pane's screen, the running containers, the account fields of `~/.claude.json` (email and plan, not tokens), and the model name from Claude Code's session files (not the conversation). It sends nothing anywhere except the update check to GitHub.
+AIminal never stores passwords. On each machine it reads tmux's state, the process list, the bottom of each pane's screen, the running containers, the account fields of `~/.claude.json` (email and plan, not tokens), and the model name from Claude Code's session files (not the conversation). It sends nothing anywhere except checking for and downloading updates from GitHub.
