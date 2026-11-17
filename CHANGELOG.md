@@ -1,5 +1,11 @@
 # Changelog
 
+## 0.12.27-beta
+
+### Fixed
+
+- **Message for Claude**: after typing in one tab's message box and switching back to another tab, your typing went into the other tab's draft (closing and reopening the box made it right). Each tab now has its own box, and an editor always writes to the tab it's showing
+
 ## 0.12.26-beta
 
 ### Changed
