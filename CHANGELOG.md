@@ -1,5 +1,12 @@
 # Changelog
 
+## 0.12.26-beta
+
+### Changed
+
+- A session's right-click menu always offers presets: **Save as preset…**, or **Update preset from this session…** when a preset with that name already exists (before, the item was hidden)
+- Updating a preset from a session keeps its startup command when it runs the same program (`claude --model opus` stays instead of becoming `claude`)
+
 ## 0.12.25-beta
 
 ### Changed
