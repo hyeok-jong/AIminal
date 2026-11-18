@@ -1,5 +1,29 @@
 # Changelog
 
+## 0.13.0-beta
+
+### Changed
+
+- **Panes now each have their own tab bar.** Splitting used to happen inside one tab's content area, and the layout changed whenever you switched tabs. Now the terminal area is divided into panes, like editor groups in VS Code: every pane has its tabs at the top and shows one of them
+  - **Drag a tab** to another pane's tab bar to move it, or to the edge to give it a new pane; right-click a tab for **Move to a New Pane** / **Move to Pane N**
+  - ⌘D / ⇧⌘D open a new terminal in a pane beside / below; closing a pane's last tab removes the pane
+  - **Files are tabs too**: a file opened from the file tree becomes a tab in the pane next to the terminal, with an unsaved-changes dot, and stays open when you close the terminal tab it came from
+  - The pane you click becomes the active one (outlined tab); the sidebar, the file tree, ⌘W, ⇧⌘M and ⌘↩ follow it
+  - With several panes the session header shrinks to one line; **Merge All Panes** in the split menu brings everything back into one
+- One file tree for the window, following the active pane's terminal
+- **Much lighter on shared servers**: an idle machine now costs about 0.5 KB every 3 seconds instead of tens of KB. AIminal sends only the processes under your tmux panes (not the whole server's process list), skips the session list when nothing changed, checks `docker ps`, `nvidia-smi` and Claude's session files every 15 seconds, and only looks inside containers that run tmux (all containers once a minute)
+- Large files in the editor no longer slow down typing (syntax colors catch up a moment later)
+
+### Fixed
+
+- A message box draft is no longer redrawn with the whole window on every keystroke
+- Downloading a folder that changes while it's being sent (a running training job's logs) no longer fails at the end
+- Notifications for a session you're looking at are skipped only when the main window is in front and that session is visible in any pane
+- Renaming a machine or session keeps its place in the order you dragged
+- Problems in a sheet ("Enter a session name", "already exists") now show inside the sheet instead of behind it
+- English: "1 session running", "1 error", "+1 window"
+- VoiceOver reads session cards, rows and tabs as buttons
+
 ## 0.12.29-beta
 
 A second full audit — data safety, performance, and the rough edges a first-time user hits.

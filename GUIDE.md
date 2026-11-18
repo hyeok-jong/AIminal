@@ -143,13 +143,13 @@ Nothing has to be installed on the server beyond `tar` (which every system has):
 
 ## Editing files
 
-Double-click a text file in the file tree and it opens in a pane beside the terminal, so you don't need vim for a quick change.
+Double-click a text file in the file tree and it opens as a tab in the pane beside the terminal, so you don't need vim for a quick change.
 
 - **Markdown** (`.md`) opens as a rendered preview (tables, task lists, code blocks); switch to **Edit** to change it. **HTML** has a preview too. Previews only read the file: they don't run scripts and don't load remote images or other content from the internet. Everything else (`.sh`, `.py`, `.json`, `.yaml`, `.toml`, `Dockerfile`, dotfiles, …) opens straight in the editor.
 - **⌘S** saves back to where the file lives: this Mac, an SSH machine or a container. An orange dot means unsaved changes.
 - If the file changed since you opened it (another person on the server, or Claude), AIminal asks before overwriting.
 - The editor is made for code: syntax colors for shell, Python, JavaScript/TypeScript, C-family, Go, Rust, Swift, YAML, JSON, HTML, SQL and Dockerfiles; no smart quotes or auto-correct. ⌘F finds.
-- Closing a pane with unsaved changes asks to save. Files over 5 MB or that aren't UTF-8 text don't open in the editor; right-click → Open with Default App / Open in VS Code / Open a Copy instead.
+- Closing a file with unsaved changes asks to save. Files over 5 MB or that aren't UTF-8 text don't open in the editor; right-click → Open with Default App / Open in VS Code / Open a Copy instead.
 
 ## Multi-line input
 
@@ -163,13 +163,14 @@ Typing a long prompt straight into a terminal is awkward: Enter submits, and eve
 
 Watch more than one thing at once:
 
-- **⌘D** opens a new terminal beside the current one, in the same machine and folder (**⇧⌘D** below it).
-- The **split button** in the session header opens a new terminal, any open tab, or any session that isn't open yet beside the current one, and switches between **Side by Side** and **Stacked**.
-- **Drag a tab** from the tab bar onto the terminal and drop it on the highlighted area. Or right-click a tab → **Open Beside Current Tab**.
+The terminal area splits into **panes, each with its own tab bar** (like editor groups in VS Code). A pane shows one of its tabs; tabs are terminals or files.
 
-- Up to six panes: the current terminal plus five terminals or files. **Drag the divider** between panes to resize them (the split menu has **Equal Sizes**).
-- Each pane has **Go to this tab** and **✕** (closes only the pane; the tab stays open).
-- Tabs shown beside the current one are outlined in the tab bar. Every tab keeps its own layout.
+- **⌘D** opens a new terminal in a pane beside the current one, in the same machine and folder (**⇧⌘D** below it).
+- **Drag a tab** to another pane's tab bar to move it there, or to the highlighted area at the edge to give it a pane of its own. Dragging within a tab bar reorders. Right-click a tab for **Move to a New Pane** / **Move to Pane N**.
+- The **split button** in the session header does the same from a menu: new terminal beside or below, move this tab to a new pane, open another tab or a session that isn't open yet beside it, switch between **Side by Side** and **Stacked**, **Equal Sizes**, and **Merge All Panes**.
+- Files you open from the file tree become tabs in the pane next to the terminal, so the terminal stays visible.
+- Up to six panes. **Drag the divider** between panes to resize them. A pane disappears when its last tab is closed.
+- Click a pane to make it the active one: its tab is outlined, and the sidebar, the file tree, ⌘W, ⇧⌘M and ⌘↩ follow it. Home, machine and preset pages take the whole area and leave the layout as it is.
 
 ## Starting sessions and presets
 
@@ -277,7 +278,7 @@ Hold **⌘** for half a second to see all shortcuts; the tabs show their numbers
 | ⇧⌘. | Show or hide hidden files in the file tree |
 | ⇧⌘M / ⌘↩ | Show or hide the message box / send it and press Enter |
 | ⌘S | Save the file open beside the terminal |
-| ⌘D / ⇧⌘D | New terminal beside / below |
+| ⌘D / ⇧⌘D | New terminal in a pane beside / below |
 | ⌘R | Refresh |
 | ⌃⌘S | Show or hide the sidebar |
 | ⌃⌘F | Full screen |

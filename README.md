@@ -28,7 +28,7 @@
 | 🗂 **File tree beside the terminal** | ⇧⌘E (hidden files: ⇧⌘.). Follows the session's folder, on your Mac, servers and containers. Right-click a file to hand it to Claude as `@path` |
 | ✏️ **Edit files without vim** | Double-click a `.md`, `.html`, `.sh`, `.py`, `.json`, `.yaml`… to open it next to the terminal, with syntax colors. Markdown and HTML preview, ⌘S saves straight back to the server |
 | ⬇️⬆️ **Download and upload** | Right-click to download a file or folder to any folder you pick, drag from Finder to upload. A progress bar with size and percent, and a Cancel button |
-| 🪟 **Terminals side by side** | ⌘D, the split button, or drag a tab onto the terminal. Side by side or stacked, up to six panes, drag the dividers to resize. Watch Claude on two servers at once |
+| 🪟 **Panes, each with its own tabs** | ⌘D, the split button, or drag a tab to another pane. Side by side or stacked, up to six panes, drag the dividers to resize. Watch Claude on two servers at once |
 | ⏱ **Clock and machine stats** | Time, date, this Mac's CPU and memory in the toolbar; each server's load, memory and every GPU's utilization and temperature on its machine page |
 | 🔍 **Zoom the panel you click** | ⌘= / ⌘- grow or shrink just the terminal, pane, message box, editor or file tree you clicked last |
 | 🐳 **Docker containers, first class** | Enter containers for you, find the tmux sessions inside them, open them in a tab, and start new ones inside |
@@ -43,7 +43,7 @@ Every tmux session on your Mac, your servers and inside their containers, as liv
 <img src="screenshots/home.gif" alt="Home: every tmux session as a card with a live preview; when Claude finishes, the card shows a bell and a Done chip">
 
 ### Two machines, side by side
-Claude on your Mac and Claude inside a container on the GPU server, next to each other. Drag a tab onto the terminal, press ⌘D, or use the split button. Up to six panes, drag the dividers, and ⌘= zooms just the pane you clicked. Each pane has its own **Message for Claude** box.
+Claude on your Mac and Claude inside a container on the GPU server, next to each other. Every pane has its own tab bar: drag a tab to another pane or to the edge for a new one, press ⌘D, or use the split button. Up to six panes, drag the dividers, and ⌘= zooms just the pane you clicked. Each pane has its own **Message for Claude** box.
 
 <img src="screenshots/split.gif" alt="A gpu-box container session opens beside the local Claude session; the divider is dragged, then the layout switches to stacked">
 
@@ -124,7 +124,7 @@ AIminal is the app I wanted for that:
 - **Docker containers**: keep tmux on the server and work inside a container. A session or preset can name a container, and AIminal runs `docker exec` into it for you (with your folder and startup command). AIminal also finds the tmux sessions running *inside* each container, opens them with `docker exec -it <container> tmux attach`, and starts new ones inside the container from the sidebar, Home or the machine page. Each machine page lists its running containers
 - **File tree** (⇧⌘E, shown by default): a folder tree beside the terminal that follows the session's folder, on this Mac, SSH machines and inside containers. Right-click a file to type its path into the terminal (as `@path` for Claude). Download files and folders, or drag them in from Finder to upload, with a progress bar and Cancel
 - **Built-in editor** with syntax colors: double-click a text file (`.md`, `.html`, `.sh`, `.py`, `.json`, `.yaml`, …) to open it next to the terminal. Markdown and HTML have a live preview. ⌘S saves back to the machine or container, and AIminal warns you if the file changed since you opened it. Other files open in their app, or in VS Code Remote on SSH machines
-- **Side by side**: ⌘D opens a new terminal beside the current one (⇧⌘D below it). The split button in the header also opens any tab or session beside it, and you can drag a tab onto the terminal. Up to six terminals and files, side by side or stacked, with draggable dividers
+- **Side by side**: ⌘D opens a new terminal beside the current one (⇧⌘D below it). Each pane has its own tab bar, like editor groups: drag tabs between panes, or use the split button in the header to open any tab or session beside it. Up to six panes of terminals and files, side by side or stacked, with draggable dividers
 - **Multi-line input** (the **Message for Claude** button under every terminal, or ⇧⌘M): write a long prompt with Markdown and code blocks in a box under the terminal, preview it, and send it to Claude as one message with ⌘↩
 - **Snippets**: one-click buttons under the terminal that type text for you (`/clear`, `/compact`, …)
 - **Manage tmux**: create sessions; rename sessions and windows; create and close windows
