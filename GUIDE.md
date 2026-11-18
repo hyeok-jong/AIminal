@@ -95,11 +95,11 @@ MACHINES (SSH)   ⤢ ⤡   expand all / collapse all
      session …
      ▸ 🐳 container  docker     (collapsed by default)
  ─────────
- ▾ 🖥 a100  ●
+ ▾ 🖥 gpu-box  ●
      session …
-     ▾ 🐳 hyeokjong  docker
-         dl
-         ecg-ef
+     ▾ 🐳 research  docker
+         train
+         eval
  ─────────
  ▸ 🖥 staging  ○
  ⊕ Add machine (SSH)
@@ -137,7 +137,7 @@ A folder tree sits to the left of the terminal, like VS Code's Explorer. It is o
 - **Right-click** for Copy Path, Copy Relative Path, cd Here, Show in Finder, **Download To…** (pick any folder; AIminal remembers the last one), **Download to Downloads** and **Upload Here…**. On this Mac, **Copy To…** does the same.
 - **Upload** by dropping files or folders from Finder onto a folder (or onto empty space for the top folder). AIminal asks before replacing anything.
 - **Progress**: big transfers show a progress bar with the size and percent under the tree, and a **Cancel** button. A cancelled download leaves nothing behind; a cancelled upload may leave a partial file on the server.
-- The header has Parent folder, Go to the terminal's folder, show/hide hidden files, Upload and Refresh. Drag the divider to resize.
+- The header has Parent folder, Go to the terminal's folder, show/hide hidden files (the eye; also **⇧⌘.** like Finder, or right-click the empty area), Upload and Refresh. Drag the divider to resize.
 
 Nothing has to be installed on the server beyond `tar` (which every system has): transfers run over AIminal's existing SSH connection, and folders work too.
 
@@ -145,7 +145,7 @@ Nothing has to be installed on the server beyond `tar` (which every system has):
 
 Double-click a text file in the file tree and it opens in a pane beside the terminal, so you don't need vim for a quick change.
 
-- **Markdown** (`.md`) opens as a rendered preview (tables, task lists, code blocks); switch to **Edit** to change it. **HTML** has a preview too. Everything else (`.sh`, `.py`, `.json`, `.yaml`, `.toml`, `Dockerfile`, dotfiles, …) opens straight in the editor.
+- **Markdown** (`.md`) opens as a rendered preview (tables, task lists, code blocks); switch to **Edit** to change it. **HTML** has a preview too. Previews only read the file: they don't run scripts and don't load remote images or other content from the internet. Everything else (`.sh`, `.py`, `.json`, `.yaml`, `.toml`, `Dockerfile`, dotfiles, …) opens straight in the editor.
 - **⌘S** saves back to where the file lives: this Mac, an SSH machine or a container. An orange dot means unsaved changes.
 - If the file changed since you opened it (another person on the server, or Claude), AIminal asks before overwriting.
 - The editor is made for code: syntax colors for shell, Python, JavaScript/TypeScript, C-family, Go, Rust, Swift, YAML, JSON, HTML, SQL and Dockerfiles; no smart quotes or auto-correct. ⌘F finds.
@@ -274,6 +274,7 @@ Hold **⌘** for half a second to see all shortcuts; the tabs show their numbers
 | ⌘N / ⌘T / ⇧⌘N | New tmux session / new terminal (no tmux) / new preset |
 | ⌘= / ⌘- / ⌘0 | Zoom the last-clicked panel in / out / reset |
 | ⇧⌘E | Show or hide the file tree |
+| ⇧⌘. | Show or hide hidden files in the file tree |
 | ⇧⌘M / ⌘↩ | Show or hide the message box / send it and press Enter |
 | ⌘S | Save the file open beside the terminal |
 | ⌘D / ⇧⌘D | New terminal beside / below |
@@ -299,7 +300,7 @@ Errors and warnings are saved to `~/Library/Logs/AIminal/aiminal.log` (it opens 
 
 | Problem | Try |
 |---|---|
-| "tmux is not installed" | `brew install tmux` |
+| "tmux is not installed" | `brew install tmux` — AIminal notices within a few seconds, no restart needed. SSH machines work without tmux on this Mac. |
 | A machine won't connect | The machine page and the log show the SSH error. Check Tailscale/VPN, the address, and that `ssh <host>` works in a terminal. |
 | A password prompt tab closes at once | Look at the tab's last line (it now stays open) or the log; usually the server is unreachable. |
 | Sessions on a server don't appear | Make sure tmux is installed there and you are connected (green dot). |
@@ -310,10 +311,15 @@ Errors and warnings are saved to `~/Library/Logs/AIminal/aiminal.log` (it opens 
 
 | File | |
 |---|---|
-| `~/.config/aiminal/config.json` | settings and presets |
-| `~/.ssh/config` | your SSH machines (edited only when you save a machine; backup in `config.aiminal-backup`) |
+| `~/.config/aiminal/config.json` | settings and presets (readable only by you) |
+| `~/.ssh/config` | your SSH machines (edited only when you save a machine; the previous contents go to `config.aiminal-backup`, and the file as it was before AIminal first touched it stays in `config.aiminal-original`) |
 | `~/.config/aiminal/ssh/` (or `/tmp/aiminal-<uid>`) | AIminal's own SSH connection-sharing sockets |
 | `~/Library/Logs/AIminal/aiminal.log` | logs |
 | `~/Downloads` | files you download from the file tree |
+| `~/Library/Preferences/com.hyeokjong.initia.plist` | window and sidebar state |
 
-AIminal never stores passwords. On each machine it reads tmux's state, the process list, the bottom of each pane's screen, the running containers, the account fields of `~/.claude.json` (email and plan, not tokens), and the model name from Claude Code's session files (not the conversation). It sends nothing anywhere except checking for and downloading updates from GitHub.
+AIminal never stores your SSH passwords or keys: a password is typed once into a terminal tab and only the open connection is reused. The one secret it keeps is the optional cmux socket password you enter in Settings, saved in `config.json`.
+
+On each machine it reads tmux's state, the process list, the bottom of each pane's screen, the running containers, the account fields of `~/.claude.json` (email and plan, not tokens), and the model name from Claude Code's session files (not the conversation). None of it leaves your Mac: there is no telemetry or analytics, and the only connections AIminal makes on its own are to your SSH machines and to GitHub, to check for and download updates. The log file records machine names, file paths and commands that failed, never what you type into the message box or the terminal.
+
+**Uninstalling.** Quit AIminal, move `AIminal.app` to the Trash, and delete the files in the table above (plus `~/Library/Logs/AIminal/`). If you turned on **Launch AIminal at login**, turn it off first or remove AIminal in System Settings → General → Login Items. tmux sessions and your `~/.ssh/config` are yours and stay as they are; shared SSH connections close by themselves within 30 minutes.
