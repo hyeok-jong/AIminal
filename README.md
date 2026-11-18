@@ -25,7 +25,7 @@
 | 🏠 **A home for all your tmux sessions** | Every session on this Mac, your SSH servers and the docker containers on them, as live cards in one window |
 | 🤖 **Knows when Claude Code is done** | Working, waiting, or stopped at the usage limit (with the reset time), and which model it runs. A notification the moment it finishes, even on a remote server or inside a container |
 | ✍️ **Multi-line prompts** | A **Message for Claude** button under every terminal unfolds a box for long prompts with Markdown and code blocks. Preview, then ⌘↩ sends it to Claude as one message |
-| 🗂 **File tree beside the terminal** | ⇧⌘E. Follows the session's folder, on your Mac, servers and containers. Right-click a file to hand it to Claude as `@path` |
+| 🗂 **File tree beside the terminal** | ⇧⌘E (hidden files: ⇧⌘.). Follows the session's folder, on your Mac, servers and containers. Right-click a file to hand it to Claude as `@path` |
 | ✏️ **Edit files without vim** | Double-click a `.md`, `.html`, `.sh`, `.py`, `.json`, `.yaml`… to open it next to the terminal, with syntax colors. Markdown and HTML preview, ⌘S saves straight back to the server |
 | ⬇️⬆️ **Download and upload** | Right-click to download a file or folder to any folder you pick, drag from Finder to upload. A progress bar with size and percent, and a Cancel button |
 | 🪟 **Terminals side by side** | ⌘D, the split button, or drag a tab onto the terminal. Side by side or stacked, up to six panes, drag the dividers to resize. Watch Claude on two servers at once |
@@ -176,7 +176,7 @@ Settings live in `~/.config/aiminal/config.json`. Open the Settings window with 
 
 **Logs:** errors and warnings go to `~/Library/Logs/AIminal/aiminal.log`. Open the log viewer with ⇧⌘L.
 
-**SSH:** AIminal reads hosts from `~/.ssh/config`. When you edit a host in AIminal, only the lines you change are rewritten, and the previous file is kept as `~/.ssh/config.aiminal-backup`. AIminal never stores passwords: if a host needs one, you log in once in a terminal tab and AIminal keeps reusing that connection (and for 30 minutes after it was last used).
+**SSH:** AIminal reads hosts from `~/.ssh/config`. When you edit a host in AIminal, only the lines you change are rewritten, and the previous file is kept as `~/.ssh/config.aiminal-backup`. AIminal never stores SSH passwords: if a host needs one, you log in once in a terminal tab and AIminal keeps reusing that connection (and for 30 minutes after it was last used).
 
 **cmux:** by default, cmux accepts socket connections only from processes it started itself. To let AIminal open workspaces in cmux, go to cmux **Settings → Automation**, set socket access to `password`, and enter the same password in AIminal under **Settings → Terminals**.
 

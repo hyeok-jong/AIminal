@@ -1,5 +1,45 @@
 # Changelog
 
+## 0.12.29-beta
+
+A second full audit — data safety, performance, and the rough edges a first-time user hits.
+
+### Fixed — things that could lose work
+
+- **Message for Claude lost long messages**: anything over about 16 KB (roughly 5,000 Korean characters, or a pasted log) failed with "command too long" and the draft was already gone. Text of any length now goes through, and if a send ever fails the draft comes back
+- **A message starting with `-` followed by non-English text** (a Markdown bullet in Korean, for example) arrived empty on this Mac. The same bug made **uploading a file named like `-메모.txt`** send the whole parent folder instead; both are fixed
+- **A file that failed to open could be overwritten**: a too-large or non-text file showed an empty editor, and saving it replaced the real file. It now shows **Try Again** and can't be saved
+- **Uploading into a folder you hadn't expanded** replaced same-named files without asking
+- **Opening a seventh pane** silently dropped the first one even when it was an unsaved editor; unsaved editors are never pushed out now
+- **Editing a machine removed the quotes** around values such as `IdentityFile "~/My Keys/id"`, after which ssh rejected the whole config. Untouched lines are left exactly as they were
+- **A `~/.ssh/config` that isn't UTF-8** was treated as empty, so adding a machine replaced the file. AIminal now refuses to rewrite it, and keeps the very first original as `config.aiminal-original`
+- **Saving a remote file** no longer leaves it empty if the connection drops mid-save
+- **End tmux session…** now always asks first (it used to end the session without a prompt when Claude was idle); **deleting a preset** asks too, and **Replace** when loading presets keeps a copy of the old ones
+- **Closing or quitting with something running in a terminal without tmux** asks first, like Terminal does
+- **Cancelling an update at the "save changes?" prompt** left the button stuck on "Downloading…" and swapped the app hours later when you quit. Unsaved files are asked about before the download, and a failed swap is reported instead of saying "Updated"
+
+### Faster and lighter
+
+- **Much less background CPU**: the 3-second check on this Mac used to start dozens of small processes each time; Claude's model and status are now read directly, and previews reuse what the check already captured
+- **Slows down when you aren't looking**: with the window closed or covered, this Mac is checked every 9 seconds instead of 3
+- The window no longer redraws itself every 2–3 seconds for unchanged data (the CPU/MEM figures update on their own), and the editor stops recompiling its syntax rules on every keystroke
+- A stuck `docker` or `tmux` can no longer pile up background checks, and machines you aren't connected to cost nothing
+
+### Improved
+
+- **tmux installed after AIminal** is picked up within seconds (no restart), with the install command shown on Home; the menu bar popover still lists your SSH sessions when this Mac has no tmux
+- **Hidden files**: ⇧⌘. (as in Finder) and a right-click item, in addition to the eye button
+- **Previews are read-only and offline**: the HTML preview doesn't run scripts, neither preview loads remote images, and links open in your browser
+- Messages such as "Copied" look like information, not errors, and fade after 5 seconds
+- SSH connections notice a dead network within 45 seconds instead of staying "connected" with a frozen screen, and a leftover socket from a crash no longer causes repeated logins
+- Uploads into a root container are owned by that user (not uid 501); container shells fall back to `sh` when the image has no `bash`; files opened from a server are quarantined like any download
+- A session that ends by itself cleans up its panes, and an unsaved editor beside it moves to the next tab; a detached pane has a **Reconnect** button
+- ⌘W in a sheet or the Settings window no longer closes the tab behind it; ⌘K gives the keyboard back to the terminal; the tab bar scrolls to the selected tab and long tab titles are shortened
+- A fresh login no longer hides the window when you open AIminal yourself right after a restart
+- `config.json` is readable only by you; the log no longer contains any text from the message box
+- `install.sh` updates AIminal where it already is (no second copy), asks the running app to quit normally, and can't leave you without an app if the download is cut off
+- Guide: what AIminal reads and stores, spelled out; how to uninstall
+
 ## 0.12.28-beta
 
 Full code and documentation audit before wider release. Nothing changes in how AIminal looks; these are the fixes.
