@@ -1,5 +1,12 @@
 # Changelog
 
+## 0.13.7-beta
+
+### Changed
+
+- **Message for Claude is open by default.** New tabs start with the message box unfolded. Fold it with ✕ or ⇧⌘M and that tab stays folded; turn the default off in Settings → General → **Open the message box in new tabs**
+- **"AIminal" reads as AIminal.** In the system font a capital I looks exactly like a lowercase l, so the name read as "Alminal". The sidebar headers, the menu bar popover title, Home and the status chips now use the font's legible variant, where the capital I has crossbars
+
 ## 0.13.6-beta
 
 ### Added

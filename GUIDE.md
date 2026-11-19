@@ -153,7 +153,7 @@ Double-click a text file in the file tree and it opens as a tab in the pane besi
 
 ## Multi-line input
 
-Typing a long prompt straight into a terminal is awkward: Enter submits, and every tool has its own trick for a line break. Under every terminal, including each pane of a split view, there is a **Message for Claude** button (just **Multi-line input** when Claude isn't running there). Click it, or press **⇧⌘M**, and a text box unfolds; write there instead: several paragraphs, Markdown, code blocks, anything. Fold it back with ✕ or ⇧⌘M. Each pane has its own box and draft, and ⇧⌘M and ⌘↩ act on the pane you last clicked or typed in; the button shows the first line of an unsent draft.
+Typing a long prompt straight into a terminal is awkward: Enter submits, and every tool has its own trick for a line break. Under every terminal, including each pane of a split view, there is a **Message for Claude** button (just **Multi-line input** when Claude isn't running there). Click it, or press **⇧⌘M**, and a text box unfolds; write there instead: several paragraphs, Markdown, code blocks, anything. New tabs start with the box open (turn that off in Settings → General); fold it with ✕ or ⇧⌘M and that tab stays folded. Each pane has its own box and draft, and ⇧⌘M and ⌘↩ act on the pane you last clicked or typed in; the button shows the first line of an unsent draft.
 
 - **Send ⌘↩** pastes the whole text into the terminal as one block and then presses Enter, so Claude Code (or your shell) receives it as a single message. **Paste Only** pastes without Enter, so you can keep editing in the terminal. **esc** puts the keyboard back in the terminal without sending. After sending, the keyboard goes to the terminal so you can watch; turn on **Keep typing in the message box after sending** in Settings → General to stay in the box instead.
 - **Preview** renders the Markdown; what is sent is always the raw text. The box keeps its own draft per tab, and you can drag its top edge to resize it.
@@ -289,7 +289,7 @@ The **Go** menu lists the navigation shortcuts. They work while the terminal has
 
 Open with ⌘,.
 
-- **General**: language (English, 한국어), where clicking a session opens it (AIminal by default, or your external terminal), terminal font size, Dock icon, launch at login, autostart presets, notifications, the clock and stats in the toolbar, keeping the keyboard in the message box after sending, and updates.
+- **General**: language (English, 한국어), where clicking a session opens it (AIminal by default, or your external terminal), terminal font size, Dock icon, launch at login, autostart presets, notifications, the clock and stats in the toolbar, opening the message box in new tabs, keeping the keyboard in the message box after sending, and updates.
 - **Terminals**: your default external terminal (iTerm2, Terminal, cmux, Ghostty, WezTerm, kitty, Alacritty) and its options. For cmux, set its socket access to `password` in cmux Settings → Automation and enter the same password here.
 - **Advanced**: tmux path and version, the log file, and the config file.
 
