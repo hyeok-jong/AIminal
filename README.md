@@ -154,9 +154,9 @@ xattr -dr com.apple.quarantine /Applications/AIminal.app
 
 A preset is a session you start often: a machine, a folder, and a startup command. Start it in one click from Home, or mark it **autostart** to bring it up when AIminal launches. A new install comes with an `example` preset that opens Claude Code in your home folder; edit or delete it in the sidebar.
 
-The ⤓ button next to **Presets** turns the sessions you have running into presets in one go: local, SSH, tmux inside a container, or a machine tmux that `docker exec`s into one, each with its folder and `claude` filled in. Tick **Include in Autostart** and your whole setup comes back with one click.
+**Save Running…** next to **Presets** turns the sessions you have running into presets in one go: local, SSH, tmux inside a container, or a machine tmux that `docker exec`s into one, each with its folder and `claude` filled in. Tick **Include in Autostart** and your whole setup comes back with one click.
 
-The folder button next to **Presets** in the sidebar saves them to a folder you pick (iCloud Drive, say) as one file per Mac, and loads another Mac's presets with a click.
+**Folder** next to **Presets** in the sidebar saves them to a folder you pick (iCloud Drive, say) as one file per Mac, and loads another Mac's presets with a click.
 
 Presets are stored in `~/.config/aiminal/config.json`, so you can also write them by hand:
 
