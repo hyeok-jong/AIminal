@@ -36,7 +36,7 @@ The script downloads the newest release, checks its checksum and installs AImina
 
 **Updates.** AIminal checks for a new version when it starts and every 6 hours. When one is out, the **Update** button at the top right of the window (and in the menu bar popover) says so; click it, confirm, and AIminal downloads, verifies and restarts. **Check for Updates** in the same place checks right away and, if there is a new version, goes straight to the same confirmation. Your tmux sessions keep running and the tabs you had open come back. You'll also get a notification, at most once a day. Settings → General → Updates lets you check now, turn automatic checks off, or skip beta versions.
 
-**First launch.** macOS asks whether AIminal may send notifications. Allow it if you want "Claude finished" alerts. You can change it later in System Settings → Notifications → AIminal.
+**First launch.** A welcome screen checks what you already have and gives one button for each next step: install tmux if it's missing, save the tmux sessions it found as presets (or start your first one), add an SSH machine, and **Allow Notifications** for "Claude finished" alerts. Open it again any time from Help → **Welcome to AIminal…**. If macOS blocks AIminal's notifications later, Settings → General says so and links to System Settings.
 
 AIminal lives in the menu bar and the Dock. Clicking the Dock icon (or launching it again) opens the main window, which always starts at Home.
 
@@ -90,7 +90,7 @@ Remote numbers ride along with the tmux snapshot AIminal already receives every 
 ```
 🏠 Home
 OPEN IN AIMINAL        sessions you have open in tabs (they stay listed under their machine too)
-MACHINES (SSH)   Expand All   (Collapse All once everything is open)
+MACHINES         Expand All   (Collapse All once everything is open)
  ▾ 💻 This Mac
      session …
      ▸ 🐳 container  docker     (collapsed by default)
@@ -102,7 +102,7 @@ MACHINES (SSH)   Expand All   (Collapse All once everything is open)
          eval
  ─────────
  ▸ 🖥 staging  ○
- ⊕ Add machine (SSH)
+ ⊕ Add Machine (SSH)…
 PRESETS
 ```
 
@@ -202,13 +202,15 @@ Presets live in `~/.config/aiminal/config.json`:
 
 ## Closing things
 
-The **Close** menu in the session header (and in every session's right-click menu) has three actions, each named after what it does. Nothing happens on a plain click, so nothing ends by accident.
+The **End…** menu in the session header (and in every session's right-click menu) has three actions, each named after what it does. Nothing happens on a plain click, so nothing ends by accident.
 
 | Action | What happens |
 |---|---|
-| **Close window (Ctrl-b d)** | Closes AIminal's tab. The tmux session and Claude keep running. Same as the tab's ✕ and ⌘W. |
+| **Close Tab (Detach)** | Closes AIminal's tab. The tmux session and Claude keep running. Same as the tab's ✕ and ⌘W. |
 | **Quit Claude (/exit)** | Sends `/exit` to Claude. The shell and the session stay. |
-| **End tmux session…** | Ends the session. If Claude runs in it, AIminal quits Claude with `/exit` first, waits for it, then ends the session. |
+| **End Session…** | Ends the session after asking. If Claude runs in it, AIminal quits Claude with `/exit` first, waits for it, then ends the session. |
+
+If a remote session's machine drops, its pane says **Lost connection** and offers **Reconnect**; the session is usually still running on the server. A session that really ended offers **Start Again** (when it has a preset) and **Close Tab**.
 
 ## Claude Code
 
@@ -226,13 +228,15 @@ Turn notifications or their sound off in Settings → General → Notifications.
 
 ## Machines over SSH
 
-The **Machines (SSH)** section lists the hosts in your `~/.ssh/config` next to this Mac.
+The **Machines** section lists this Mac and the hosts in your `~/.ssh/config`.
 
-**Connecting.** Click a machine and **Connect**. With an SSH key, it connects in the background. If the server wants a password (or a host key confirmation), a terminal tab opens so you can type it once; AIminal reuses that login while you stay connected. If the server can't be reached (Tailscale off, wrong address), AIminal shows the actual SSH error instead.
+**Connecting.** Click a machine and **Connect**. With an SSH key, it connects in the background. If the server wants a password (or a host key confirmation), a terminal tab opens so you can type it once; AIminal reuses that login while you stay connected. If the server can't be reached, AIminal shows the SSH error with a hint (address not found: VPN or Tailscale off? no answer, connection refused, host key changed, key not accepted) and a **Try Again** button. Home cards show the same reason; **Cancel** stops a connection that hangs.
+
+**Reconnecting by itself.** When Wi-Fi drops or the Mac sleeps, a machine that was connected tries again every 30 seconds with your SSH key, and right after the Mac wakes. It never opens a password prompt by itself; **Disconnect** stops the retries.
 
 **One login.** AIminal keeps a single SSH session per machine and streams the session list, Claude status and previews over it every 3 seconds, so a login monitor on the server sees one login, not one every few seconds. When nothing has changed, only a few hundred bytes go over the wire, and the slower checks (`docker ps`, `nvidia-smi`, Claude's session files) run every 15 seconds. Tabs and file transfers reuse that same connection, so the server still sees one login.
 
-**Editing machines.** Add a machine with **Add machine (SSH)**, or edit one on its page: name (Host), address (HostName), user, port, key file and jump host. AIminal only rewrites the lines you change, keeps your comments and other options, writes through symlinks (dotfiles setups), and keeps the previous file as `~/.ssh/config.aiminal-backup`. Hosts from `Include`d files are shown read-only.
+**Editing machines.** Add a machine with **Add Machine (SSH)…**, or edit one on its page: name (Host), address (HostName), user, port, key file and jump host. AIminal only rewrites the lines you change, keeps your comments and other options, writes through symlinks (dotfiles setups), and keeps the previous file as `~/.ssh/config.aiminal-backup`. Hosts from `Include`d files are shown read-only.
 
 **Notes**
 - AIminal runs tmux with `-u`, so it works on servers whose SSH sessions have no language setting (macOS servers in particular), and Korean or box-drawing characters show correctly.
@@ -269,13 +273,14 @@ Hold **⌘** for half a second to see all shortcuts; the tabs show their numbers
 | ⇧⌘H | Home |
 | ⌘1 … ⌘8, ⌘9 | Go to a tab, counted in the order you see them across panes (⌘9 = last tab) |
 | ⇧⌘] / ⇧⌘[ | Next / previous tab |
-| ⌘W | Close window (Ctrl-b d) for the current tab |
+| ⌘W | Close Tab (Detach) for the current tab |
 | ⌘N / ⌘T / ⇧⌘N | New tmux session / new terminal (no tmux) / new preset |
 | ⌘= / ⌘- / ⌘0 | Zoom the last-clicked panel in / out / reset |
 | ⇧⌘E | Show or hide the file tree |
 | ⇧⌘. | Show or hide hidden files in the file tree |
 | ⇧⌘M / ⌘↩ | Show or hide the message box / send it and press Enter |
-| ⌘S | Save the file open beside the terminal |
+| ⌘S / ⌥⌘S | Save the editor you're working in / save every changed file |
+| ⌥⌘→ / ⌥⌘← | Move to the next / previous pane |
 | ⌘D / ⇧⌘D | New terminal in a pane beside / below |
 | ⌘R | Refresh |
 | ⌃⌘S | Show or hide the sidebar |
@@ -289,9 +294,9 @@ The **Go** menu lists the navigation shortcuts. They work while the terminal has
 
 Open with ⌘,.
 
-- **General**: language (English, 한국어), where clicking a session opens it (AIminal by default, or your external terminal), terminal font size, Dock icon, launch at login, autostart presets, notifications, the clock and stats in the toolbar, opening the message box in new tabs, keeping the keyboard in the message box after sending, and updates.
-- **Terminals**: your default external terminal (iTerm2, Terminal, cmux, Ghostty, WezTerm, kitty, Alacritty) and its options. For cmux, set its socket access to `password` in cmux Settings → Automation and enter the same password here.
-- **Advanced**: tmux path and version, the log file, and the config file.
+- **General**: language (English, 한국어), Dock icon and the clock and stats in the toolbar; a **Terminal** group (where clicking a session opens it, terminal font size, opening the message box in new tabs, keeping the keyboard in the message box after sending, **Edit Snippets…**); notifications (with a warning when macOS blocks them); updates; and startup (launch at login, autostart presets).
+- **External Terminals**: your default external terminal (iTerm2, Terminal, cmux, Ghostty, WezTerm, kitty, Alacritty) and its options. For cmux, set its socket access to `password` in cmux Settings → Automation and enter the same password here.
+- **Advanced**: tmux path and version (or how to install it), the log file, the config file, and **Help**: **Report a Problem…**, the welcome screen and this guide.
 
 ## Logs and troubleshooting
 
@@ -300,11 +305,13 @@ Errors and warnings are saved to `~/Library/Logs/AIminal/aiminal.log` (it opens 
 | Problem | Try |
 |---|---|
 | "tmux is not installed" | `brew install tmux` — AIminal notices within a few seconds, no restart needed. SSH machines work without tmux on this Mac. |
-| A machine won't connect | The machine page and the log show the SSH error. Check Tailscale/VPN, the address, and that `ssh <host>` works in a terminal. |
+| A machine won't connect | The machine page shows the SSH error with a hint, and the log has the details. Check Tailscale/VPN, the address, and that `ssh <host>` works in a terminal. |
 | A password prompt tab closes at once | Look at the tab's last line (it now stays open) or the log; usually the server is unreachable. |
 | Sessions on a server don't appear | Make sure tmux is installed there and you are connected (green dot). |
 | No notifications | Allow AIminal in System Settings → Notifications, and check Settings → General → Notifications. In Happy's remote mode, Claude can't be tracked. |
 | Claude in a container isn't detected | Use a recent Claude Code; AIminal reads its title and screen, so the session should show Claude's normal screen. |
+
+Still stuck? Help → **Report a Problem…** opens a GitHub issue with your AIminal, macOS and tmux versions filled in. Nothing is sent until you submit it; paste the relevant log lines if they help.
 
 ## Files and privacy
 

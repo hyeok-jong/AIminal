@@ -33,7 +33,8 @@
 | 🔍 **Zoom the panel you click** | ⌘= / ⌘- grow or shrink just the terminal, pane, message box, editor or file tree you clicked last |
 | 🐳 **Docker containers, first class** | Enter containers for you, find the tmux sessions inside them, open them in a tab, and start new ones inside |
 | 💾 **Save your setup as presets** | One button turns the sessions you have running, on your Mac, servers and containers, into presets with their folder and `claude` filled in. Autostart brings them all back |
-| 🔐 **Server-friendly SSH** | Uses your `~/.ssh/config`, keys or passwords, one shared connection per machine. Nothing to install on the server beyond tmux |
+| 🔐 **Server-friendly SSH** | Uses your `~/.ssh/config`, keys or passwords, one shared connection per machine, and reconnects by itself after sleep or a dropped network. Nothing to install on the server beyond tmux |
+| 👋 **Ready in a minute** | A welcome screen finds your tmux, sessions and SSH machines and walks you through the rest. Light on the CPU even with several Claudes working |
 
 ## See it
 
@@ -117,10 +118,10 @@ AIminal is the app I wanted for that:
 
 - **Home**: a start screen with a card for every session, live previews, and a summary of what's running
 - **Built-in terminal**: open any tmux session in a real terminal inside AIminal, with a tab for each one. Plain terminals without tmux work too (⌘T)
-- **Clear close actions**: Close window (Ctrl-b d) keeps the session running, Quit Claude (/exit) ends only Claude, End tmux session ends it all
-- **Keyboard first**: hold ⌘ to see every shortcut, ⌘K to jump to any session, machine or command, ⌘1…⌘9 for tabs, ⌘= / ⌘- to zoom whichever panel you clicked last (a terminal, the message box, an editor, the file tree)
+- **Clear close actions**: Close Tab (Detach) keeps the session running, Quit Claude (/exit) ends only Claude, End Session ends it all. A dropped machine shows **Lost connection** with **Reconnect**, not "session ended"
+- **Keyboard first**: hold ⌘ to see every shortcut, ⌘K to jump to any session, machine or command, ⌘1…⌘9 for tabs, ⌥⌘← / ⌥⌘→ between panes, ⌘S saves the editor you're in, ⌘= / ⌘- to zoom whichever panel you clicked last (a terminal, the message box, an editor, the file tree)
 - **Claude Code aware**: see which sessions run Claude (or `happy claude`) and whether it is working or waiting, even inside a docker container. Get a notification when Claude finishes or hits its usage limit (with the reset time), see which model each Claude is using (**Claude · Fable 5.1**) and which account and plan it is signed in with on each machine, and quit it cleanly with **Quit Claude (/exit)**
-- **Machines**: this Mac and your `~/.ssh/config` machines side by side in the sidebar. Connect (key or password) to see and open each machine's tmux sessions, and add or edit machines in the app. AIminal keeps one SSH session per machine, so your server sees a single login
+- **Machines**: this Mac and your `~/.ssh/config` machines side by side in the sidebar. Connect (key or password) to see and open each machine's tmux sessions, and add or edit machines in the app. AIminal keeps one SSH session per machine, so your server sees a single login. Connection errors come with a hint, and machines reconnect by themselves after sleep or a Wi-Fi drop
 - **Docker containers**: keep tmux on the server and work inside a container. A session or preset can name a container, and AIminal runs `docker exec` into it for you (with your folder and startup command). AIminal also finds the tmux sessions running *inside* each container, opens them with `docker exec -it <container> tmux attach`, and starts new ones inside the container from the sidebar, Home or the machine page. Each machine page lists its running containers
 - **File tree** (⇧⌘E, shown by default): a folder tree beside the terminal that follows the session's folder, on this Mac, SSH machines and inside containers. Right-click a file to type its path into the terminal (as `@path` for Claude). Download files and folders, or drag them in from Finder to upload, with a progress bar and Cancel
 - **Built-in editor** with syntax colors: double-click a text file (`.md`, `.html`, `.sh`, `.py`, `.json`, `.yaml`, …) to open it next to the terminal. Markdown and HTML have a live preview. ⌘S saves back to the machine or container, and AIminal warns you if the file changed since you opened it. Other files open in their app, or in VS Code Remote on SSH machines
@@ -186,7 +187,7 @@ AIminal has no telemetry or analytics. On its own it only connects to your SSH m
 
 ## Feedback
 
-Report bugs and request features in [Issues](https://github.com/hyeok-jong/AIminal/issues).
+Report bugs and request features in [Issues](https://github.com/hyeok-jong/AIminal/issues), or use Help → **Report a Problem…** in the app, which fills in your versions.
 
 ## License
 
