@@ -117,8 +117,10 @@ PRESETS
 Selecting a session opens it in AIminal's terminal. The header shows its machine (or container), folder and windows, plus:
 
 - **Terminal / Overview**: Overview shows a live preview of every window, where you can rename, add or close windows (double-click a name to rename).
-- **Close**: see [Closing things](#closing-things).
+- **End…**: see [Closing things](#closing-things).
 - A pencil next to the name renames the session. **Files**, **Message** and **Split** toggle the file tree (⇧⌘E), the message box (⇧⌘M) and splitting (⌘D) (just icons when the window is narrow); **⋯** has the rest (open in another terminal, copy the attach command, save as preset, new window).
+
+Every tab says which machine it's on: 💻 **This Mac**, 🖥 the SSH machine, or 📦 *container · machine*, so two sessions with the same name never look alike.
 
 **Snippets** are buttons under the terminal that type text for you. The defaults (`/clear`, `/compact`, `continue`, Esc) appear when Claude runs in the session. Click the slider icon to add your own; `\e` sends Esc and `\n` a new line.
 
@@ -224,7 +226,7 @@ AIminal notices Claude Code in any tmux window: on this Mac, over SSH, and insid
 - **Happy.** Sessions started with `happy claude` show **Happy**. In Happy's remote mode (the phone screen), Claude's own screen is hidden, so AIminal can't tell when it is working; the badge says so.
 - **Trust prompt.** In a folder Claude hasn't been trusted in yet, Claude waits on a "trust this folder?" prompt; AIminal shows it as waiting.
 
-Turn notifications or their sound off in Settings → General → Notifications.
+The **Alerts** button at the top right turns the notification, its sound and the count on the Dock icon on or off in one click (the bell is crossed out when they're all off). The same switches are in Settings → General → Notifications.
 
 ## Machines over SSH
 
