@@ -10,7 +10,8 @@ REPO="hyeok-jong/AIminal"
 APP_NAME="AIminal.app"
 BUNDLE_ID="com.hyeokjong.initia"
 
-bold() { printf "\033[1m%s\033[0m\n" "$1"; }
+# Output never stops the install: if this runs in a terminal tab of AIminal itself, quitting the app closes that terminal.
+bold() { printf "\033[1m%s\033[0m\n" "$1" 2>/dev/null || true; }
 fail() { printf "\033[31mError:\033[0m %s\n" "$1" >&2; exit 1; }
 
 [[ "$(uname)" == "Darwin" ]] || fail "AIminal only runs on macOS."
@@ -73,6 +74,9 @@ rm -rf "$STAGED"
 ditto "$TMP/$APP_NAME" "$STAGED" || { rm -rf "$STAGED"; fail "Couldn't copy the app to $DEST_DIR."; }
 xattr -dr com.apple.quarantine "$STAGED" 2>/dev/null || true
 
+# If this script runs inside one of AIminal's own (non-tmux) terminal tabs, quitting the app hangs up this shell.
+# Ignore that, so the install still finishes instead of leaving the app closed and half replaced.
+trap '' HUP PIPE
 # Ask a running AIminal to quit normally (it offers to save unsaved editor files), then make sure it is gone.
 # tmux sessions keep running either way.
 if pgrep -x AIminal >/dev/null || pgrep -x Aiminal >/dev/null; then
@@ -93,12 +97,12 @@ mv "$STAGED" "$DEST" || fail "Couldn't move the app into place. The new copy is 
 for OLD in Aiminal Termoor Initia; do
     if [[ -d "$DEST_DIR/$OLD.app" && ! "$DEST_DIR/$OLD.app" -ef "$DEST" ]]; then
         rm -rf "$DEST_DIR/$OLD.app"
-        echo "    removed the old $OLD.app (your settings carry over)"
+        echo "    removed the old $OLD.app (your settings carry over)" 2>/dev/null || true
     fi
 done
 
 if ! command -v tmux >/dev/null 2>&1 && [[ ! -x /opt/homebrew/bin/tmux && ! -x /usr/local/bin/tmux ]]; then
-    printf "\n\033[33mNote:\033[0m tmux is not installed. Install it with: brew install tmux\n"
+    printf "\n\033[33mNote:\033[0m tmux is not installed. Install it with: brew install tmux\n" 2>/dev/null || true
 fi
 
 [[ -n "${AIMINAL_NO_OPEN:-${TERMOOR_NO_OPEN:-${INITIA_NO_OPEN:-}}}" ]] || open "$DEST"
