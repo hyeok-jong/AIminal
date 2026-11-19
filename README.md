@@ -23,7 +23,7 @@
 | | |
 |---|---|
 | 🏠 **A home for all your tmux sessions** | Every session on this Mac, your SSH servers and the docker containers on them, as live cards in one window |
-| 🤖 **Knows when Claude Code is done** | Working, waiting, or stopped at the usage limit (with the reset time), and which model it runs. A notification the moment it finishes, even on a remote server or inside a container |
+| 🤖 **Knows when Claude Code is done** | Working, waiting, or stopped at the usage limit (with the reset time), and which model it runs. A notification the moment it finishes, even on a remote server or inside a container. The toolbar **Alerts** button turns the notification, sound and Dock count on or off |
 | ✍️ **Multi-line prompts** | A **Message for Claude** button under every terminal unfolds a box for long prompts with Markdown and code blocks. Preview, then ⌘↩ sends it to Claude as one message |
 | 🗂 **File tree beside the terminal** | ⇧⌘E. New file and folder, a **Hidden** button for dotfiles. Follows the session's folder, on your Mac, servers and containers. Right-click a file to hand it to Claude as `@path` |
 | ✏️ **Edit files without vim** | Double-click a `.md`, `.html`, `.sh`, `.py`, `.json`, `.yaml`… to open it next to the terminal, with syntax colors. Markdown and HTML preview, ⌘S saves straight back to the server |

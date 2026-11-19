@@ -1,5 +1,12 @@
 # Changelog
 
+## 0.13.10-beta
+
+### Added
+
+- **Alerts button in the toolbar.** Turn the "Claude finished" notification, its sound and the count on the Dock icon on or off without opening Settings. The bell is crossed out when they're all off, and the menu warns you if macOS is blocking AIminal's notifications. The Dock count can now be turned off on its own (also in Settings → General → Notifications)
+- **Every tab shows its machine**, including 💻 This Mac: 🖥 SSH machine, 📦 container · machine. Two sessions with the same name on different machines no longer look alike
+
 ## 0.13.9-beta
 
 ### Changed
