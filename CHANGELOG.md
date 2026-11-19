@@ -1,5 +1,12 @@
 # Changelog
 
+## 0.13.4-beta
+
+### Changed
+
+- **Dragging a tab shows where it can go.** While you drag a tab, the other panes' tab bars light up with *Drop to move to this pane*, and a line marks the spot when you hover another tab. Before, only the "new pane" area at the edge was highlighted, even though dropping on another pane's tabs already worked
+- **Claude's account in split view.** With several panes, the one-line session header now shows which account Claude is signed in with, next to the model
+
 ## 0.13.3-beta
 
 ### Added

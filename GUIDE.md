@@ -164,7 +164,7 @@ Typing a long prompt straight into a terminal is awkward: Enter submits, and eve
 Watch more than one thing at once. The terminal area splits into **panes, each with its own tab bar** (like editor groups in VS Code). A pane shows one of its tabs; tabs are terminals or files.
 
 - **⌘D** opens a new terminal in a pane beside the current one, in the same machine and folder (**⇧⌘D** below it).
-- **Drag a tab** to another pane's tab bar to move it there, or to the highlighted area at the edge to give it a pane of its own. Dragging within a tab bar reorders. Right-click a tab for **Move to a New Pane** / **Move to Pane N**.
+- **Drag a tab** to another pane's tab bar to move it there (while you drag, the other panes' tab bars light up with *Drop to move to this pane*, and a line shows where it will land), or to the highlighted area at the edge to give it a pane of its own. Dragging within a tab bar reorders. With several panes, each session's one-line header still shows Claude's model and account. Right-click a tab for **Move to a New Pane** / **Move to Pane N**.
 - The **split button** in the session header does the same from a menu: new terminal beside or below, move this tab to a new pane, open another tab or a session that isn't open yet beside it, switch between **Side by Side** and **Stacked**, **Equal Sizes**, and **Merge All Panes**.
 - Files you open from the file tree become tabs in the pane next to the terminal, so the terminal stays visible.
 - Up to six panes. **Drag the divider** between panes to resize them. A pane disappears when its last tab is closed.
