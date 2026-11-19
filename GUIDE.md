@@ -34,7 +34,7 @@ curl -fsSL https://raw.githubusercontent.com/hyeok-jong/AIminal/beta/install.sh 
 
 The script downloads the newest release, checks its checksum and installs AIminal into `/Applications` (or `~/Applications`). AIminal is not notarized yet, so if you install the zip by hand, run `xattr -dr com.apple.quarantine /Applications/AIminal.app` once.
 
-**Updates.** AIminal checks for a new version when it starts and every 6 hours. When one is out, the **Update** button in the toolbar (and in the menu bar popover) says so; click it to download, verify and restart. Your tmux sessions keep running and the tabs you had open come back. You'll also get a notification, at most once a day. Settings → General → Updates lets you check now, turn automatic checks off, or skip beta versions.
+**Updates.** AIminal checks for a new version when it starts and every 6 hours. When one is out, the **Update** button at the top right of the window (and in the menu bar popover) says so; click it, confirm, and AIminal downloads, verifies and restarts. **Check for Updates** in the same place checks right away and, if there is a new version, goes straight to the same confirmation. Your tmux sessions keep running and the tabs you had open come back. You'll also get a notification, at most once a day. Settings → General → Updates lets you check now, turn automatic checks off, or skip beta versions.
 
 **First launch.** macOS asks whether AIminal may send notifications. Allow it if you want "Claude finished" alerts. You can change it later in System Settings → Notifications → AIminal.
 
@@ -77,7 +77,7 @@ Below, every machine and every container with tmux gets its own section of **ses
 - a **live preview** of the last lines on screen
 - the current task title (what Claude is working on) and the last activity
 
-Click a heading to collapse it (Expand all / Collapse all are at the top); containers sit inside their machine's section. Click a card to open it, or drag it to reorder. Presets you haven't started yet appear under **Quick start**, and machines that aren't connected are listed with a **Connect** button.
+Click a heading to collapse it (**Expand All** / **Collapse All** are at the top); containers sit inside their machine's section. Click a card to open it, or drag it to reorder. Presets you haven't started yet appear under **Quick start**, and machines that aren't connected are listed with a **Connect** button.
 
 ## Clock and machine stats
 
@@ -90,7 +90,7 @@ Remote numbers ride along with the tmux snapshot AIminal already receives every 
 ```
 🏠 Home
 OPEN IN AIMINAL        sessions you have open in tabs (they stay listed under their machine too)
-MACHINES (SSH)   ⤢ ⤡   expand all / collapse all
+MACHINES (SSH)   Expand All   (Collapse All once everything is open)
  ▾ 💻 This Mac
      session …
      ▸ 🐳 container  docker     (collapsed by default)
@@ -118,7 +118,7 @@ Selecting a session opens it in AIminal's terminal. The header shows its machine
 
 - **Terminal / Overview**: Overview shows a live preview of every window, where you can rename, add or close windows (double-click a name to rename).
 - **Close**: see [Closing things](#closing-things).
-- A pencil next to the name renames the session. Buttons toggle the file tree (⇧⌘E), the message box (⇧⌘M) and splitting (⌘D); **⋯** has the rest (open in another terminal, copy the attach command, save as preset, new window).
+- A pencil next to the name renames the session. **Files**, **Message** and **Split** toggle the file tree (⇧⌘E), the message box (⇧⌘M) and splitting (⌘D) (just icons when the window is narrow); **⋯** has the rest (open in another terminal, copy the attach command, save as preset, new window).
 
 **Snippets** are buttons under the terminal that type text for you. The defaults (`/clear`, `/compact`, `continue`, Esc) appear when Claude runs in the session. Click the slider icon to add your own; `\e` sends Esc and `\n` a new line.
 
@@ -155,7 +155,7 @@ Double-click a text file in the file tree and it opens as a tab in the pane besi
 
 Typing a long prompt straight into a terminal is awkward: Enter submits, and every tool has its own trick for a line break. Under every terminal, including each pane of a split view, there is a **Message for Claude** button (just **Multi-line input** when Claude isn't running there). Click it, or press **⇧⌘M**, and a text box unfolds; write there instead: several paragraphs, Markdown, code blocks, anything. Fold it back with ✕ or ⇧⌘M. Each pane has its own box and draft, and ⇧⌘M and ⌘↩ act on the pane you last clicked or typed in; the button shows the first line of an unsent draft.
 
-- **Send + Enter** (⌘↩) pastes the whole text into the terminal as one block and then presses Enter, so Claude Code (or your shell) receives it as a single message. **Send** pastes without Enter, so you can keep editing in the terminal. **esc** puts the keyboard back in the terminal without sending. After sending, the keyboard goes to the terminal so you can watch; turn on **Keep typing in the message box after sending** in Settings → General to stay in the box instead.
+- **Send ⌘↩** pastes the whole text into the terminal as one block and then presses Enter, so Claude Code (or your shell) receives it as a single message. **Paste Only** pastes without Enter, so you can keep editing in the terminal. **esc** puts the keyboard back in the terminal without sending. After sending, the keyboard goes to the terminal so you can watch; turn on **Keep typing in the message box after sending** in Settings → General to stay in the box instead.
 - **Preview** renders the Markdown; what is sent is always the raw text. The box keeps its own draft per tab, and you can drag its top edge to resize it.
 - Works in tmux sessions on this Mac, over SSH and inside containers (the text goes through tmux's paste buffer), and in plain terminal tabs.
 
@@ -184,9 +184,9 @@ Watch more than one thing at once. The terminal area splits into **panes, each w
 
 **Presets** save that recipe so a session is one click away. Start one from Home (Quick start), the sidebar, or ⌘K. Mark a preset **autostart** to bring it up with the **Autostart** button, or automatically when AIminal launches (Settings → General). A new install comes with an `example` preset that opens Claude Code in your home folder.
 
-**Save what's running as presets, all at once.** The ⤓ button next to **Presets** in the sidebar (or ⌘K → *Save sessions as presets…*) lists your tmux sessions, the ones open in AIminal first (switch to **All sessions** for the rest). Each row already knows where it lives: on this Mac, on an SSH machine, inside a container's own tmux, or a machine's tmux that `docker exec`s into a container (the container and its `-w` folder are kept). The folder comes from the session's window and the command is `claude` (or `happy`) when Claude Code runs there; edit either before saving. Tick **Include in Autostart** and the whole setup comes back with one click. A preset holds one window, so for multi-window sessions the Claude window is saved; sessions that are already presets are marked and, if you tick them, updated in place. To save just one session, right-click it in the sidebar or on Home → **Save as preset…** (filled in the same way), or **Update preset from this session…** if it already has one.
+**Save what's running as presets, all at once.** **Save Running…** next to **Presets** in the sidebar (or ⌘K → *Save sessions as presets…*) lists your tmux sessions, the ones open in AIminal first (switch to **All sessions** for the rest). Each row already knows where it lives: on this Mac, on an SSH machine, inside a container's own tmux, or a machine's tmux that `docker exec`s into a container (the container and its `-w` folder are kept). The folder comes from the session's window and the command is `claude` (or `happy`) when Claude Code runs there; edit either before saving. Tick **Include in Autostart** and the whole setup comes back with one click. A preset holds one window, so for multi-window sessions the Claude window is saved; sessions that are already presets are marked and, if you tick them, updated in place. To save just one session, right-click it in the sidebar or on Home → **Save as preset…** (filled in the same way), or **Update preset from this session…** if it already has one.
 
-**Keep presets in iCloud Drive (one file per Mac).** Click the folder button next to **Presets** in the sidebar → **Save to Folder…** and pick a folder, for example `iCloud Drive/AIminal`. From then on, every change is saved there as `AIminal presets (<this Mac's name>).json`. On another Mac, the same button offers **Load from Folder** with one entry per Mac (or **Load from File…** for any backup); you choose **Merge** (add only what isn't there yet) or **Replace**. Each Mac keeps its own file, so presets that point at local folders never mix, and nothing is loaded automatically. The first time AIminal touches iCloud Drive, macOS asks for permission.
+**Keep presets in iCloud Drive (one file per Mac).** Click **Folder** next to **Presets** in the sidebar → **Save to Folder…** and pick a folder, for example `iCloud Drive/AIminal`. From then on, every change is saved there as `AIminal presets (<this Mac's name>).json`. On another Mac, the same menu offers **Load from Folder** with one entry per Mac (or **Load from File…** for any backup); you choose **Merge** (add only what isn't there yet) or **Replace**. Each Mac keeps its own file, so presets that point at local folders never mix, and nothing is loaded automatically. The first time AIminal touches iCloud Drive, macOS asks for permission.
 
 Presets live in `~/.config/aiminal/config.json`:
 

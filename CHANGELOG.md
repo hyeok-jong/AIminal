@@ -1,5 +1,17 @@
 # Changelog
 
+## 0.13.2-beta
+
+### Changed
+
+- **Update from the top right, start to finish.** **Check for Updates** in the toolbar now goes straight to the "Update and restart?" dialog when a new version is out (with a **Release Notes** button), instead of only saying so and leaving the actual update to a banner at the bottom of the sidebar. The banner is gone
+- **Buttons say what they do.** The toolbar (**Check for Updates**, **Logs**, **Refresh**, **New**), the session header (**Files**, **Message**, **Split**), the sidebar (**Expand All** / **Collapse All**, **Save Running…**, **Folder**), Home (**Expand All**, **Collapse All**), the snippet bar (**Edit**), a preset's **Delete**, and the menu bar popover (**Open**, **Settings**) now show words, not just icons. When the window is too narrow, the session header falls back to icons and then to one line
+- **Message box: Send ⌘↩ and Paste Only.** The main button is now **Send ⌘↩** (paste and press Enter), so its name matches the shortcut; the other one is **Paste Only** (no Enter)
+
+### Fixed
+
+- In a narrow window the session header no longer wraps the folder and "1 window" into a column of single letters
+
 ## 0.13.1-beta
 
 ### Fixed
