@@ -130,7 +130,7 @@ If you detach from inside tmux (Ctrl-b d), the tab shows **Reconnect** instead o
 
 ## File tree
 
-A folder tree sits to the left of the terminal, like VS Code's Explorer. It is on by default; **⇧⌘E** (or the sidebar button in the session header) hides and shows it. It works the same on this Mac, SSH machines and docker containers.
+A folder tree sits to the left of the terminal, like VS Code's Explorer. It is on by default; **⇧⌘E** (or the **Files** button in the session header) hides and shows it. It works the same on this Mac, SSH machines and docker containers.
 
 - It **follows the session's current folder**: `cd` in the terminal and the tree moves there a few seconds later. If a window is inside a container (`docker exec`), the tree shows the container's home.
 - **Click a folder** to expand it. Clicking a file only selects it.
@@ -184,9 +184,9 @@ Watch more than one thing at once. The terminal area splits into **panes, each w
 | Keep running in the background (tmux) | on by default; turn off for a plain terminal |
 | Session name / Startup command | for example `claude` or `npm run dev` |
 
-**Presets** save that recipe so a session is one click away. Start one from Home (Quick start), the sidebar, or ⌘K. Mark a preset **autostart** to bring it up with the **Autostart** button, or automatically when AIminal launches (Settings → General). A new install comes with an `example` preset that opens Claude Code in your home folder.
+**Presets** save that recipe so a session is one click away. Start one from Home (Quick Start), the sidebar, or ⌘K. Mark a preset **autostart** to bring it up with the **Autostart** button, or automatically when AIminal launches (Settings → General). A new install comes with an `example` preset that opens Claude Code in your home folder.
 
-**Save what's running as presets, all at once.** **Save Running…** next to **Presets** in the sidebar (or ⌘K → *Save sessions as presets…*) lists your tmux sessions, the ones open in AIminal first (switch to **All sessions** for the rest). Each row already knows where it lives: on this Mac, on an SSH machine, inside a container's own tmux, or a machine's tmux that `docker exec`s into a container (the container and its `-w` folder are kept). The folder comes from the session's window and the command is `claude` (or `happy`) when Claude Code runs there; edit either before saving. Tick **Include in Autostart** and the whole setup comes back with one click. A preset holds one window, so for multi-window sessions the Claude window is saved; sessions that are already presets are marked and, if you tick them, updated in place. To save just one session, right-click it in the sidebar or on Home → **Save as preset…** (filled in the same way), or **Update preset from this session…** if it already has one.
+**Save what's running as presets, all at once.** **Save Running…** next to **Presets** in the sidebar (or ⌘K → *Save Sessions as Presets…*) lists your tmux sessions, the ones open in AIminal first (switch to **All sessions** for the rest). Each row already knows where it lives: on this Mac, on an SSH machine, inside a container's own tmux, or a machine's tmux that `docker exec`s into a container (the container and its `-w` folder are kept). The folder comes from the session's window and the command is `claude` (or `happy`) when Claude Code runs there; edit either before saving. Tick **Include in Autostart** and the whole setup comes back with one click. A preset holds one window, so for multi-window sessions the Claude window is saved; sessions that are already presets are marked and, if you tick them, updated in place. To save just one session, right-click it in the sidebar or on Home → **Save as Preset…** (filled in the same way), or **Update preset from this session…** if it already has one.
 
 **Keep presets in iCloud Drive (one file per Mac).** Click **Folder** next to **Presets** in the sidebar → **Save to Folder…** and pick a folder, for example `iCloud Drive/AIminal`. From then on, every change is saved there as `AIminal presets (<this Mac's name>).json`. On another Mac, the same menu offers **Load from Folder** with one entry per Mac (or **Load from File…** for any backup); you choose **Merge** (add only what isn't there yet) or **Replace**. Each Mac keeps its own file, so presets that point at local folders never mix, and nothing is loaded automatically. The first time AIminal touches iCloud Drive, macOS asks for permission.
 
@@ -223,7 +223,7 @@ AIminal notices Claude Code in any tmux window: on this Mac, over SSH, and insid
 - **Usage limit.** When Claude stops at its usage limit ("Usage limit reached · resets 8:50pm"), the session shows ⚠ **Limit · 8:50pm** and you get one notification instead of "finished".
 - **Model.** The Claude badge on cards, session headers and window cards says which model that Claude is using, like **Claude · Fable 5.1** or **Opus 5.5** (the full id is in the tooltip). AIminal reads it from Claude Code's own session files (`~/.claude/sessions`, and the last reply in the session's transcript); it never reads your conversation or tokens. If a session's windows use different models, both are listed.
 - **Account.** Machine pages, container rows and Claude session headers show which account Claude Code is signed in with there, and its plan (for example `you@example.com · Max 5x`). AIminal reads this from `~/.claude.json`; it never reads tokens.
-- **Happy.** Sessions started with `happy claude` show **Happy**. In Happy's remote mode (the phone screen), Claude's own screen is hidden, so AIminal can't tell when it is working; the badge says so.
+- **Happy.** Sessions started with `happy claude` show **Happy**. In Happy's remote mode (the phone screen), Claude's own screen is hidden, so AIminal reads working / waiting from Claude Code's session file instead; the badge says it is in remote mode.
 - **Trust prompt.** In a folder Claude hasn't been trusted in yet, Claude waits on a "trust this folder?" prompt; AIminal shows it as waiting.
 
 The **Alerts** button at the top right turns the notification, its sound and the count on the Dock icon on or off in one click (the bell is crossed out when they're all off). The same switches are in Settings → General → Notifications.
@@ -282,6 +282,7 @@ Hold **⌘** for half a second to see all shortcuts; the tabs show their numbers
 | ⇧⌘. | Show or hide hidden files in the file tree |
 | ⇧⌘M / ⌘↩ | Show or hide the message box / send it and press Enter |
 | ⌘S / ⌥⌘S | Save the editor you're working in / save every changed file |
+| ⌘F / ⌘G | Find in the editor / find next |
 | ⌥⌘→ / ⌥⌘← | Move to the next / previous pane |
 | ⌘D / ⇧⌘D | New terminal in a pane beside / below |
 | ⌘R | Refresh |
@@ -310,7 +311,7 @@ Errors and warnings are saved to `~/Library/Logs/AIminal/aiminal.log` (it opens 
 | A machine won't connect | The machine page shows the SSH error with a hint, and the log has the details. Check Tailscale/VPN, the address, and that `ssh <host>` works in a terminal. |
 | A password prompt tab closes at once | Look at the tab's last line (it now stays open) or the log; usually the server is unreachable. |
 | Sessions on a server don't appear | Make sure tmux is installed there and you are connected (green dot). |
-| No notifications | Allow AIminal in System Settings → Notifications, and check Settings → General → Notifications. In Happy's remote mode, Claude can't be tracked. |
+| No notifications | Allow AIminal in System Settings → Notifications, and check Settings → General → Notifications. |
 | Claude in a container isn't detected | Use a recent Claude Code; AIminal reads its title and screen, so the session should show Claude's normal screen. |
 
 Still stuck? Help → **Report a Problem…** opens a GitHub issue with your AIminal, macOS and tmux versions filled in. Nothing is sent until you submit it; paste the relevant log lines if they help.
@@ -328,6 +329,6 @@ Still stuck? Help → **Report a Problem…** opens a GitHub issue with your AIm
 
 AIminal never stores your SSH passwords or keys: a password is typed once into a terminal tab and only the open connection is reused. The one secret it keeps is the optional cmux socket password you enter in Settings, saved in `config.json`.
 
-On each machine it reads tmux's state, the process list, the bottom of each pane's screen, the running containers, the account fields of `~/.claude.json` (email and plan, not tokens), and the model name from Claude Code's session files (not the conversation). None of it leaves your Mac: there is no telemetry or analytics, and the only connections AIminal makes on its own are to your SSH machines and to GitHub, to check for and download updates. The log file records machine names, file paths and commands that failed, never what you type into the message box or the terminal.
+On each machine it reads tmux's state, the process list, the bottom of each pane's screen, the running containers, load, memory, GPU and disk usage, the account fields of `~/.claude.json` (email and plan, not tokens), and the model name from Claude Code's session files (not the conversation). None of it leaves your Mac: there is no telemetry or analytics, and the only connections AIminal makes on its own are to your SSH machines and to GitHub, to check for and download updates. The log file records machine names, file paths and commands that failed, never what you type into the message box or the terminal.
 
-**Uninstalling.** Quit AIminal, move `AIminal.app` to the Trash, and delete the files in the table above (plus `~/Library/Logs/AIminal/`). If you turned on **Launch AIminal at login**, turn it off first or remove AIminal in System Settings → General → Login Items. tmux sessions and your `~/.ssh/config` are yours and stay as they are; shared SSH connections close by themselves within 30 minutes.
+**Uninstalling.** Quit AIminal, move `AIminal.app` to the Trash, and delete AIminal's own files: `~/.config/aiminal/`, `~/Library/Logs/AIminal/` and `~/Library/Preferences/com.hyeokjong.initia.plist` (plus the `~/.config/termoor` and `~/.config/initia` links, if you started on an older version). If you turned on **Launch AIminal at login**, turn it off first or remove AIminal in System Settings → General → Login Items. tmux sessions, your `~/.ssh/config` and your downloads are yours and stay as they are; shared SSH connections close by themselves within 30 minutes.

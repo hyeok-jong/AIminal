@@ -1,5 +1,35 @@
 # Changelog
 
+## 0.13.11-beta
+
+A full review of the code and documents. No new features; fixes only.
+
+### Fixed
+
+- **Saving a file over a dropped connection could leave it cut short.** The editor now replaces the file only when every byte arrived
+- **Adding a machine with a space in a field could break `~/.ssh/config`** for every host. An IdentityFile with spaces is quoted, and other fields refuse spaces
+- **A Mac that has been up for about 250 days could crash AIminal** when it read the CPU counters
+- **A pane whose screen showed AIminal's own marker text** (for example, when viewing its logs) could make a machine's sessions disappear from the sidebar
+- **Disconnect and Cancel are final.** A reconnect attempt that finished after you pressed Disconnect no longer brings the machine back, and pressing Connect twice no longer opens two logins
+- **Disconnecting a machine clears its 🔔 marks** and the Dock count. Coming back to AIminal clears the mark for every session you can see, not only the selected one
+- **Renaming a machine** now carries its container tabs and terminal tabs along
+- **Sending the message box to a terminal that has ended** keeps your draft and tells you, instead of dropping the text
+- **Clicking an editor or a message box makes its pane the focused one**, so ⌘W, ⌘S and ⇧⌘M act where you clicked
+- **Updates**: unsaved editors are checked again after the download, an update you cancelled at the last step is dropped instead of installing itself hours later, and the app reopens if replacing it fails
+- **Uploading into a folder that couldn't be listed** asks first instead of replacing files silently
+- **Docker on this Mac hanging** no longer makes container sessions flicker or lose their Claude state
+- The ⌘ shortcut overlay no longer stays up after ⌘-Tab; the working ✦ keeps pulsing after scrolling; the Alerts button notices when you allow notifications in System Settings; the Files button matches the tree in Overview; the welcome sheet closes with esc; a full disk no longer crashes the app when it writes its log
+- `install.sh` finishes even when it runs inside one of AIminal's own terminal tabs
+
+### Added
+
+- **Find in the editor**: ⌘F and ⌘G (Edit → Find)
+- **Equal Sizes** in ⌘K
+
+### Changed
+
+- Guide and README corrections: Happy remote mode, where the cmux password goes, what AIminal reads on each machine, and uninstall steps that name only AIminal's own files
+
 ## 0.13.10-beta
 
 ### Added

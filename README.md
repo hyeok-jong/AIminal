@@ -49,7 +49,7 @@ Claude on your Mac and Claude inside a container on the GPU server, next to each
 <img src="screenshots/split.gif" alt="A gpu-box container session opens beside the local Claude session; the divider is dragged, then the layout switches to stacked">
 
 ### Write to Claude like a document
-Long prompts don't belong on one terminal line. The **Message for Claude** button under every terminal unfolds a box for paragraphs, Markdown and code blocks; ⌘↩ sends it to Claude as one message.
+Long prompts don't belong on one terminal line. The **Message for Claude** button under every terminal unfolds a box for paragraphs, Markdown and code blocks; ⌘↩ sends it to Claude as one message. New tabs start with the box open.
 
 <img src="screenshots/compose.gif" alt="Writing a Markdown message with a list and a code block in the box under the Claude Code terminal, then sending it with ⌘↩: the text goes up into Claude's prompt and the box empties">
 
@@ -117,13 +117,13 @@ AIminal is the app I wanted for that:
 ## Features
 
 - **Home**: a start screen with a card for every session, live previews, and a summary of what's running
-- **Built-in terminal**: open any tmux session in a real terminal inside AIminal, with a tab for each one. Plain terminals without tmux work too (⌘T)
+- **Built-in terminal**: open any tmux session in a real terminal inside AIminal, with a tab for each one that says which machine or container it is on, drawn on the GPU. Plain terminals without tmux work too (⌘T)
 - **Clear close actions**: Close Tab (Detach) keeps the session running, Quit Claude (/exit) ends only Claude, End Session ends it all. A dropped machine shows **Lost connection** with **Reconnect**, not "session ended"
-- **Keyboard first**: hold ⌘ to see every shortcut, ⌘K to jump to any session, machine or command, ⌘1…⌘9 for tabs, ⌥⌘← / ⌥⌘→ between panes, ⌘S saves the editor you're in, ⌘= / ⌘- to zoom whichever panel you clicked last (a terminal, the message box, an editor, the file tree)
+- **Keyboard first**: hold ⌘ to see every shortcut, ⌘K to jump to any session, machine or command, ⌘1…⌘9 for tabs, ⌥⌘← / ⌥⌘→ between panes, ⌘S saves the editor you're in (⌥⌘S saves all), ⌘F finds in it, ⌘= / ⌘- to zoom whichever panel you clicked last (a terminal, the message box, an editor, the file tree)
 - **Claude Code aware**: see which sessions run Claude (or `happy claude`) and whether it is working or waiting, even inside a docker container. Get a notification when Claude finishes or hits its usage limit (with the reset time), see which model each Claude is using (**Claude · Fable 5.1**) and which account and plan it is signed in with on each machine, and quit it cleanly with **Quit Claude (/exit)**
 - **Machines**: this Mac and your `~/.ssh/config` machines side by side in the sidebar. Connect (key or password) to see and open each machine's tmux sessions, and add or edit machines in the app. AIminal keeps one SSH session per machine, so your server sees a single login. Connection errors come with a hint, and machines reconnect by themselves after sleep or a Wi-Fi drop
 - **Docker containers**: keep tmux on the server and work inside a container. A session or preset can name a container, and AIminal runs `docker exec` into it for you (with your folder and startup command). AIminal also finds the tmux sessions running *inside* each container, opens them with `docker exec -it <container> tmux attach`, and starts new ones inside the container from the sidebar, Home or the machine page. Each machine page lists its running containers
-- **File tree** (⇧⌘E, shown by default): a folder tree beside the terminal that follows the session's folder, on this Mac, SSH machines and inside containers. Right-click a file to type its path into the terminal (as `@path` for Claude). Download files and folders, or drag them in from Finder to upload, with a progress bar and Cancel
+- **File tree** (⇧⌘E, shown by default): a folder tree beside the terminal that follows the session's folder, on this Mac, SSH machines and inside containers. Right-click a file to type its path into the terminal (as `@path` for Claude). Create files and folders, show hidden files, download files and folders, or drag them in from Finder to upload, with a progress bar, speed, time left and Cancel
 - **Built-in editor** with syntax colors: double-click a text file (`.md`, `.html`, `.sh`, `.py`, `.json`, `.yaml`, …) to open it next to the terminal. Markdown and HTML have a live preview. ⌘S saves back to the machine or container, and AIminal warns you if the file changed since you opened it. Other files open in their app, or in VS Code Remote on SSH machines
 - **Side by side**: ⌘D opens a new terminal beside the current one (⇧⌘D below it). Each pane has its own tab bar, like editor groups: drag tabs between panes, or use the split button in the header to open any tab or session beside it. Up to six panes of terminals and files, side by side or stacked, with draggable dividers
 - **Multi-line input** (the **Message for Claude** button under every terminal, or ⇧⌘M): write a long prompt with Markdown and code blocks in a box under the terminal, preview it, and send it to Claude as one message with ⌘↩
@@ -179,11 +179,11 @@ Settings live in `~/.config/aiminal/config.json`. Open the Settings window with 
 
 **SSH:** AIminal reads hosts from `~/.ssh/config`. When you edit a host in AIminal, only the lines you change are rewritten, and the previous file is kept as `~/.ssh/config.aiminal-backup`. AIminal never stores SSH passwords: if a host needs one, you log in once in a terminal tab and AIminal keeps reusing that connection (and for 30 minutes after it was last used).
 
-**cmux:** by default, cmux accepts socket connections only from processes it started itself. To let AIminal open workspaces in cmux, go to cmux **Settings → Automation**, set socket access to `password`, and enter the same password in AIminal under **Settings → Terminals**.
+**cmux:** by default, cmux accepts socket connections only from processes it started itself. To let AIminal open workspaces in cmux, go to cmux **Settings → Automation**, set socket access to `password`, and enter the same password in AIminal under **Settings → External Terminals**.
 
 ## Privacy
 
-AIminal has no telemetry or analytics. On its own it only connects to your SSH machines and to GitHub (to check for updates). On each machine it reads tmux's state, the processes under each pane, the bottom of each pane's screen, the running containers, the account and plan from `~/.claude.json` and the model name from Claude Code's session files, never your conversations or tokens. SSH passwords are never stored. Details: [Files and privacy](GUIDE.md#files-and-privacy).
+AIminal has no telemetry or analytics. On its own it only connects to your SSH machines and to GitHub (to check for updates). On each machine it reads tmux's state, the processes under each pane (and `happy` / `docker exec` command lines), load, memory, GPU and disk usage, the bottom of each pane's screen, the running containers, the account and plan from `~/.claude.json` and the model name from Claude Code's session files, never your conversations or tokens. SSH passwords are never stored. Details: [Files and privacy](GUIDE.md#files-and-privacy).
 
 ## Feedback
 
