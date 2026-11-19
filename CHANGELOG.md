@@ -1,5 +1,19 @@
 # Changelog
 
+## 0.13.6-beta
+
+### Added
+
+- **Transfer timing and speed.** While a file or folder uploads or downloads, the progress row shows the current speed, when it started, how long it has been running, the time left and the ETA. Finished transfers keep their start → end time, how long they took and the average speed
+
+### Changed
+
+- **Panes keep the full session header when there's room.** Splitting no longer forces the one-line header: the avatar, folder, Claude model and account stay as long as the pane is wide enough, and only narrow panes step down (icons, then one line). The Terminal / Overview switch shows only on the active pane, the one it applies to
+
+### Fixed
+
+- In a very narrow pane the one-line header no longer spills over the pane next to it; the session name shrinks first
+
 ## 0.13.5-beta
 
 ### Fixed

@@ -27,7 +27,7 @@
 | ✍️ **Multi-line prompts** | A **Message for Claude** button under every terminal unfolds a box for long prompts with Markdown and code blocks. Preview, then ⌘↩ sends it to Claude as one message |
 | 🗂 **File tree beside the terminal** | ⇧⌘E. New file and folder, a **Hidden** button for dotfiles. Follows the session's folder, on your Mac, servers and containers. Right-click a file to hand it to Claude as `@path` |
 | ✏️ **Edit files without vim** | Double-click a `.md`, `.html`, `.sh`, `.py`, `.json`, `.yaml`… to open it next to the terminal, with syntax colors. Markdown and HTML preview, ⌘S saves straight back to the server |
-| ⬇️⬆️ **Download and upload** | Right-click to download a file or folder to any folder you pick, drag from Finder to upload. A progress bar with size and percent, and a Cancel button |
+| ⬇️⬆️ **Download and upload** | Right-click to download a file or folder to any folder you pick, drag from Finder to upload. A progress bar with speed, elapsed time, time left and ETA, and a Cancel button |
 | 🪟 **Panes, each with its own tabs** | ⌘D, the split button, or drag a tab to another pane. Side by side or stacked, up to six panes, drag the dividers to resize. Watch Claude on two servers at once |
 | ⏱ **Clock and machine stats** | Time, date, this Mac's CPU, memory and disk in the toolbar; each server's load, memory, disk and every GPU's utilization and temperature on its machine page |
 | 🔍 **Zoom the panel you click** | ⌘= / ⌘- grow or shrink just the terminal, pane, message box, editor or file tree you clicked last |
