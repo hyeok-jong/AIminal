@@ -296,7 +296,7 @@ Open with ⌘,.
 
 - **General**: language (English, 한국어), Dock icon and the clock and stats in the toolbar; a **Terminal** group (where clicking a session opens it, terminal font size, opening the message box in new tabs, keeping the keyboard in the message box after sending, **Edit Snippets…**); notifications (with a warning when macOS blocks them); updates; and startup (launch at login, autostart presets).
 - **External Terminals**: your default external terminal (iTerm2, Terminal, cmux, Ghostty, WezTerm, kitty, Alacritty) and its options. For cmux, set its socket access to `password` in cmux Settings → Automation and enter the same password here.
-- **Advanced**: tmux path and version (or how to install it), the log file, the config file, and **Help**: **Report a Problem…**, the welcome screen and this guide.
+- **Advanced**: tmux path and version (or how to install it), **Draw terminals with the GPU (Metal)** (on by default; much less CPU when many sessions update at once, turn it off if a terminal draws incorrectly), the log file, the config file, and **Help**: **Report a Problem…**, the welcome screen and this guide.
 
 ## Logs and troubleshooting
 

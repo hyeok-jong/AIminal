@@ -1,5 +1,13 @@
 # Changelog
 
+## 0.13.9-beta
+
+### Changed
+
+- **Terminals draw with the GPU.** Each terminal now renders with Metal instead of re-typesetting changed lines on the CPU. In a stress test with six panes of Claude-style output updating ten times a second, AIminal's CPU fell from about 19 % to 13 % and the main thread went from about 27 % busy to 3 %, so the window stays smooth however many agents are working. Tabs you aren't looking at cost nothing: 6 and 24 streaming sessions use the same CPU. Turn it off in Settings → Advanced → **Draw terminals with the GPU (Metal)** if a terminal ever draws incorrectly
+- **The Claude badge looks like before**: the light orange capsule with ✦, and the ✦ pulses while Claude works. The pulse is now a Core Animation layer that the window server runs, so it no longer costs CPU (it was about 15 % in 0.13.7)
+- **The sidebar can be much wider**: drag it up to 640 points (it stopped at 340)
+
 ## 0.13.8-beta
 
 A quality pass aimed at a first-time buyer: lighter on the CPU, clearer when something goes wrong, steadier on flaky networks.
