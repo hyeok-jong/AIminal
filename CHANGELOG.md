@@ -1,5 +1,47 @@
 # Changelog
 
+## 0.13.8-beta
+
+A quality pass aimed at a first-time buyer: lighter on the CPU, clearer when something goes wrong, steadier on flaky networks.
+
+### Added
+
+- **Welcome screen on first launch.** It checks what you already have (tmux, tmux sessions, SSH machines from `~/.ssh/config`, notification permission) and gives one button for each next step. Open it again from Help → **Welcome to AIminal…**
+- **Machines reconnect by themselves.** When Wi-Fi drops or the Mac wakes from sleep, a machine that was connected tries again every 30 seconds with your ssh key, and right after wake. It never opens a password prompt by itself, and **Disconnect** stops it
+- **"Lost connection" is no longer "Session ended".** If a remote session disappears because its machine dropped, the pane says so and offers **Reconnect**. A session that really ended offers **Start Again** (when it has a preset) and **Close Tab**
+- **SSH errors come with a hint**: address not found (VPN/Tailscale off?), no answer, connection refused, host key changed, key not accepted. Home cards show the reason and a **Try Again** button, plus **Cancel** while connecting
+- **File → Save (⌘S) saves the editor you're working in**, and **Save All** (⌥⌘S) saves every changed file. **⌥⌘→ / ⌥⌘←** move between panes; **Equal Sizes** and **Merge All Panes** are in the View menu and ⌘K
+- **Help → Report a Problem…** opens a GitHub issue with your AIminal, macOS and tmux versions filled in. Nothing is sent until you submit it
+- Failed uploads and downloads show the reason in the row. The file tree error line has **Try Again**. Search with no matches says so. Home shows an **Add Machine (SSH)…** card when you have none
+
+### Changed
+
+- **Much lighter while Claude works.** The pulsing "working" badge redrew the whole window every frame (about 15 % CPU on its own). It is now a solid badge with "…": filled while Claude works, light while it waits
+- Ending a session is called **End Session** everywhere (it was "Kill" in some alerts), and the session header menu is **End…** so it isn't confused with a tab's **Close**. Buttons that stop things are marked destructive
+- Menus use Title Case. ⌘W is **Close Tab (Detach)**. The sidebar header is **Machines**
+- Settings: app, terminal and notification options are in separate groups, the **Terminals** tab is **External Terminals**, a warning appears when macOS blocks AIminal's notifications, and the Advanced tab shows how to install tmux when it's missing
+- New sessions on a machine without tmux turn the tmux option off and say why
+- Notification permission is asked from the welcome screen (or when you turn notifications on) instead of at first launch
+- Icon-only buttons, status dots and the Claude badge have VoiceOver labels
+
+### Fixed
+
+- Renaming a session or an SSH machine no longer moves its tab into another pane
+- Choosing **Cancel** in "Save changes?" after closing the last terminal tab kept your edits instead of discarding them
+- A detached or ended tab can be closed with ✕, and ⌘W on it no longer closes the whole window
+- Clicking a terminal in another pane moves pane focus there, so ⌘W closes what you're typing in
+- A screen showing AIminal's internal marker text could freeze a machine's list
+- A hung Docker or tmux could freeze this Mac's session list until restart; timeouts now stop the whole command
+- The ssh connection step gives up after 40 seconds instead of waiting forever (for example on a pending Tailscale approval)
+- The file tree no longer drops all expanded folders on slow links when several folders reload at once
+- The remote watch loop removes its temp file on Ubuntu/Debian servers when the connection drops
+- Smart Exit no longer ends a session because its machine dropped while it waited for Claude to quit
+- A collapsed message box stays collapsed when you reconnect a tab
+- A background update check could bring back the **Update** button during a download
+- Dragging a pane divider in a very narrow window could produce a negative width
+- New File no longer empties a file created at the same moment, and says "Couldn't reach" instead of "no permission" when the machine is offline
+- A running transfer can no longer drop off the list (and become uncancellable) when a fifth one starts
+
 ## 0.13.7-beta
 
 ### Changed
