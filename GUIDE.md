@@ -161,9 +161,7 @@ Typing a long prompt straight into a terminal is awkward: Enter submits, and eve
 
 ## Side by side
 
-Watch more than one thing at once:
-
-The terminal area splits into **panes, each with its own tab bar** (like editor groups in VS Code). A pane shows one of its tabs; tabs are terminals or files.
+Watch more than one thing at once. The terminal area splits into **panes, each with its own tab bar** (like editor groups in VS Code). A pane shows one of its tabs; tabs are terminals or files.
 
 - **⌘D** opens a new terminal in a pane beside the current one, in the same machine and folder (**⇧⌘D** below it).
 - **Drag a tab** to another pane's tab bar to move it there, or to the highlighted area at the edge to give it a pane of its own. Dragging within a tab bar reorders. Right-click a tab for **Move to a New Pane** / **Move to Pane N**.
@@ -232,7 +230,7 @@ The **Machines (SSH)** section lists the hosts in your `~/.ssh/config` next to t
 
 **Connecting.** Click a machine and **Connect**. With an SSH key, it connects in the background. If the server wants a password (or a host key confirmation), a terminal tab opens so you can type it once; AIminal reuses that login while you stay connected. If the server can't be reached (Tailscale off, wrong address), AIminal shows the actual SSH error instead.
 
-**One login.** AIminal keeps a single SSH session per machine and streams the session list, Claude status and previews over it every 3 seconds, so a login monitor on the server sees one login, not one every few seconds. Tabs and file transfers reuse that same connection, so the server still sees one login.
+**One login.** AIminal keeps a single SSH session per machine and streams the session list, Claude status and previews over it every 3 seconds, so a login monitor on the server sees one login, not one every few seconds. When nothing has changed, only a few hundred bytes go over the wire, and the slower checks (`docker ps`, `nvidia-smi`, Claude's session files) run every 15 seconds. Tabs and file transfers reuse that same connection, so the server still sees one login.
 
 **Editing machines.** Add a machine with **Add machine (SSH)**, or edit one on its page: name (Host), address (HostName), user, port, key file and jump host. AIminal only rewrites the lines you change, keeps your comments and other options, writes through symlinks (dotfiles setups), and keeps the previous file as `~/.ssh/config.aiminal-backup`. Hosts from `Include`d files are shown read-only.
 
@@ -252,7 +250,7 @@ docker exec -it -w <folder> <container> bash -lc '<command>; exec bash -l'
 
 for you, so the session lands in the container's folder with your command running, and stays in the container shell after it ends. Session cards show 🐳 and the container name. Claude inside the container is detected from its title and screen, since its processes aren't under the tmux pane.
 
-**2. tmux inside the container.** AIminal also reads the tmux sessions running *inside* each container (every 15 seconds, over the machine's existing SSH session). They appear under the machine as 🐳 container → sessions, and opening one runs `docker exec -it <container> tmux attach -t <session>` in AIminal's terminal. Claude detection, notifications, Close and rename all work there too. **Start more of them** from AIminal: the ⊕ next to the container in the sidebar (or right-click → New tmux session inside…), the "new session" card in the container's group on Home, or **New tmux inside** on the machine page. The session is created inside the container (`docker exec <container> tmux new -s …`), so you can keep several tmux sessions per container, each with its own Claude.
+**2. tmux inside the container.** AIminal also reads the tmux sessions running *inside* each container (every 15 seconds for containers that have tmux, and a full sweep every minute, over the machine's existing SSH session). They appear under the machine as 🐳 container → sessions, and opening one runs `docker exec -it <container> tmux attach -t <session>` in AIminal's terminal. Claude detection, notifications, Close and rename all work there too. **Start more of them** from AIminal: the ⊕ next to the container in the sidebar (or right-click → New tmux session inside…), the "new session" card in the container's group on Home, or **New tmux inside** on the machine page. The session is created inside the container (`docker exec <container> tmux new -s …`), so you can keep several tmux sessions per container, each with its own Claude.
 
 A machine's page lists its running containers with:
 - **New tmux inside**: a new tmux session inside the container (tmux lives in the container; keep several)
