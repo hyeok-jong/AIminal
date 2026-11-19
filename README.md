@@ -34,7 +34,7 @@
 | 🐳 **Docker containers, first class** | Enter containers for you, find the tmux sessions inside them, open them in a tab, and start new ones inside |
 | 💾 **Save your setup as presets** | One button turns the sessions you have running, on your Mac, servers and containers, into presets with their folder and `claude` filled in. Autostart brings them all back |
 | 🔐 **Server-friendly SSH** | Uses your `~/.ssh/config`, keys or passwords, one shared connection per machine, and reconnects by itself after sleep or a dropped network. Nothing to install on the server beyond tmux |
-| 👋 **Ready in a minute** | A welcome screen finds your tmux, sessions and SSH machines and walks you through the rest. Light on the CPU even with several Claudes working |
+| 👋 **Ready in a minute** | A welcome screen finds your tmux, sessions and SSH machines and walks you through the rest. Light on the CPU even with several Claudes working: terminals draw on the GPU, hidden tabs cost nothing |
 
 ## See it
 
