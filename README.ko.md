@@ -180,6 +180,10 @@ xattr -dr com.apple.quarantine /Applications/AIminal.app
 
 **cmux:** cmux는 기본적으로 자기가 띄운 프로세스의 소켓 연결만 받습니다. AIminal이 cmux에 워크스페이스를 열게 하려면 cmux **Settings → Automation**에서 소켓 접근을 `password`로 바꾸고, 같은 비밀번호를 AIminal의 **설정 → 터미널**에 넣으세요.
 
+## 개인정보
+
+AIminal에는 사용 통계·분석 기능이 없습니다. 스스로 연결하는 곳은 내 SSH 머신과 (업데이트 확인용) GitHub뿐입니다. 각 머신에서는 tmux 상태, pane 아래 프로세스, pane 화면 아래쪽, 실행 중인 컨테이너, `~/.claude.json`의 계정·요금제, Claude Code 세션 파일의 모델 이름만 읽고 대화 내용이나 토큰은 읽지 않습니다. SSH 비밀번호는 저장하지 않습니다. 자세한 내용: [파일과 개인정보](GUIDE.ko.md#파일과-개인정보).
+
 ## 피드백
 
 버그 신고와 기능 요청은 [Issues](https://github.com/hyeok-jong/AIminal/issues)에 남겨 주세요.

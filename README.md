@@ -180,6 +180,10 @@ Settings live in `~/.config/aiminal/config.json`. Open the Settings window with 
 
 **cmux:** by default, cmux accepts socket connections only from processes it started itself. To let AIminal open workspaces in cmux, go to cmux **Settings → Automation**, set socket access to `password`, and enter the same password in AIminal under **Settings → Terminals**.
 
+## Privacy
+
+AIminal has no telemetry or analytics. On its own it only connects to your SSH machines and to GitHub (to check for updates). On each machine it reads tmux's state, the processes under each pane, the bottom of each pane's screen, the running containers, the account and plan from `~/.claude.json` and the model name from Claude Code's session files, never your conversations or tokens. SSH passwords are never stored. Details: [Files and privacy](GUIDE.md#files-and-privacy).
+
 ## Feedback
 
 Report bugs and request features in [Issues](https://github.com/hyeok-jong/AIminal/issues).
