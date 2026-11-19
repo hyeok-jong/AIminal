@@ -1,5 +1,11 @@
 # Changelog
 
+## 0.13.5-beta
+
+### Fixed
+
+- **⌘1…⌘9 follow the order you see.** After merging panes or moving tabs between them, ⌘ numbers (and ⇧⌘] / ⇧⌘[, the numbers shown while holding ⌘, and the **Open in AIminal** list) used the order tabs were opened in. They now count tabs as they appear on screen, pane by pane from the left
+
 ## 0.13.4-beta
 
 ### Changed

@@ -267,7 +267,7 @@ Hold **⌘** for half a second to see all shortcuts; the tabs show their numbers
 |---|---|
 | ⌘K | Command palette: jump to any session, machine, preset or command |
 | ⇧⌘H | Home |
-| ⌘1 … ⌘8, ⌘9 | Go to a tab (⌘9 = last tab) |
+| ⌘1 … ⌘8, ⌘9 | Go to a tab, counted in the order you see them across panes (⌘9 = last tab) |
 | ⇧⌘] / ⇧⌘[ | Next / previous tab |
 | ⌘W | Close window (Ctrl-b d) for the current tab |
 | ⌘N / ⌘T / ⇧⌘N | New tmux session / new terminal (no tmux) / new preset |
