@@ -25,11 +25,11 @@
 | 🏠 **A home for all your tmux sessions** | Every session on this Mac, your SSH servers and the docker containers on them, as live cards in one window |
 | 🤖 **Knows when Claude Code is done** | Working, waiting, or stopped at the usage limit (with the reset time), and which model it runs. A notification the moment it finishes, even on a remote server or inside a container |
 | ✍️ **Multi-line prompts** | A **Message for Claude** button under every terminal unfolds a box for long prompts with Markdown and code blocks. Preview, then ⌘↩ sends it to Claude as one message |
-| 🗂 **File tree beside the terminal** | ⇧⌘E (hidden files: ⇧⌘.). Follows the session's folder, on your Mac, servers and containers. Right-click a file to hand it to Claude as `@path` |
+| 🗂 **File tree beside the terminal** | ⇧⌘E. New file and folder, a **Hidden** button for dotfiles. Follows the session's folder, on your Mac, servers and containers. Right-click a file to hand it to Claude as `@path` |
 | ✏️ **Edit files without vim** | Double-click a `.md`, `.html`, `.sh`, `.py`, `.json`, `.yaml`… to open it next to the terminal, with syntax colors. Markdown and HTML preview, ⌘S saves straight back to the server |
 | ⬇️⬆️ **Download and upload** | Right-click to download a file or folder to any folder you pick, drag from Finder to upload. A progress bar with size and percent, and a Cancel button |
 | 🪟 **Panes, each with its own tabs** | ⌘D, the split button, or drag a tab to another pane. Side by side or stacked, up to six panes, drag the dividers to resize. Watch Claude on two servers at once |
-| ⏱ **Clock and machine stats** | Time, date, this Mac's CPU and memory in the toolbar; each server's load, memory and every GPU's utilization and temperature on its machine page |
+| ⏱ **Clock and machine stats** | Time, date, this Mac's CPU, memory and disk in the toolbar; each server's load, memory, disk and every GPU's utilization and temperature on its machine page |
 | 🔍 **Zoom the panel you click** | ⌘= / ⌘- grow or shrink just the terminal, pane, message box, editor or file tree you clicked last |
 | 🐳 **Docker containers, first class** | Enter containers for you, find the tmux sessions inside them, open them in a tab, and start new ones inside |
 | 💾 **Save your setup as presets** | One button turns the sessions you have running, on your Mac, servers and containers, into presets with their folder and `claude` filled in. Autostart brings them all back |
@@ -53,7 +53,7 @@ Long prompts don't belong on one terminal line. The **Message for Claude** butto
 <img src="screenshots/compose.gif" alt="Writing a Markdown message with a list and a code block in the box under the Claude Code terminal, then sending it with ⌘↩: the text goes up into Claude's prompt and the box empties">
 
 ### Know what the machine is doing
-The toolbar keeps the time and this Mac's CPU and memory in view; each server's page shows its load, memory and every GPU with utilization and temperature.
+The toolbar keeps the time and this Mac's CPU, memory and disk in view; each server's page shows its load, memory, disk and every GPU with utilization and temperature.
 
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="screenshots/stats-dark.png">
@@ -131,7 +131,7 @@ AIminal is the app I wanted for that:
 - **Opens in AIminal by default**, and still one click away in iTerm2, Terminal, cmux, Ghostty, WezTerm, kitty or Alacritty
 - **Presets and autostart**: save a machine, folder and startup command, and bring your sessions up at login. Turn every running session (local, SSH, container) into presets at once. Keep them in iCloud Drive, one file per Mac, and load another Mac's presets with a click
 - **Automatic updates**: AIminal checks for new versions and updates itself in one click. Your tmux sessions keep running
-- **Clock and stats**: time, date, CPU and memory of this Mac in the toolbar; load, memory and GPUs (utilization, temperature) on each server's page
+- **Clock and stats**: time, date, CPU, memory and disk of this Mac in the toolbar; load, memory, disk and GPUs (utilization, temperature) on each server's page
 - **Menu bar and Dock**, English and Korean UI
 
 ## Install
