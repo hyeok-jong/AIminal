@@ -81,7 +81,7 @@ Click a heading to collapse it (**Expand All** / **Collapse All** are at the top
 
 ## Clock and machine stats
 
-The middle of the toolbar shows the time (to the second) and date, and this Mac's **CPU** and **MEM** in use. Each remote machine's page shows that machine's **load** per core, memory and every **GPU** (utilization and temperature, from `nvidia-smi`), with a bar per GPU for utilization and memory. Chips turn orange at 70% and red at 90%.
+The middle of the toolbar shows the time (to the second) and date, and this Mac's **CPU**, **MEM** and **DISK** in use (disk = the volume with your home folder; hover for free space). Each remote machine's page shows that machine's **load** per core, memory, disk (where `$HOME` lives) and every **GPU** (utilization and temperature, from `nvidia-smi`), with a bar per GPU for utilization and memory. Chips turn orange at 70% and red at 90%.
 
 Remote numbers ride along with the tmux snapshot AIminal already receives every few seconds, so they cost no extra logins. This Mac shows no GPU or temperature because macOS gives apps no public reading for them. Turn the strip off in Settings → General.
 
@@ -137,7 +137,7 @@ A folder tree sits to the left of the terminal, like VS Code's Explorer. It is o
 - **Right-click** for Copy Path, Copy Relative Path, cd Here, Show in Finder, **Download To…** (pick any folder; AIminal remembers the last one), **Download to Downloads** and **Upload Here…**. On this Mac, **Copy To…** does the same.
 - **Upload** by dropping files or folders from Finder onto a folder (or onto empty space for the top folder). AIminal asks before replacing anything.
 - **Progress**: big transfers show a progress bar with the size and percent under the tree, and a **Cancel** button. A cancelled download leaves nothing behind; a cancelled upload may leave a partial file on the server.
-- The header has Parent folder, Go to the terminal's folder, show/hide hidden files (the eye; also **⇧⌘.** like Finder, or right-click the empty area), Upload and Refresh. Drag the divider to resize.
+- The header has Parent folder, Go to the terminal's folder, Upload and Refresh. Under it: **File** and **Folder** create a new one (in the selected folder; a new text file opens in the editor, and an existing name is never overwritten) and **Hidden** shows names starting with `.` (also **⇧⌘.** like Finder). Right-click a folder or the empty area for the same. Drag the divider to resize.
 
 Nothing has to be installed on the server beyond `tar` (which every system has): transfers run over AIminal's existing SSH connection, and folders work too.
 

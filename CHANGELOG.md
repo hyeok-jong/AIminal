@@ -1,5 +1,17 @@
 # Changelog
 
+## 0.13.3-beta
+
+### Added
+
+- **Disk usage.** The toolbar shows this Mac's **DISK** next to CPU and MEM (the volume with your home folder; hover for free space), and each server's page shows the disk where `$HOME` lives
+- **New files and folders from the file tree.** **File** and **Folder** buttons under the tree header (and in the right-click menu) create one in the selected folder, on your Mac, a server or a container. A new text file opens straight in the editor; an existing name is never overwritten
+- **Hidden** button in the file tree to show files and folders whose names start with `.` (the same as ⇧⌘.)
+
+### Changed
+
+- The toolbar buttons at the top right have room between them instead of sitting in one tight group
+
 ## 0.13.2-beta
 
 ### Changed
