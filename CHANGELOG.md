@@ -1,5 +1,11 @@
 # Changelog
 
+## 0.13.1-beta
+
+### Fixed
+
+- **⌘↩ in the Message for Claude box works every time.** After the first send, **Send + Enter** stayed greyed out while you typed the next message, so ⌘↩ did nothing until you closed and reopened the box
+
 ## 0.13.0-beta
 
 ### Changed
