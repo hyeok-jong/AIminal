@@ -1,5 +1,11 @@
 # Changelog
 
+## 0.13.13-beta
+
+### Added
+
+- **Keyboard in the file tree.** Click a row, then ↑ ↓ to move, → to expand or step into a folder, ← to collapse or go to the parent, ↩ to open it like a double-click
+
 ## 0.13.12-beta
 
 ### Fixed
