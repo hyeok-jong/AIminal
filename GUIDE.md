@@ -170,7 +170,7 @@ Watch more than one thing at once. The terminal area splits into **panes, each w
 - The **split button** in the session header does the same from a menu: new terminal beside or below, move this tab to a new pane, open another tab or a session that isn't open yet beside it, switch between **Side by Side** and **Stacked**, **Equal Sizes**, and **Merge All Panes**.
 - Files you open from the file tree become tabs in the pane next to the terminal, so the terminal stays visible.
 - Up to six panes. **Drag the divider** between panes to resize them. A pane disappears when its last tab is closed.
-- Click a pane to make it the active one: its tab is outlined, and the sidebar, the file tree, ⌘W, ⇧⌘M and ⌘↩ follow it. Home, machine and preset pages take the whole area and leave the layout as it is.
+- Click a pane (or one of its tabs, or press ⌥⌘← / ⌥⌘→) to make it the active one: its tab is outlined, the keyboard goes to its terminal or editor, and the sidebar, the file tree, ⌘W and ⇧⌘M follow it. ⌘↩ sends a message box only while you're typing in that box or its terminal, so it never fires from a file editor. Home, machine and preset pages take the whole area and leave the layout as it is.
 
 ## Starting sessions and presets
 
