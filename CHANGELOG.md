@@ -1,5 +1,11 @@
 # Changelog
 
+## 0.13.19-beta
+
+### Added
+
+- **Claude Code hooks (optional).** One click on a machine page (or a container row) adds a few hooks to that machine's `~/.claude/settings.json`, after asking. Claude Code then tells AIminal itself when it starts, finishes, or waits for your permission to run a tool, instead of AIminal reading the screen. A session waiting for you shows **Claude · Needs you** and you get a notification. The hooks only mark the tmux pane (nothing is sent anywhere), the original file is backed up, and Remove takes out only AIminal's hooks
+
 ## 0.13.18-beta
 
 ### Changed
