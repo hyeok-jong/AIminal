@@ -1,5 +1,16 @@
 # Changelog
 
+## 0.13.12-beta
+
+### Fixed
+
+- **The keyboard follows the pane you pick.** Clicking a tab in another pane, or ⌥⌘← / ⌥⌘→, now moves typing to that pane's terminal or editor; before, only the outline moved and keys still went to the previous terminal
+- **⌘↩ no longer sends a message box from a file editor** or the search field. It sends only while you're typing in the box or its terminal
+- **Renaming a session inside tmux** (prefix + `$`) keeps its tab, Claude badge, file tree and notifications instead of leaving a dead tab behind
+- **Quitting during a download or upload asks first**, since an unfinished upload can leave a partial file on the server
+- The menu bar search no longer leaves its filter on the main window's sidebar and Home
+- Very narrow panes keep **End…** and **⋯** reachable (the file tree and message box move into ⋯), and Home fits a narrow window (buttons shrink to icons, the summary tiles wrap)
+
 ## 0.13.11-beta
 
 A full review of the code and documents. No new features; fixes only.
