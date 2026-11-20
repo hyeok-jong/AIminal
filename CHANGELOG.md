@@ -1,5 +1,11 @@
 # Changelog
 
+## 0.13.20-beta
+
+### Fixed
+
+- **Korean (and other input-method) typing in the terminal.** While a syllable was being composed, the text you had already typed on that line could disappear, so it looked like only one character was there; from the second message on in Claude Code it happened most of the time. With GPU drawing on, the box that shows the character being composed stayed at an old cursor position and covered the line. It now follows the cursor, and the input method's candidate window opens in the right place too. What was sent was always correct
+
 ## 0.13.19-beta
 
 ### Added
