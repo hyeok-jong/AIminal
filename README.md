@@ -1,3 +1,5 @@
+<img src="screenshots/icon.png" width="128" height="128" alt="AIminal app icon: a terminal screen with two round ears, its eyes a green ❯ prompt and _ cursor">
+
 # AIminal
 
 **English** | [한국어](README.ko.md)

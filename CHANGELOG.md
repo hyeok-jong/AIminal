@@ -1,5 +1,11 @@
 # Changelog
 
+## 0.13.18-beta
+
+### Changed
+
+- **A new app icon.** The terminal grew ears: a screen with two round ears, its eyes a green `❯` prompt and `_` cursor (AI + terminal, and an animal). It replaces the old split-pane icon in the Dock, Finder, the menu bar popover and the welcome screen
+
 ## 0.13.17-beta
 
 ### Changed

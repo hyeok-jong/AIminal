@@ -1,3 +1,5 @@
+<img src="screenshots/icon.png" width="128" height="128" alt="AIminal 앱 아이콘: 둥근 귀 둘이 달린 터미널 화면, 눈은 초록 ❯ 프롬프트와 _ 커서">
+
 # AIminal
 
 [English](README.md) | **한국어**
