@@ -17,7 +17,8 @@ other liability arising from the use of AIminal.
 
 Third-party components:
   - SwiftTerm (https://github.com/migueldeicaza/SwiftTerm), MIT License,
-    Copyright (c) Miguel de Icaza.
+    Copyright (c) Miguel de Icaza. AIminal ships it with a small fix for where
+    input-method (e.g. Korean) text is shown while typing.
   - MarkdownUI (https://github.com/gonzalezreal/swift-markdown-ui), MIT License,
     Copyright (c) 2020 Guillermo Gonzalez.
   - NetworkImage (https://github.com/gonzalezreal/NetworkImage), MIT License,
