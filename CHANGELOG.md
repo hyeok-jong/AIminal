@@ -1,5 +1,11 @@
 # Changelog
 
+## 0.13.17-beta
+
+### Changed
+
+- **Toolbar buttons stay at the right edge** while the name, clock and stats stay at the left (in 0.13.16 the buttons followed right after the stats on wide windows). The stats chips are a touch smaller, the update button reads **Updates**, and **New** is no longer cut to "N…"
+
 ## 0.13.16-beta
 
 ### Changed
