@@ -110,7 +110,7 @@ PRESETS
 - Click a **machine row** for its page: a shell, new sessions, running containers, and (for SSH) the connection and its config.
 - The guide lines and indentation show what belongs to what. What you expand stays expanded next time.
 - Drag machines, sessions, presets or tabs to reorder them; Home uses the same order.
-- Right-click anything for its actions. ⌃⌘S hides the sidebar. The search field filters sessions, machines and presets.
+- Right-click anything for its actions. ⌃⌘S (or the sidebar button at the sidebar's top-right edge, which moves with it as you resize) hides the sidebar. The search field filters sessions, machines and presets.
 
 ## Working in a session
 
@@ -137,6 +137,7 @@ A folder tree sits to the left of the terminal, like VS Code's Explorer. It is o
 - **Right-click → Insert Path** types the file's path into the terminal, without pressing Enter. When Claude is running it's **Insert as @mention**, which types `@path` so Claude picks up the file.
 - **Double-click a text file** (`.md`, `.html`, `.sh`, `.py`, `.json`, `.yaml`, …) to edit it right next to the terminal; see [Editing files](#editing-files). Other files (images, PDFs, spreadsheets) open in their app on this Mac, in VS Code Remote on an SSH machine if VS Code is installed, or as a downloaded copy. Double-click a folder to make it the top.
 - **Right-click** for Copy Path, Copy Relative Path, cd Here, Show in Finder, **Download To…** (pick any folder; AIminal remembers the last one), **Download to Downloads** and **Upload Here…**. On this Mac, **Copy To…** does the same.
+- **Rename, move, duplicate, delete.** Right-click → **Rename…** (or **F2**), **Move To…** (type a folder, full or relative), **Duplicate** (`notes copy.md`), and **Move to Trash** on this Mac or **Delete…** on a server or container (**⌘⌫**; remote machines have no Trash, so AIminal asks first and says it can't be undone). **Drag a row onto a folder** (or onto empty space for the top folder) to move it there. An existing name is never overwritten, and an open editor follows its file to the new name.
 - **Upload** by dropping files or folders from Finder onto a folder (or onto empty space for the top folder). AIminal asks before replacing anything.
 - **Progress**: big transfers show a progress bar under the tree with the size, percent and current speed, when it started, how long it has run, the time left and the ETA, plus a **Cancel** button. A finished transfer keeps its start → end time, how long it took and its average speed. A cancelled download leaves nothing behind; a cancelled upload may leave a partial file on the server.
 - The header has Parent folder, Go to the terminal's folder, Upload and Refresh. Under it: **File** and **Folder** create a new one (in the selected folder; a new text file opens in the editor, and an existing name is never overwritten) and **Hidden** shows names starting with `.` (also **⇧⌘.** like Finder). Right-click a folder or the empty area for the same. Drag the divider to resize.
@@ -280,6 +281,7 @@ Hold **⌘** for half a second to see all shortcuts; the tabs show their numbers
 | ⌘= / ⌘- / ⌘0 | Zoom the last-clicked panel in / out / reset |
 | ⇧⌘E | Show or hide the file tree |
 | ⇧⌘. | Show or hide hidden files in the file tree |
+| F2 / ⌘⌫ | Rename / delete the selected item in the file tree |
 | ⇧⌘M / ⌘↩ | Show or hide the message box / send it and press Enter |
 | ⌘S / ⌥⌘S | Save the editor you're working in / save every changed file |
 | ⌘F / ⌘G | Find in the editor / find next |

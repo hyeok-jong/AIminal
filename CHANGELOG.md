@@ -1,5 +1,15 @@
 # Changelog
 
+## 0.13.14-beta
+
+### Added
+
+- **Rename, move, duplicate and delete in the file tree.** Right-click → Rename… (F2), Move To…, Duplicate, and Move to Trash on this Mac or Delete… on a server or container (⌘⌫, with a clear warning since remote machines have no Trash). Drag a row onto a folder to move it. Works on this Mac, SSH machines and containers; existing names are never overwritten, and an open editor follows its file to the new name
+
+### Fixed
+
+- **The sidebar button moves with the sidebar.** Widening the sidebar left its hide/show button behind next to the window buttons; it now sits at the sidebar's edge, and in the toolbar's leading spot while the sidebar is hidden
+
 ## 0.13.13-beta
 
 ### Added
