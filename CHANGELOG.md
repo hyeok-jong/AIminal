@@ -1,5 +1,11 @@
 # Changelog
 
+## 0.13.16-beta
+
+### Changed
+
+- **A tidier toolbar.** The AIminal name sits at the left of the toolbar (it used to show the selected session's name, so a session called `aiminal` looked like a misspelled app name), with the clock and CPU / MEM / DISK right next to it in a slightly larger size. The Refresh button is gone from the toolbar (lists update on their own every few seconds; ⌘R and the View menu still refresh), so New no longer falls into the overflow menu on smaller windows
+
 ## 0.13.15-beta
 
 ### Fixed

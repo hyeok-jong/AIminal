@@ -81,7 +81,7 @@ Click a heading to collapse it (**Expand All** / **Collapse All** are at the top
 
 ## Clock and machine stats
 
-The middle of the toolbar shows the time (to the second) and date, and this Mac's **CPU**, **MEM** and **DISK** in use (disk = the volume with your home folder; hover for free space). Each remote machine's page shows that machine's **load** per core, memory, disk (where `$HOME` lives) and every **GPU** (utilization and temperature, from `nvidia-smi`), with a bar per GPU for utilization and memory. Chips turn orange at 70% and red at 90%.
+The left of the toolbar, next to the AIminal name, shows the time (to the second) and date, and this Mac's **CPU**, **MEM** and **DISK** in use (disk = the volume with your home folder; hover for free space). Each remote machine's page shows that machine's **load** per core, memory, disk (where `$HOME` lives) and every **GPU** (utilization and temperature, from `nvidia-smi`), with a bar per GPU for utilization and memory. Chips turn orange at 70% and red at 90%.
 
 Remote numbers ride along with the tmux snapshot AIminal already receives every few seconds, so they cost no extra logins. This Mac shows no GPU or temperature because macOS gives apps no public reading for them. Turn the strip off in Settings → General.
 
