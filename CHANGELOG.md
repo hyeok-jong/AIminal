@@ -1,5 +1,11 @@
 # Changelog
 
+## 0.13.15-beta
+
+### Fixed
+
+- **The sidebar button now really stays at the sidebar's right edge.** In 0.13.14 it moved there once but stayed put when you widened the sidebar
+
 ## 0.13.14-beta
 
 ### Added
