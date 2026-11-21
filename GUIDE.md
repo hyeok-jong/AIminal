@@ -72,8 +72,8 @@ Home is the start screen. At the top, four tiles count your tmux sessions and wi
 Below, every machine and every container with tmux gets its own section of **session cards**. A card shows:
 
 - the session name and folder, and where it is open
-- **Claude** (or **Happy**) when Claude Code runs in it, pulsing while it works
-- 🐳 the container it is in, the number of windows, and a bell when Claude finished and you haven't looked yet
+- Claude's state when Claude Code runs in it: **Working** (orange), **Done** (green, finished and you haven't looked yet), **Waiting** (gray) or **Needs you** (red, waiting for your permission). The same badge is on the tab and in the sidebar
+- 🐳 the container it is in and the number of windows
 - a **live preview** of the last lines on screen
 - the current task title (what Claude is working on) and the last activity
 
@@ -106,7 +106,7 @@ MACHINES         Expand All   (Collapse All once everything is open)
 PRESETS
 ```
 
-- Click the arrow to expand or collapse a machine or container. Containers start collapsed; their row still shows Claude and bell badges.
+- Click the arrow to expand or collapse a machine or container. Containers start collapsed; their row still shows the Claude badge.
 - Click a **machine row** for its page: a shell, new sessions, running containers, and (for SSH) the connection and its config.
 - The guide lines and indentation show what belongs to what. What you expand stays expanded next time.
 - Drag machines, sessions, presets or tabs to reorder them; Home uses the same order.
@@ -124,7 +124,7 @@ Every tab says which machine it's on: 💻 **This Mac**, 🖥 the SSH machine, o
 
 **Snippets** are buttons under the terminal that type text for you. The defaults (`/clear`, `/compact`, `continue`, Esc) appear when Claude runs in the session. Click the slider icon to add your own; `\e` sends Esc and `\n` a new line.
 
-**Zoom** with ⌘= and ⌘-, reset with ⌘0. They act on the panel you clicked last: this terminal, a side-by-side pane, the message box, an editor pane, or the file tree. Copy and paste work as usual.
+**Zoom** with ⌘= and ⌘-, reset with ⌘0. They act on the kind of panel you clicked last: all terminals (including side-by-side panes), all message boxes, all editors, or the file tree. Every tab gets the same size, and new tabs open at it. ⌘= on a terminal is the same setting as **Terminal font size** in Settings. Copy and paste work as usual.
 
 If you detach from inside tmux (Ctrl-b d), the tab shows **Reconnect** instead of disappearing. If an SSH tab ends, it stays open with the last output and the exit code, so you can see why.
 
@@ -221,7 +221,7 @@ AIminal notices Claude Code in any tmux window: on this Mac, over SSH, and insid
 
 - **Working or waiting.** While Claude works, its status line says "esc to interrupt"; AIminal reads the bottom of the pane every few seconds. (Inside tmux, Claude keeps its window title fixed, so the title alone can't tell.)
 - **Claude Code hooks (optional, more accurate).** On a machine page, **Install…** next to *Claude Code hooks* (for a container: **Add Claude hooks…** on its row) adds a few hooks to that machine's `~/.claude/settings.json`, after asking. Claude Code then tells AIminal itself when it starts working, finishes, or **waits for your permission** to run a tool, so AIminal no longer depends on reading the screen, and a session waiting for you shows **Claude · Needs you** with its own notification. The hooks only mark the tmux pane Claude runs in (nothing is sent anywhere); the original file is kept as `settings.json.aiminal-backup`, and **Remove…** takes out only AIminal's hooks. Restart running Claude Code sessions to pick them up. Outside tmux (a plain `docker exec` shell) the screen reading above is still used.
-- **Finished.** When Claude goes from working to waiting in a session you aren't looking at, you get a notification with the task name, a bell on the session, and a Dock badge. Click the notification to jump to it.
+- **Finished.** When Claude goes from working to waiting in a session you aren't looking at, you get a notification with the task name, a green **Done** badge on the session, and a Dock badge. Click the notification to jump to it.
 - **Usage limit.** When Claude stops at its usage limit ("Usage limit reached · resets 8:50pm"), the session shows ⚠ **Limit · 8:50pm** and you get one notification instead of "finished".
 - **Model.** The Claude badge on cards, session headers and window cards says which model that Claude is using, like **Claude · Fable 5.1** or **Opus 5.5** (the full id is in the tooltip). AIminal reads it from Claude Code's own session files (`~/.claude/sessions`, and the last reply in the session's transcript); it never reads your conversation or tokens. If a session's windows use different models, both are listed.
 - **Account.** Machine pages, container rows and Claude session headers show which account Claude Code is signed in with there, and its plan (for example `you@example.com · Max 5x`). AIminal reads this from `~/.claude.json`; it never reads tokens.
@@ -279,7 +279,7 @@ Hold **⌘** for half a second to see all shortcuts; the tabs show their numbers
 | ⇧⌘] / ⇧⌘[ | Next / previous tab |
 | ⌘W | Close Tab (Detach) for the current tab |
 | ⌘N / ⌘T / ⇧⌘N | New tmux session / new terminal (no tmux) / new preset |
-| ⌘= / ⌘- / ⌘0 | Zoom the last-clicked panel in / out / reset |
+| ⌘= / ⌘- / ⌘0 | Zoom the last-clicked kind of panel in every tab / out / reset |
 | ⌃⌘= / ⌃⌘- / ⌃⌘0 | Make the whole interface bigger / smaller / default size |
 | ⇧⌘E | Show or hide the file tree |
 | ⇧⌘. | Show or hide hidden files in the file tree |
