@@ -1,5 +1,11 @@
 # Changelog
 
+## 0.14.5-beta
+
+### Fixed
+
+- **The app no longer stalls behind the update dialog.** After you clicked Updates, terminals and the rest of the window stopped refreshing for as long as "Update AIminal to …?" was open. The same stall is gone from the "Save changes?" dialog, the save-conflict warning, and the file tree's error and upload-check dialogs
+
 ## 0.14.4-beta
 
 ### Fixed
