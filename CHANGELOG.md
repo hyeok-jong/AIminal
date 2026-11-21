@@ -1,5 +1,21 @@
 # Changelog
 
+## 0.14.0-beta
+
+### Added
+
+- **Interface size.** ⌃⌘= / ⌃⌘- (and ⌃⌘0) make the whole app bigger or smaller, from 85% to 150%: text, icons and controls together. Also in Settings → General. ⌘= / ⌘- still zoom just the panel you clicked
+- **Session and Machine menus** in the menu bar, with the same items as the right-click menus for whatever is selected in the sidebar, so everything works from the keyboard. View has Expand All, Collapse All and Start Autostart Presets
+
+### Changed
+
+- **A consistent look across the app.** Confirmation dialogs (rename, delete, end session, unsaved changes, quit) are drawn in AIminal's own style, and Settings is laid out as cards with app-styled choices. Every button reacts when you point at it
+- **A fixed green accent**, the green of the icon's prompt. It no longer turns red or purple when your system accent color is set that way
+- **Easier to read in light mode.** Secondary text, status colors and badges were darkened to meet a 4.5:1 contrast ratio
+- **Nothing hides until you hover.** The Open buttons on Home and window cards, the open buttons in the menu bar list and the × on tabs are always in place
+- **The Claude badge stays still.** Working shows ✦✦ on a stronger badge and waiting a single ✦, instead of a blinking star
+- **The icon uses three colors.** The pink inside the ears is gone
+
 ## 0.13.21-beta
 
 ### Changed

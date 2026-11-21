@@ -32,7 +32,7 @@
 | ⬇️⬆️ **Download and upload** | Right-click to download a file or folder to any folder you pick, drag from Finder to upload. A progress bar with speed, elapsed time, time left and ETA, and a Cancel button |
 | 🪟 **Panes, each with its own tabs** | ⌘D, the split button, or drag a tab to another pane. Side by side or stacked, up to six panes, drag the dividers to resize. Watch Claude on two servers at once |
 | ⏱ **Clock and machine stats** | Time, date, this Mac's CPU, memory and disk in the toolbar; each server's load, memory, disk and every GPU's utilization and temperature on its machine page |
-| 🔍 **Zoom the panel you click** | ⌘= / ⌘- grow or shrink just the terminal, pane, message box, editor or file tree you clicked last |
+| 🔍 **Zoom the panel you click, or the whole app** | ⌘= / ⌘- grow or shrink just the terminal, pane, message box, editor or file tree you clicked last. ⌃⌘= / ⌃⌘- make the whole interface bigger or smaller (85–150%) |
 | 🐳 **Docker containers, first class** | Enter containers for you, find the tmux sessions inside them, open them in a tab, and start new ones inside |
 | 💾 **Save your setup as presets** | One button turns the sessions you have running, on your Mac, servers and containers, into presets with their folder and `claude` filled in. Autostart brings them all back |
 | 🔐 **Server-friendly SSH** | Uses your `~/.ssh/config`, keys or passwords, one shared connection per machine, and reconnects by itself after sleep or a dropped network. Nothing to install on the server beyond tmux |
@@ -121,7 +121,7 @@ AIminal is the app I wanted for that:
 - **Home**: a start screen with a card for every session, live previews, and a summary of what's running
 - **Built-in terminal**: open any tmux session in a real terminal inside AIminal, with a tab for each one that says which machine or container it is on, drawn on the GPU. Plain terminals without tmux work too (⌘T)
 - **Clear close actions**: Close Tab (Detach) keeps the session running, Quit Claude (/exit) ends only Claude, End Session ends it all. A dropped machine shows **Lost connection** with **Reconnect**, not "session ended"
-- **Keyboard first**: hold ⌘ to see every shortcut, ⌘K to jump to any session, machine or command, ⌘1…⌘9 for tabs, ⌥⌘← / ⌥⌘→ between panes, ⌘S saves the editor you're in (⌥⌘S saves all), ⌘F finds in it, ⌘= / ⌘- to zoom whichever panel you clicked last (a terminal, the message box, an editor, the file tree)
+- **Keyboard first**: hold ⌘ to see every shortcut, ⌘K to jump to any session, machine or command, ⌘1…⌘9 for tabs, ⌥⌘← / ⌥⌘→ between panes, ⌘S saves the editor you're in (⌥⌘S saves all), ⌘F finds in it, ⌘= / ⌘- to zoom whichever panel you clicked last (a terminal, the message box, an editor, the file tree), ⌃⌘= / ⌃⌘- to scale the whole interface. **Session** and **Machine** menus in the menu bar do everything the right-click menus do
 - **Claude Code aware**: see which sessions run Claude (or `happy claude`) and whether it is working or waiting, even inside a docker container. Get a notification when Claude finishes, waits for your permission (with optional Claude Code hooks, one click per machine) or hits its usage limit (with the reset time), see which model each Claude is using (**Claude · Fable 5.1**) and which account and plan it is signed in with on each machine, and quit it cleanly with **Quit Claude (/exit)**
 - **Machines**: this Mac and your `~/.ssh/config` machines side by side in the sidebar. Connect (key or password) to see and open each machine's tmux sessions, and add or edit machines in the app. AIminal keeps one SSH session per machine, so your server sees a single login. Connection errors come with a hint, and machines reconnect by themselves after sleep or a Wi-Fi drop
 - **Docker containers**: keep tmux on the server and work inside a container. A session or preset can name a container, and AIminal runs `docker exec` into it for you (with your folder and startup command). AIminal also finds the tmux sessions running *inside* each container, opens them with `docker exec -it <container> tmux attach`, and starts new ones inside the container from the sidebar, Home or the machine page. Each machine page lists its running containers
@@ -135,7 +135,7 @@ AIminal is the app I wanted for that:
 - **Presets and autostart**: save a machine, folder and startup command, and bring your sessions up at login. Turn every running session (local, SSH, container) into presets at once. Keep them in iCloud Drive, one file per Mac, and load another Mac's presets with a click
 - **Automatic updates**: AIminal checks for new versions and updates itself in one click. Your tmux sessions keep running
 - **Clock and stats**: time, date, CPU, memory and disk of this Mac in the toolbar; load, memory, disk and GPUs (utilization, temperature) on each server's page
-- **Menu bar and Dock**, English and Korean UI
+- **Menu bar and Dock**, English and Korean UI, dark and light, with a fixed green accent that doesn't change with your system accent color
 
 ## Install
 

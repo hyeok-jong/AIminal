@@ -280,6 +280,7 @@ Hold **⌘** for half a second to see all shortcuts; the tabs show their numbers
 | ⌘W | Close Tab (Detach) for the current tab |
 | ⌘N / ⌘T / ⇧⌘N | New tmux session / new terminal (no tmux) / new preset |
 | ⌘= / ⌘- / ⌘0 | Zoom the last-clicked panel in / out / reset |
+| ⌃⌘= / ⌃⌘- / ⌃⌘0 | Make the whole interface bigger / smaller / default size |
 | ⇧⌘E | Show or hide the file tree |
 | ⇧⌘. | Show or hide hidden files in the file tree |
 | F2 / ⌘⌫ | Rename / delete the selected item in the file tree |
@@ -296,11 +297,13 @@ Hold **⌘** for half a second to see all shortcuts; the tabs show their numbers
 
 The **Go** menu lists the navigation shortcuts. They work while the terminal has focus.
 
+The **Session** and **Machine** menus act on what you selected in the sidebar, with the same items as the right-click menus (open in another terminal, rename, save as preset, quit Claude, end the session; connect, disconnect, edit or delete a machine). **View** has Expand All, Collapse All and Start Autostart Presets for Home.
+
 ## Settings
 
 Open with ⌘,.
 
-- **General**: language (English, 한국어), Dock icon and the clock and stats in the toolbar; a **Terminal** group (where clicking a session opens it, terminal font size, opening the message box in new tabs, keeping the keyboard in the message box after sending, **Edit Snippets…**); notifications (with a warning when macOS blocks them); updates; and startup (launch at login, autostart presets).
+- **General**: language (English, 한국어), **Interface size** (85–150%, also ⌃⌘= / ⌃⌘-), Dock icon and the clock and stats in the toolbar; a **Terminal** group (where clicking a session opens it, terminal font size, opening the message box in new tabs, keeping the keyboard in the message box after sending, **Edit Snippets…**); notifications (with a warning when macOS blocks them); updates; and startup (launch at login, autostart presets).
 - **External Terminals**: your default external terminal (iTerm2, Terminal, cmux, Ghostty, WezTerm, kitty, Alacritty) and its options. For cmux, set its socket access to `password` in cmux Settings → Automation and enter the same password here.
 - **Advanced**: tmux path and version (or how to install it), **Draw terminals with the GPU (Metal)** (on by default; much less CPU when many sessions update at once, turn it off if a terminal draws incorrectly), the log file, the config file, and **Help**: **Report a Problem…**, the welcome screen and this guide.
 
