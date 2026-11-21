@@ -1,5 +1,12 @@
 # Changelog
 
+## 0.14.7-beta
+
+### Fixed
+
+- **Updating no longer freezes the app.** In 0.14.5 and 0.14.6, clicking Updates could open the "Update AIminal?" dialog at zero size. You couldn't see it, but it still blocked the whole window. If you're on one of those versions, update once with the install command in the README
+- Dialogs with three buttons no longer cut off the button text
+
 ## 0.14.6-beta
 
 ### Fixed
