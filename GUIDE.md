@@ -330,7 +330,7 @@ Still stuck? Help → **Report a Problem…** opens a GitHub issue with your AIm
 | `~/Downloads` | files you download from the file tree |
 | `~/Library/Preferences/com.hyeokjong.initia.plist` | window and sidebar state |
 
-AIminal never stores your SSH passwords or keys: a password is typed once into a terminal tab and only the open connection is reused. The one secret it keeps is the optional cmux socket password you enter in Settings, saved in `config.json`.
+AIminal never stores your SSH passwords or keys: a password is typed once into a terminal tab and only the open connection is reused. The one secret it keeps is the optional cmux socket password you enter in Settings, saved in your macOS Keychain (not in `config.json`). After an update macOS may ask once whether AIminal can use it; choose Always Allow.
 
 On each machine it reads tmux's state, the process list, the bottom of each pane's screen, the running containers, load, memory, GPU and disk usage, the account fields of `~/.claude.json` (email and plan, not tokens), and the model name from Claude Code's session files (not the conversation). If you install the optional Claude Code hooks, AIminal writes them into that machine's `~/.claude/settings.json` (backup kept) and reads the status they leave on the tmux pane. None of it leaves your Mac: there is no telemetry or analytics, and the only connections AIminal makes on its own are to your SSH machines and to GitHub, to check for and download updates. The log file records machine names, file paths and commands that failed, never what you type into the message box or the terminal.
 

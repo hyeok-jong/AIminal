@@ -1,5 +1,15 @@
 # Changelog
 
+## 0.13.21-beta
+
+### Changed
+
+- **The cmux socket password now lives in your macOS Keychain.** It used to be saved as plain text in `~/.config/aiminal/config.json`; on the first launch it is moved to the Keychain and removed from the file. After an update macOS may ask once whether AIminal can use it (when you open a session in cmux or open that settings field); choose Always Allow
+
+### Fixed
+
+- The app now builds without compiler warnings (including three in the bundled terminal library)
+
 ## 0.13.20-beta
 
 ### Fixed
