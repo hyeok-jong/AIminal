@@ -1,5 +1,11 @@
 # Changelog
 
+## 0.14.13-beta
+
+### Fixed
+
+- **Dialog buttons still not responding to the mouse.** Dialogs now sit on the same window layer as system alerts, so another window can't take the click. If a click still goes elsewhere, AIminal writes which window got it to the log.
+
 ## 0.14.12-beta
 
 ### Fixed
