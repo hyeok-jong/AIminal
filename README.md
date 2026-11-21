@@ -32,7 +32,7 @@
 | ⬇️⬆️ **Download and upload** | Right-click to download a file or folder to any folder you pick, drag from Finder to upload. A progress bar with speed, elapsed time, time left and ETA, and a Cancel button |
 | 🪟 **Panes, each with its own tabs** | ⌘D, the split button, or drag a tab to another pane. Side by side or stacked, up to six panes, drag the dividers to resize. Watch Claude on two servers at once |
 | ⏱ **Clock and machine stats** | Time, date, this Mac's CPU, memory and disk in the toolbar; each server's load, memory, disk and every GPU's utilization and temperature on its machine page |
-| 🔍 **Zoom one kind of panel, or the whole app** | ⌘= / ⌘- grow or shrink every terminal, every message box, every editor or the file tree, whichever kind you clicked last, in every tab at once. ⌃⌘= / ⌃⌘- make the whole interface bigger or smaller (85–150%) |
+| 🔍 **Zoom one kind of panel, or the whole app** | ⌘= / ⌘- grow or shrink every terminal, every message box, every editor or the file tree, whichever kind you clicked last, in every tab at once, and each panel shows its size (**13pt**). ⌃⌘= / ⌃⌘- make the whole interface bigger or smaller (85–150%) |
 | 🐳 **Docker containers, first class** | Enter containers for you, find the tmux sessions inside them, open them in a tab, and start new ones inside |
 | 💾 **Save your setup as presets** | One button turns the sessions you have running, on your Mac, servers and containers, into presets with their folder and `claude` filled in. Autostart brings them all back |
 | 🔐 **Server-friendly SSH** | Uses your `~/.ssh/config`, keys or passwords, one shared connection per machine, and reconnects by itself after sleep or a dropped network. Nothing to install on the server beyond tmux |

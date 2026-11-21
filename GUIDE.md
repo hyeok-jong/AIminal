@@ -124,7 +124,7 @@ Every tab says which machine it's on: 💻 **This Mac**, 🖥 the SSH machine, o
 
 **Snippets** are buttons under the terminal that type text for you. The defaults (`/clear`, `/compact`, `continue`, Esc) appear when Claude runs in the session. Click the slider icon to add your own; `\e` sends Esc and `\n` a new line.
 
-**Zoom** with ⌘= and ⌘-, reset with ⌘0. They act on the kind of panel you clicked last: all terminals (including side-by-side panes), all message boxes, all editors, or the file tree. Every tab gets the same size, and new tabs open at it. ⌘= on a terminal is the same setting as **Terminal font size** in Settings. Copy and paste work as usual.
+**Zoom** with ⌘= and ⌘-, reset with ⌘0. They act on the kind of panel you clicked last: all terminals (including side-by-side panes), all message boxes, all editors, or the file tree. Every tab gets the same size, and new tabs open at it. The size is always shown in the panel's header (for example **13pt** next to the session name, in the message box and the editor, and under the file tree); click it for Bigger, Smaller and Default Size. ⌘= on a terminal is the same setting as **Terminal font size** in Settings. Copy and paste work as usual.
 
 If you detach from inside tmux (Ctrl-b d), the tab shows **Reconnect** instead of disappearing. If an SSH tab ends, it stays open with the last output and the exit code, so you can see why.
 

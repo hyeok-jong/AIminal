@@ -1,5 +1,11 @@
 # Changelog
 
+## 0.14.10-beta
+
+### Added
+
+- **Text size is always visible.** The terminal, message box, editor and file tree headers show their current size (for example **13pt**). Click it for Bigger, Smaller or Default Size, the same as ⌘= / ⌘- / ⌘0
+
 ## 0.14.9-beta
 
 ### Changed
