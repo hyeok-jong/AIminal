@@ -1,5 +1,15 @@
 # Changelog
 
+## 0.14.1-beta
+
+### Fixed
+
+- **Shell quoting with accented names.** A single quote directly followed by a combining accent mark (for example in a session, folder or file name) was not escaped, so the rest of the name could run as a shell command. Every escape in AIminal now matches characters exactly
+
+### Changed
+
+- Internal cleanup to current SwiftUI APIs (no visible change): durations and load figures use the system formatters, and a few older view modifiers were replaced
+
 ## 0.14.0-beta
 
 ### Added
