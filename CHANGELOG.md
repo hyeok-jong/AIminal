@@ -1,5 +1,12 @@
 # Changelog
 
+## 0.14.14-beta
+
+### Fixed
+
+- **Dialog buttons now respond to the mouse.** Dialogs opened from a button (for example **Install…** for Claude Code hooks) ignored clicks on their own buttons; only ↩ and esc worked.
+- **Black terminal panes after an update.** When AIminal reopened itself after updating, a quiet terminal pane could stay black until you switched tabs. Panes now redraw when the window becomes visible.
+
 ## 0.14.13-beta
 
 ### Fixed
