@@ -25,14 +25,14 @@
 | | |
 |---|---|
 | 🏠 **A home for all your tmux sessions** | Every session on this Mac, your SSH servers and the docker containers on them, as live cards in one window |
-| 🤖 **Knows when Claude Code is done** | Working, waiting, waiting for your permission, or stopped at the usage limit (with the reset time), and which model it runs. A notification the moment it finishes or needs you, even on a remote server or inside a container. Optional Claude Code hooks make it exact. The toolbar **Alerts** button turns the notification, sound and Dock count on or off |
+| 🤖 **Knows when Claude Code is done** | **Working**, **Done**, **Waiting** or **Needs you** (your permission), each in its own color on the tab and in the sidebar, or stopped at the usage limit (with the reset time), and which model it runs. A notification the moment it finishes or needs you, even on a remote server or inside a container. Optional Claude Code hooks make it exact. The toolbar **Alerts** button turns the notification, sound and Dock count on or off |
 | ✍️ **Multi-line prompts** | A **Message for Claude** button under every terminal unfolds a box for long prompts with Markdown and code blocks. Preview, then ⌘↩ sends it to Claude as one message |
 | 🗂 **File tree beside the terminal** | ⇧⌘E. New, rename, move (drag onto a folder), duplicate, delete, a **Hidden** button for dotfiles. Follows the session's folder, on your Mac, servers and containers. Right-click a file to hand it to Claude as `@path` |
 | ✏️ **Edit files without vim** | Double-click a `.md`, `.html`, `.sh`, `.py`, `.json`, `.yaml`… to open it next to the terminal, with syntax colors. Markdown and HTML preview, ⌘S saves straight back to the server |
 | ⬇️⬆️ **Download and upload** | Right-click to download a file or folder to any folder you pick, drag from Finder to upload. A progress bar with speed, elapsed time, time left and ETA, and a Cancel button |
 | 🪟 **Panes, each with its own tabs** | ⌘D, the split button, or drag a tab to another pane. Side by side or stacked, up to six panes, drag the dividers to resize. Watch Claude on two servers at once |
 | ⏱ **Clock and machine stats** | Time, date, this Mac's CPU, memory and disk in the toolbar; each server's load, memory, disk and every GPU's utilization and temperature on its machine page |
-| 🔍 **Zoom the panel you click, or the whole app** | ⌘= / ⌘- grow or shrink just the terminal, pane, message box, editor or file tree you clicked last. ⌃⌘= / ⌃⌘- make the whole interface bigger or smaller (85–150%) |
+| 🔍 **Zoom one kind of panel, or the whole app** | ⌘= / ⌘- grow or shrink every terminal, every message box, every editor or the file tree, whichever kind you clicked last, in every tab at once. ⌃⌘= / ⌃⌘- make the whole interface bigger or smaller (85–150%) |
 | 🐳 **Docker containers, first class** | Enter containers for you, find the tmux sessions inside them, open them in a tab, and start new ones inside |
 | 💾 **Save your setup as presets** | One button turns the sessions you have running, on your Mac, servers and containers, into presets with their folder and `claude` filled in. Autostart brings them all back |
 | 🔐 **Server-friendly SSH** | Uses your `~/.ssh/config`, keys or passwords, one shared connection per machine, and reconnects by itself after sleep or a dropped network. Nothing to install on the server beyond tmux |
@@ -66,7 +66,7 @@ The toolbar keeps the time and this Mac's CPU, memory and disk in view; each ser
 <img src="screenshots/machine.gif" alt="A GPU server's page: load, memory and two GPUs whose utilization and temperature update live">
 
 ### Zoom just the panel you clicked
-⌘= and ⌘- act on the last panel you clicked: the file tree, a terminal, a pane or the message box, each independently.
+⌘= and ⌘- act on the kind of panel you clicked last: the file tree, the terminals or the message boxes. Every tab gets the same size.
 
 <img src="screenshots/zoom.gif" alt="The file tree grows with ⌘= while the terminal stays the same size, then the message box grows on its own">
 
@@ -121,7 +121,7 @@ AIminal is the app I wanted for that:
 - **Home**: a start screen with a card for every session, live previews, and a summary of what's running
 - **Built-in terminal**: open any tmux session in a real terminal inside AIminal, with a tab for each one that says which machine or container it is on, drawn on the GPU. Plain terminals without tmux work too (⌘T)
 - **Clear close actions**: Close Tab (Detach) keeps the session running, Quit Claude (/exit) ends only Claude, End Session ends it all. A dropped machine shows **Lost connection** with **Reconnect**, not "session ended"
-- **Keyboard first**: hold ⌘ to see every shortcut, ⌘K to jump to any session, machine or command, ⌘1…⌘9 for tabs, ⌥⌘← / ⌥⌘→ between panes, ⌘S saves the editor you're in (⌥⌘S saves all), ⌘F finds in it, ⌘= / ⌘- to zoom whichever panel you clicked last (a terminal, the message box, an editor, the file tree), ⌃⌘= / ⌃⌘- to scale the whole interface. **Session** and **Machine** menus in the menu bar do everything the right-click menus do
+- **Keyboard first**: hold ⌘ to see every shortcut, ⌘K to jump to any session, machine or command, ⌘1…⌘9 for tabs, ⌥⌘← / ⌥⌘→ between panes, ⌘S saves the editor you're in (⌥⌘S saves all), ⌘F finds in it, ⌘= / ⌘- to zoom the kind of panel you clicked last in every tab (terminals, message boxes, editors, the file tree), ⌃⌘= / ⌃⌘- to scale the whole interface. **Session** and **Machine** menus in the menu bar do everything the right-click menus do
 - **Claude Code aware**: see which sessions run Claude (or `happy claude`) and whether it is working or waiting, even inside a docker container. Get a notification when Claude finishes, waits for your permission (with optional Claude Code hooks, one click per machine) or hits its usage limit (with the reset time), see which model each Claude is using (**Claude · Fable 5.1**) and which account and plan it is signed in with on each machine, and quit it cleanly with **Quit Claude (/exit)**
 - **Machines**: this Mac and your `~/.ssh/config` machines side by side in the sidebar. Connect (key or password) to see and open each machine's tmux sessions, and add or edit machines in the app. AIminal keeps one SSH session per machine, so your server sees a single login. Connection errors come with a hint, and machines reconnect by themselves after sleep or a Wi-Fi drop
 - **Docker containers**: keep tmux on the server and work inside a container. A session or preset can name a container, and AIminal runs `docker exec` into it for you (with your folder and startup command). AIminal also finds the tmux sessions running *inside* each container, opens them with `docker exec -it <container> tmux attach`, and starts new ones inside the container from the sidebar, Home or the machine page. Each machine page lists its running containers

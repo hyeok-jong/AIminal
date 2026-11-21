@@ -1,5 +1,12 @@
 # Changelog
 
+## 0.14.9-beta
+
+### Changed
+
+- **⌘= / ⌘- now zoom every tab.** Zooming a terminal sizes every terminal, and the same goes for message boxes and editors. New tabs open at that size, and it's kept after a restart. The terminal size is the same setting as **Terminal font size** in Settings
+- **Clearer Claude status on tabs and in the sidebar.** Each state has its own color, icon and word: **Working** (orange), **Done** (green, finished and not viewed yet), **Waiting** (gray) and **Needs you** (red). Tabs show the word too. The separate bell for finished sessions is now the green **Done** badge
+
 ## 0.14.8-beta
 
 ### Fixed
