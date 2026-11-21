@@ -1,5 +1,12 @@
 # Changelog
 
+## 0.14.8-beta
+
+### Fixed
+
+- **Long dialogs keep their buttons on screen.** Uploading many files over existing ones listed every name, and the dialog grew taller than the screen with Replace and Cancel out of reach. Long text now scrolls inside the dialog
+- Dropping files on a folder you haven't opened in the file tree no longer freezes the window while "Replace existing items?" is open
+
 ## 0.14.7-beta
 
 ### Fixed
