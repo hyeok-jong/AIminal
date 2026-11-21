@@ -1,5 +1,13 @@
 # Changelog
 
+## 0.14.4-beta
+
+### Fixed
+
+- **Force-quitting AIminal no longer ends your tmux sessions.** When AIminal started the tmux server on this Mac (a preset at launch, or the first new session), macOS treated the server as part of the app, and Force Quit took every session down with it. AIminal now starts the server through launchd, so it runs on its own. A server that an older version already started stays tied to the app until that server is restarted. One visible change: when a program in a session first opens a protected folder such as Documents or Downloads, macOS may ask once under the name "tmux"
+- **Quit from the Dock while a dialog is open** brings that dialog to the front. Before, the request was dropped without any sign, and the app looked stuck
+- AIminal's dialogs stay on screen when you switch to another app, follow you to the current Space, and come forward when you click the Dock icon
+
 ## 0.14.3-beta
 
 ### Fixed
