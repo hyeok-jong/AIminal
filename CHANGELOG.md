@@ -1,5 +1,12 @@
 # Changelog
 
+## 0.14.6-beta
+
+### Fixed
+
+- **Changing the interface size no longer disturbs what you're writing.** ⌃⌘= / ⌃⌘- used to rebuild the window, so the message box and file editor lost the cursor, scroll position, keyboard focus, and any Korean syllable still being composed. All of them now stay put
+- Settings switches keep their place in the row after a size change
+
 ## 0.14.5-beta
 
 ### Fixed
