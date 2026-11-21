@@ -1,5 +1,11 @@
 # Changelog
 
+## 0.14.17-beta
+
+### Changed
+
+- **File tree buttons are words now.** Up, Terminal Folder, Refresh, Upload, New File, New Folder, Sizes and Show Hidden replace the icons above the tree, and wrap onto a second line when the tree is narrow.
+
 ## 0.14.16-beta
 
 ### Added
