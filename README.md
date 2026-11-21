@@ -135,7 +135,7 @@ AIminal is the app I wanted for that:
 - **Presets and autostart**: save a machine, folder and startup command, and bring your sessions up at login. Turn every running session (local, SSH, container) into presets at once. Keep them in iCloud Drive, one file per Mac, and load another Mac's presets with a click
 - **Automatic updates**: AIminal checks for new versions and updates itself in one click. Your tmux sessions keep running
 - **Clock and stats**: time, date, CPU, memory and disk of this Mac in the toolbar; load, memory, disk and GPUs (utilization, temperature) on each server's page
-- **Menu bar and Dock**, English and Korean UI, dark and light, with a fixed green accent that doesn't change with your system accent color
+- **Menu bar and Dock**, English and Korean UI, dark and light, with a fixed green accent that doesn't change with your system accent color, and no motion when Reduce Motion is on
 
 ## Install
 

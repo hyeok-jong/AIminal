@@ -1,5 +1,15 @@
 # Changelog
 
+## 0.14.2-beta
+
+### Changed
+
+- **Follows Reduce Motion.** With System Settings → Accessibility → Display → Reduce motion on, AIminal's transitions (card hover, banners, the shortcut overlay, collapsing the sidebar, scrolling to a tab) happen instantly
+
+### Fixed
+
+- If settings can't be saved (for example the disk is full), it now shows up in Logs with the toolbar's error count instead of being lost silently. The same goes for keeping the original copy of your SSH config and for the outside-changes check before saving a file
+
 ## 0.14.1-beta
 
 ### Fixed
