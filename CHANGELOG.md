@@ -1,5 +1,13 @@
 # Changelog
 
+## 0.14.15-beta
+
+### Added
+
+- **File and folder sizes in the file tree.** Hover a row and click **Size**, or click **Sizes** above the tree to measure everything shown. Nothing is measured until you ask; the size appears at the right of the row.
+- **Download a folder as a zip.** Right-click a folder on a server or in a container → **Download as Zip** saves one `.zip` to Downloads.
+- **Hover highlight** on file tree rows.
+
 ## 0.14.14-beta
 
 ### Fixed
