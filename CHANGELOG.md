@@ -1,5 +1,16 @@
 # Changelog
 
+## 0.14.3-beta
+
+### Fixed
+
+- **Opening a session in an external terminal** now quotes every argument safely. A `;` or quote followed by an accent mark could slip through unquoted
+- **HTML preview stays offline.** It blocked only http and https before, and would load the page anyway if the block couldn't be set up. Now anything that isn't a local file is blocked, and the preview doesn't open if blocking fails
+- **"Needs you" shows everywhere.** A Claude waiting for your permission was shown as just "waiting" on the sidebar's Home badge, machine and container rows and Home's Claude tile. They now agree with the session row, and Home counts "need you" separately
+- Reading a remote machine's output no longer mistakes text on a screen for AIminal's own markers
+- First run with nothing set up: the menu bar list no longer repeats "No running sessions" and says what to do next, **Run autostart** appears only when you have autostart presets, and Home hides Expand/Collapse All until there is something to expand
+- Korean: a few messages no longer attach a particle (를/가) that could be wrong after a name
+
 ## 0.14.2-beta
 
 ### Changed
