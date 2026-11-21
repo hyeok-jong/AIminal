@@ -1,5 +1,11 @@
 # Changelog
 
+## 0.14.11-beta
+
+### Added
+
+- **Claude usage bar in each pane header.** Next to the Claude badge, a bar with the percentage shows how much of your **5-hour** and **weekly** limit is used (green, orange from 70%, red from 90%; hover for the reset times). It follows the account that pane's Claude is signed in with, and works on remote machines and in containers. It needs the Claude Code hooks: **Install…** (or **Add Claude hooks…**) now also adds a status line that shows nothing in Claude, and an existing hooks install offers to add it. If you already use your own status line, AIminal leaves it alone and skips the bar. Narrow panes shrink it to "5h 78%", then hide it, and it never costs you the header buttons
+
 ## 0.14.10-beta
 
 ### Added
