@@ -1,5 +1,12 @@
 # Changelog
 
+## 0.14.12-beta
+
+### Fixed
+
+- **Dialog buttons that didn't respond to the mouse.** In some dialogs (for example "Add Claude Code hooks") clicking the buttons did nothing and only esc worked. Dialogs no longer treat a click on their background as a window drag.
+- **Claude shown as "waiting" while a subagent is running.** The pane header now counts the subagent line Claude Code shows under the prompt as "working".
+
 ## 0.14.11-beta
 
 ### Added
