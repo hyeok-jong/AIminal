@@ -1,5 +1,17 @@
 # Changelog
 
+## 0.14.16-beta
+
+### Added
+
+- **Usage bar for Claude Code inside `docker exec`.** Claude started with `docker exec` from a tmux pane (no tmux in the container) now shows its usage too, once the hooks are installed in that container. Hooks installed by 0.14.11–0.14.15 show "usage bar needs an update"; click **Install…** again.
+- **Folder total in the file tree.** **Sizes** now also measures the whole current folder and shows the total next to its name.
+
+### Changed
+
+- **Stronger hover everywhere.** Buttons, links, sidebar rows, tabs and container rows highlight more clearly under the pointer.
+- **"Add Claude hooks…" on container rows is a real button now**, so it's easier to spot.
+
 ## 0.14.15-beta
 
 ### Added
