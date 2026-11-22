@@ -1,5 +1,11 @@
 # Changelog
 
+## 0.14.20-beta
+
+### Fixed
+
+- **"Download To…" and "Upload Files…" pickers could keep spinning.** The folder picker now opens after the menu closes, so its file list loads. The same goes for choosing the presets folder and loading presets.
+
 ## 0.14.19-beta
 
 ### Fixed
