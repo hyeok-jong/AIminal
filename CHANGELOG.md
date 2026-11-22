@@ -1,5 +1,12 @@
 # Changelog
 
+## 0.14.19-beta
+
+### Fixed
+
+- **Downloading a big remote folder no longer sits at 0 bytes first.** The transfer starts right away while the folder size is measured alongside, instead of measuring everything first. Links inside the folder aren't followed when measuring, so the size is right and quick.
+- **Clearer transfer status.** A download that hasn't received anything yet says "Waiting for the server…", and a zip download says "Making the zip…" after the files arrive.
+
 ## 0.14.18-beta
 
 ### Changed
