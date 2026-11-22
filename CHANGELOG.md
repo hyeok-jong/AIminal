@@ -1,5 +1,11 @@
 # Changelog
 
+## 0.14.23-beta
+
+### Added
+
+- **Refresh button in the file tree**, next to the folder name. It spins while the folder is being read.
+
 ## 0.14.22-beta
 
 ### Fixed
