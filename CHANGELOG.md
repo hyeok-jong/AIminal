@@ -1,5 +1,11 @@
 # Changelog
 
+## 0.14.18-beta
+
+### Changed
+
+- **Tidier file tree buttons.** One row: Up, Terminal, a New menu (file, folder, upload) and a View menu (sizes, hidden files, refresh, text size), all in the same button style.
+
 ## 0.14.17-beta
 
 ### Changed
