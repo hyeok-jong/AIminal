@@ -1,5 +1,11 @@
 # Changelog
 
+## 0.14.22-beta
+
+### Fixed
+
+- **File tree right-click menus are smooth now.** They're standard macOS menus built once when you right-click, so nothing in the background (sessions, Claude status, sizes, transfers) touches an open menu.
+
 ## 0.14.21-beta
 
 ### Fixed
