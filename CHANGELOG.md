@@ -1,5 +1,11 @@
 # Changelog
 
+## 0.14.21-beta
+
+### Fixed
+
+- **Right-click menus in the file tree no longer lag.** The open menu was being rebuilt every time session or Claude status changed in the background; now it stays put while you move through it.
+
 ## 0.14.20-beta
 
 ### Fixed
