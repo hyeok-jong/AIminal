@@ -233,6 +233,8 @@ AIminal notices Claude Code in any tmux window: on this Mac, over SSH, and insid
 
 The **Alerts** button at the top right turns the notification, its sound and the count on the Dock icon on or off in one click (the bell is crossed out when they're all off). The same switches are in Settings → General → Notifications.
 
+**Alerts per machine or session.** Right-click a machine, container or session and open **Alerts** to choose **With Sound**, **Without Sound** or **Off**, or leave it following the level above. The closest choice wins: session, then container, then machine, then the main switches. So you can silence one noisy server, or keep a single session alerting while the rest are off. A session set to Off still shows its **Done** badge in AIminal, but sends no notification and isn't counted on the Dock.
+
 ## Machines over SSH
 
 The **Machines** section lists this Mac and the hosts in your `~/.ssh/config`.

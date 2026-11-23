@@ -1,5 +1,11 @@
 # Changelog
 
+## 0.14.24-beta
+
+### Added
+
+- **Alerts per machine, container or session.** Right-click one and open **Alerts** to choose With Sound, Without Sound or Off, or follow the level above. The closest choice wins, so you can silence one server or keep a single session alerting while the rest are off.
+
 ## 0.14.23-beta
 
 ### Added
