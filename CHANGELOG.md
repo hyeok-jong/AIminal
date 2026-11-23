@@ -1,5 +1,11 @@
 # Changelog
 
+## 0.14.25-beta
+
+### Added
+
+- **A crossed-out bell** on every machine, container or session whose alerts are off, in the sidebar and on Home. Alerts stay on by default.
+
 ## 0.14.24-beta
 
 ### Added
