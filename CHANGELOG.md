@@ -1,5 +1,9 @@
 # Changelog
 
+## 0.14.31-beta
+
+- No changes in the app. This release exists to try the faster update download and its progress bar from 0.14.30.
+
 ## 0.14.30-beta
 
 ### Changed
