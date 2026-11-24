@@ -1,5 +1,11 @@
 # Changelog
 
+## 0.14.27-beta
+
+### Changed
+
+- **Waiting is now Done.** A Claude that isn't working always reads **Done**: green until you've looked at it, gray after.
+
 ## 0.14.26-beta
 
 ### Fixed

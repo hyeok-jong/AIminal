@@ -72,7 +72,7 @@ Home is the start screen. At the top, four tiles count your tmux sessions and wi
 Below, every machine and every container with tmux gets its own section of **session cards**. A card shows:
 
 - the session name and folder, and where it is open
-- Claude's state when Claude Code runs in it: **Working** (orange), **Done** (green, finished and you haven't looked yet), **Waiting** (gray) or **Needs you** (red, waiting for your permission). The same badge is on the tab and in the sidebar
+- Claude's state when Claude Code runs in it: **Working** (orange), **Done** (green until you've looked at it, then gray) or **Needs you** (red, waiting for your permission). The same badge is on the tab and in the sidebar
 - 🐳 the container it is in and the number of windows
 - a **live preview** of the last lines on screen
 - the current task title (what Claude is working on) and the last activity
@@ -220,7 +220,7 @@ If a remote session's machine drops, its pane says **Lost connection** and offer
 
 AIminal notices Claude Code in any tmux window: on this Mac, over SSH, and inside containers.
 
-- **Working or waiting.** While Claude works, its status line says "esc to interrupt"; AIminal reads the bottom of the pane every few seconds. (Inside tmux, Claude keeps its window title fixed, so the title alone can't tell.)
+- **Working or waiting.** While Claude works, it shows a progress line above the prompt; AIminal reads the bottom of the pane every few seconds. (Inside tmux, Claude keeps its window title fixed, so the title alone can't tell.)
 - **Claude Code hooks (optional, more accurate).** On a machine page, **Install…** next to *Claude Code hooks* (for a container: **Add Claude hooks…** on its row) adds a few hooks and a status line to that machine's `~/.claude/settings.json`, after asking. Claude Code then tells AIminal itself when it starts working, finishes, or **waits for your permission** to run a tool, so AIminal no longer depends on reading the screen, and a session waiting for you shows **Claude · Needs you** with its own notification. The hooks only mark the tmux pane Claude runs in (nothing is sent anywhere); the original file is kept as `settings.json.aiminal-backup`, and **Remove…** takes out only AIminal's hooks. Restart running Claude Code sessions to pick them up. Outside tmux (a plain `docker exec` shell) the screen reading above is still used.
 - **Usage bar.** With the hooks installed, each pane header shows how much of your **5-hour** and **weekly** Claude limit is used, as a bar with the percentage (green below 70%, orange from 70%, red from 90%). Hover it for the reset times. It belongs to the account that pane's Claude is signed in with, so it stays right when you switch accounts, and it works on remote machines and in containers. The numbers come from the same pane marker as the status, and the status line AIminal adds shows nothing inside Claude. If you already use your own Claude Code status line, AIminal leaves it alone and skips the bar. Subscription accounts only; with an API key there are no limits to show. Narrow panes shrink it to "5h 78%", then hide it.
   It also works for Claude Code started with `docker exec` from a tmux pane (no tmux inside the container): install the hooks in that container too (**Add Claude hooks…** on its row). If you installed the hooks with 0.14.11–0.14.15, the hooks row says the usage bar needs an update; click **Install…** once more.
