@@ -1,5 +1,11 @@
 # Changelog
 
+## 0.14.26-beta
+
+### Fixed
+
+- **Claude showed as waiting while it was still working**, and "Claude finished" alerts arrived in the middle of a task. Recent Claude Code versions changed what the screen shows while working; AIminal now reads the new working line, and it double-checks before it tells you Claude is done.
+
 ## 0.14.25-beta
 
 ### Added
