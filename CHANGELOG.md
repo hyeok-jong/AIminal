@@ -1,5 +1,11 @@
 # Changelog
 
+## 0.14.35-beta
+
+### Changed
+
+- **Claude notifications now say which session, and nothing else.** The session name is the title (with the machine for a remote one), and the text says what happened: finished, needs your OK, or hit the usage limit. They no longer show the window title, which Claude sets when a conversation starts and was often about something long finished.
+
 ## 0.14.34-beta
 
 ### Fixed
