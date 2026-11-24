@@ -1,5 +1,11 @@
 # Changelog
 
+## 0.14.32-beta
+
+### Fixed
+
+- **Usage-limit alerts for a session that wasn't at its limit**, and a session stuck on Working after it finished. Both happened when Claude's own reply (or a file on screen) contained the words AIminal looks for. It now reads them only where Claude Code itself prints them.
+
 ## 0.14.31-beta
 
 - No changes in the app. This release exists to try the faster update download and its progress bar from 0.14.30.
