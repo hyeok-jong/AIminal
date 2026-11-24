@@ -1,5 +1,26 @@
 # Changelog
 
+## 0.14.36-beta
+
+### Fixed
+
+- **"Claude finished" arrived while Claude was still working.** When Claude runs agents in the background and writes an interim report, the session now stays "working" until the agents are done, and the notification comes once, at the end.
+- **A usage limit could go unnoticed** when the message had blank lines above it or its reset time on the next line.
+- **Two Claude panes in one tmux window:** "needs your OK" in the second pane was hidden while the first one was working.
+- **Renaming a file by letter case only** (`readme.md` to `README.md`) said the name already exists.
+- **Copy Attach Command** for a container on an SSH machine copied a command that ran on this Mac. It now includes the `ssh` part.
+- **Settings and the This Mac screen could freeze for seconds** on a Mac without tmux.
+- **Sending text with ⌘↩:** if the text was pasted but Enter could not be sent, AIminal now says so. A new session whose start command could not be typed is logged.
+- **An unreadable settings file is no longer replaced** by a fresh one at launch.
+
+### Security
+
+- **A program in a terminal can no longer read your clipboard.** Copying from tmux to the Mac clipboard works as before.
+- **File names with control characters are not typed into the terminal** by Insert Path and cd Here, and names containing a line break are left out of the file tree. Such names could run a command or point a row at a different path.
+- **File tree on SSH machines:** a file with a specially crafted name could mix up the answers for the next folders.
+- **Saving a remote file** no longer leaves a temporary copy that other users of that server could read.
+- **Links in a Markdown preview** open web and mail addresses only, like the HTML preview.
+
 ## 0.14.35-beta
 
 ### Changed
