@@ -1,5 +1,11 @@
 # Changelog
 
+## 0.14.29-beta
+
+### Fixed
+
+- **Side by side, a pane with the usage bar lost its large header** while the pane next to it kept it. The usage bar now shrinks to "5h 78%" first, so both panes keep the same header.
+
 ## 0.14.28-beta
 
 ### Changed
