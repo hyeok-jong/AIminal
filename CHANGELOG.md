@@ -1,5 +1,12 @@
 # Changelog
 
+## 0.14.34-beta
+
+### Fixed
+
+- **"3 min. ago", the date and the greeting on Home stood still** while every session was quiet: a card could say "1 min. ago" for hours, and Home showed yesterday's date after midnight. They now refresh every minute.
+- **"in 0 sec."** showed for a session that was active this very second, or on a server whose clock runs ahead. It now says "just now".
+
 ## 0.14.33-beta
 
 A round of fixes from a full check of the app.
