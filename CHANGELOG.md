@@ -1,5 +1,12 @@
 # Changelog
 
+## 0.14.30-beta
+
+### Changed
+
+- **Updates download several times faster** on connections where GitHub is slow, because the update now comes down over several connections at once.
+- **A progress bar while an update downloads**, with the percentage, in the toolbar and in Settings.
+
 ## 0.14.29-beta
 
 ### Fixed
