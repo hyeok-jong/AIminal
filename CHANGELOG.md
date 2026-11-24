@@ -1,5 +1,29 @@
 # Changelog
 
+## 0.14.33-beta
+
+A round of fixes from a full check of the app.
+
+### Changed
+
+- **The Home tile now says "done"** instead of "waiting", the same word as the session badge.
+
+### Fixed
+
+- **Settings → Reload** said "Settings reloaded." even when config.json couldn't be read. It now shows the error.
+- **New Session**: pressing Create twice quickly on a remote machine could start it twice and, with "save as preset" on, save the preset twice.
+- **Updates**: an update could start twice if it was triggered again while a dialog was open.
+- **Alerts bell**: it showed "off" when the main switches were off but one machine or session had alerts turned on.
+- **"Needs you" alert sent twice** after renaming a session that was waiting for permission, and a stray alert after removing a machine and adding it back under the same name.
+- **Renaming a machine** left open editors for its files pointing at the old name, so saving failed.
+- **Replacing presets from a file** and **adding Claude Code hooks** now stop if the backup copy can't be written, instead of going ahead without one.
+- **Upload**: dropping files twice in a row onto a folder that hadn't been listed yet could skip the "Replace existing items?" question.
+- **File tree**: sizes and an error line from one machine could show up after switching to another.
+- **"in 3 min."** instead of "now" for a session on a server whose clock runs ahead.
+- **Usage bar inside a container** no longer disappears for a while after one failed read.
+- The Claude Code hooks dialog now mentions the small usage file it writes (`~/.claude/aiminal-usage`).
+- Guide and README: the file tree's **View ▾** menu (Calculate Sizes, Show Hidden Files) and the update progress bar were described wrongly or missing.
+
 ## 0.14.32-beta
 
 ### Fixed
