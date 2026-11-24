@@ -1,5 +1,11 @@
 # Changelog
 
+## 0.14.28-beta
+
+### Changed
+
+- **Text sizes are whole numbers.** The message box and the editor now start at 13pt instead of 12.5pt, and a size you had set to something like 18.5pt becomes 19pt.
+
 ## 0.14.27-beta
 
 ### Changed
