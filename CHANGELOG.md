@@ -1,5 +1,11 @@
 # Changelog
 
+## 0.14.37-beta
+
+### Fixed
+
+- **A session without Claude could show a "Done" badge.** After Claude was killed (a restarted container, a crash), a later shell or script that got the same process number was taken for Claude. AIminal now checks that it is still the same process.
+
 ## 0.14.36-beta
 
 ### Fixed
